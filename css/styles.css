@@ -1,0 +1,159 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+:root {
+  --primary-color: #85bb65; /* Dollar Bill Green */
+  --secondary-color: #000000; /* black */
+  --tertiary-color: #f5f5dc; /* beige */
+}
+
+body {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-image img {
+  height: 500px;
+  border-radius: 1rem;
+}
+
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+section ul {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 16px; /* Decrease the font size of the root element */
+  }
+
+  body {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    padding-top: 100px;
+  }
+
+  .cta-button {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtext {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image img {
+    height: auto;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  section ul {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  section li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+
+

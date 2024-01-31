@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
+    <title>GE Solutions</title>
+</head>
+<body>
+    <a class="btn" href="index.html" title="Button">Enter G.E. Solutions</a>
+    <span class="color color--blue" data-value="1"></span>
+    <span class="color color--orange" data-value="1"></span>
+    <span class="color color--green" data-value="1"></span>
+    <span class="color color--white" data-value="1"></span>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+            background: #141414;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn {
+            font-family: sans-serif;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2.8px;
+            background-color: #85bb65;
+            padding: 15px 50px;
+            border-radius: 5rem;
+            box-shadow: 1px 2.9px 16px rgba(27, 249, 53, 0.4);
+            transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+        }
+
+        .btn:hover {
+            box-shadow: 3px 4.9px 16px rgba(27, 249, 212, 0.6);
+            letter-spacing: 5px;
+        }
+
+        .btn--clicked {
+            transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+            padding: 15px 2px;
+            width: 50px;
+            color: transparent;
+            z-index: -10;
+        }
+
+        .color {
+            display: block;
+            width: 0;
+            height: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            transition: 0.8s ease;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+
+        .expanded {
+            width: 200%;
+            padding-bottom: 200%;
+            height: auto;
+        }
+
+        .color--blue {
+            background-color: #20c055;
+            transition-delay: 0.25s;
+        }
+
+        .color--orange {
+            background-color: #359166;
+            transition-delay: 0.5s;
+        }
+
+        .color--green {
+            background-color: #27543d;
+            transition-delay: 0.75s;
+        }
+
+        .color--white {
+            background-color: #000000;
+            transition-delay: 1s;
+        }
+    </style>
+    
+    <script>
+        const button = document.querySelector(".btn");
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            button.classList.add("btn--clicked");
+            document.querySelectorAll("span").forEach((element) => {
+                element.classList.add("expanded");
+            });
+
+            setTimeout(() => {
+                button.classList.remove("btn--clicked");
+                
+                // Redirect to the next page after animation is complete
+                window.location.href = "index.html";
+            }, 1500);
+
+            setTimeout(() => {
+                document.querySelectorAll("span").forEach((element) => {
+                    element.classList.remove("expanded");
+                });
+            }, 1700);
+        });
+    </script>
+</body>
+</html>
+    </script>  
