@@ -1,13 +1,13 @@
 
 body{
     padding-top: 90px;
-    height: 2500px;
+    height: 2200px;
   }
   
   /*1st part*/
   .part1{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background-color: #85bb65;
     display: flex;
     align-items: center;
@@ -60,17 +60,6 @@ body{
     height: 100%;
   }
   
-  .pic-1{
-    height: 275px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-    transition: all 0.25s ease-in;
-  }
-  
-  .pic-1:hover{
-    transform: scale(1.06);
-  }
-  
   .pic-2{
     height: 275px;
     border-radius: 10px;
@@ -82,94 +71,20 @@ body{
     transform: scale(1.06);
   }
   
-  .pic-3{
-    height: 275px;
-    border-radius: 10px;
-    margin: 0 10px;
-    margin-bottom: 50px;
-    transition: all 0.15s;
-  }
-  
-  .pic-3:hover{
-    transform: scale(1.06);
-  }
-  
-  .pic-4{
-    height: 275px;
-    border-radius: 10px;
-    margin: 0 10px;
-    transition: all 0.15s;
-  }
-  
-  .pic-4:hover{
-    transform: scale(1.06);
-  }
-  
-  
-  /*2nd part*/
-  .part2{
-    margin-top: 1rem;
-    padding-bottom: 5rem;
-  }
-  
-  .part2-organizer{
-    width: 100%;
-  }
-  
-  .text-box2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .description-box-organizer{
-    padding-top: 50px;
-    width: 100%;
-    height: 100%;
-  
-    display: flex;
-    column-gap: 2em;
-    row-gap: 2em;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .icon{
-    height: 1.5rem;
-  }
-  
-  .text-description-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 15px;
-  }
-  
-  .description-boxes{
-    height: 10rem;
-    width: 30%;
-    padding: 25px;
-    border: 1px solid black;
-    transition: all 0.25s;
-  }
-  
-  .description-boxes:hover{
-    transform: scale(1.06);
-    gap: 50px;
-  }
-  
+
   /*3rd part*/
   .part3{
-    width: 100%;
-    height: 100vh;
     background-color: #262e22;
-    aspect-ratio: 960/2000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(../pictures/wave-haikei\ \(1\).svg);
-    margin-bottom: 2000px;
+
+    width: 100%;
+    height: 95vh;
+
+    display: flex;
+    justify-content: center;
   }
   
   .part3-section{
@@ -178,14 +93,20 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+  }
+
+  .list-container{
+    height: 100%;
   }
   
   ul{
-    margin-top: 20px;
+    margin-top: 50px;
+    height: 100%;
   }
   
   ul li{
-    width: 50em;
+    width: 60em;
     color: #f5f5dc;
     border: solid 1px #f5f5dc;
     padding: 20px;
@@ -195,43 +116,12 @@ body{
   ul li a{
     text-decoration: none;
     color:#f5f5dc;
+    font-size: 1.2rem;
     font-family: Archivo Black;
   }
   
   ul li:hover{
     transform: scale(1.06);
-  }
-  
-  /*javascript fancy stuff */
-  .appear{
-    opacity: 0;
-    transition: all 3s;
-  }
-  
-  .hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(-100%);
-    transition: all 2s;
-  }
-  
-  .hidden1{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(-100%);
-    transition: all 2s;
-  }
-  
-  .show-2{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-  }
-  
-  .show-1{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
   }
   
   .text3{
@@ -286,7 +176,7 @@ body{
     }
   
     ul{
-      margin-top: 50px;
+      margin-top: 30px;
     }
   
     ul li{
@@ -294,10 +184,14 @@ body{
       padding: 15px;
       transition: all 0.5s;
     }
-  
-    .text-box3{
-      width: 80%;
-      font-size:20px;
+
+    ul li a{
+      font-size: 0.9rem;
+    }
+
+    .text3{
+      color:#f5f5dc;
+      font-size: 1.4rem;
     }
   }
 
