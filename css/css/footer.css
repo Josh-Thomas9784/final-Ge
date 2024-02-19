@@ -1,0 +1,119 @@
+footer{
+  background-color: #85bb65;
+  height: 400px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organization{
+  display: flex;
+  justify-content: space-between;
+
+  width: 800px;
+  margin-right: 150px;
+}
+
+.first-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text{
+  color: #f5f5dc;
+  font-family: Archivo Black;
+  letter-spacing: 3px;
+}
+
+.website-logo2{
+  height: 220px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.line{
+  height: 300px;
+  width: 1px;
+  background-color: #f5f5dc;
+}
+
+
+a:link {text-decoration: none;}
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+/*links*/
+
+
+.page-link1{
+  margin: 0px;
+  margin-top: 20px;
+
+  font-family: Archivo Black;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f5f5dc60;
+  
+  transition: color 0.3s;
+}
+
+.page-link1:hover{
+  color: #f5f5dc;
+  cursor: pointer;
+}
+
+/*  RESPONSIVE DESIGN   RESPONSIVE DESIGN   RESPONSIVE DESIGN    RESPONSIVE DESIGN    RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 768px){
+
+  .website-logo2{
+    height: 120px;
+    margin-top: 125px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+
+  .page-link1{
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 50px;
+  
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.219);
+    
+    transition: color 0.3s;
+  }
+
+  .page-link2{
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 50px;
+  
+    font-size: 16px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.219);
+    font-family: Poppins;
+  
+    transition: color 0.3s;
+  }
+
+  .footer-text{
+    font-size: 10px;
+    margin-left: 100px;
+  }
+}
