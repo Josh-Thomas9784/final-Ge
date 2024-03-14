@@ -1,7 +1,7 @@
 /*part 1*/
 body{
   height: 2000px;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .part1{ 
@@ -9,7 +9,7 @@ body{
   background-repeat: no-repeat;
   background-position: top 30% right 70%;
   background-size: cover;
-  background-image: url(../pictures/blob-scene-haikei\ \(5\).svg);
+  background-image: url("../pictures/scrap.png");
 
   width: 100%;
 }

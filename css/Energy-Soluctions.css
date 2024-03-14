@@ -1,6 +1,6 @@
 
 body{
-    padding-top: 90px;
+  padding-top: 80px;
     height: 2200px;
   }
   
@@ -97,11 +97,11 @@ body{
 
   }
   
-  ul{
+  .list{
     margin-top: 50px;
   }
   
-  ul li{
+  .list .list2{
     width: 50em;
     color: #f5f5dc;
     border: solid 1px #f5f5dc;
@@ -109,14 +109,14 @@ body{
     transition: all 0.5s;
   }
   
-  ul li a{
+  .list .list2 a{
     text-decoration: none;
     color:#f5f5dc;
     font-size: 1.2rem;
     font-family: Archivo Black;
   }
   
-  ul li:hover{
+  .list .list2:hover{
     transform: scale(1.06);
   }
   
@@ -171,17 +171,17 @@ body{
       width: 90%;
     }
   
-    ul{
+    .list{
       margin-top: 30px;
     }
   
-    ul li{
+    .list .list2{
       width: 18em;
       padding: 10px;
       transition: all 0.5s;
     }
 
-    ul li a{
+    .list .list2 a{
       font-size: 0.9rem;
     }
   

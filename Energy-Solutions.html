@@ -28,8 +28,10 @@
 			<a href="Effects.html">Effects</a>
 			<a href="Community.html">Community</a>
 			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
 		</nav>
 	</header>
+
 
 	<div class = "part1">
 		<section class = "entry-box">
@@ -138,12 +140,12 @@
 		<section class = "part3-section">
 			<div class = "text-box3"><h3 class ="text3">FREQUENTLY ASKED QUESTIONS</h3></div>
 			<div class = "list-container">
-				<ul>
-					<li><a href="Additional-Practices.html#Green">How can I contribute living in an apartment? →</a></li>
-					<li><a href="ThermoSUB.html">Where Is a good place to start? →</a></li>
-					<li><a href="Effects.html#text-box-whole">What are the effects of my actions? →</a></li>
-					<li><a href="windSUB.html">What Can I do with a large yard? →</a></li>
-					<li><a href="ApplianceSUB.html">What saves me the most money over time? →</a></li>
+				<ul class="list">
+					<li class="list2"><a href="Additional-Practices.html#Green">How can I contribute living in an apartment? →</a></li>
+					<li class="list2"><a href="ThermoSUB.html">Where Is a good place to start? →</a></li>
+					<li class="list2"><a href="Effects.html#text-box-whole">What are the effects of my actions? →</a></li>
+					<li class="list2"><a href="windSUB.html">What Can I do with a large yard? →</a></li>
+					<li class="list2"><a href="ApplianceSUB.html">What saves me the most money over time? →</a></li>
 				</ul>
 			</div>
 		</section>
@@ -341,5 +343,14 @@
       }
     }
   </style>
+  <script>
+    window.addEventListener("load", () =>{
+      document.querySelector(".preloader").classList.add("loader--hidden");
+
+      document.querySelector(".preloader").addEventListener("transitionend", () =>{
+        document.body.removeChild(document.querySelector(".preloader"));
+      })
+    })
+  </script>
 
 </body>

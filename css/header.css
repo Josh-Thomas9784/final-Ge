@@ -1,7 +1,7 @@
 
 *{
   margin: 0;
-  padding: 0;
+  padding: 80;
   box-sizing: border-box;
 }
 
@@ -72,6 +72,23 @@ body{
   right: 10%;
 }
 
+nav .button{
+  color: var(--tertiary-color);
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-family: Archivo Black;
+  transition: all 0.4s ease;
+  border: 2px solid var(--tertiary-color);
+}
+
+nav .button:hover{
+  background-color: black;
+  border: 2px solid black;
+}
+
 @media(max-width: 992px){
   .header{
     padding: 1.3rem 5%;
@@ -110,7 +127,7 @@ body{
 
   #check:checked~.navbar{
     border-top: 1px solid rgb(255, 255, 255);
-    height: 16.7rem;
+    height: 20rem;
   }
 
   .navbar a{
@@ -126,8 +143,18 @@ body{
   #check:checked~.navbar a{
     transform: translateY(0px);
   }
+
+  nav .button{
+    margin: 0 15px;
+  }
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
 }
+
+
+
+
+
+
