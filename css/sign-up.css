@@ -1,0 +1,144 @@
+body{
+  padding-top: 80px;
+  background-color: #80ad66;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../pictures/Copy\ of\ Effects\ \(1\).png");
+}
+
+.container{
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container{
+  width: 75%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+.first-half{
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-half{
+  height: 100%;
+  width: 70%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .second-half img{
+  height: 500px;
+}
+
+.glass{
+  padding: 10%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.piece{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+}
+
+h1{
+  font-family: Bebas Neue;
+  font-size: 65px;
+  letter-spacing: 3px;
+}
+
+p{
+  font-family: Archivo black;
+  font-size: 18px;
+}
+
+.piece p a{
+  color: rgba(0, 0, 255, 0.815);
+  text-decoration: none;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-top: 25px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+h2{
+  font-family: Bebas Neue;
+  font-size: 35px;
+  letter-spacing: 3px;
+  margin: 0 35px;
+}
+
+button{
+  margin-top: 65px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Archivo Black;
+  color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
+
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease-in;
+  background-color: var(--tertiary-color);
+}
+
+button:hover{
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  transform: scale(0.95, 0.95);
+  border: none;
+}
+
+input{
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 5px;
+  outline: noen;
+  font-size: 16px;
+  background-color: var(--tertiary-color);
+  width: 400px;
+}
+
+.piece p a:hover{
+  text-decoration: underline;
+}

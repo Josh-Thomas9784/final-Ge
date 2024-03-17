@@ -117,7 +117,8 @@ h3{
 .gallery-item:hover .text{
   opacity: 1;
   top: 150px;
-  box-shadow: inset 0px 100px rgba(0, 0, 0, 0.527)
+  box-shadow: inset 0px 100px rgba(0, 0, 0, 0.527);
+  font-family: Truculenta;
 }
 
 .w-1{
@@ -198,16 +199,18 @@ h3{
 }
 
 .p-text2{
-  padding: 20px;
+  padding: 15px;
   height: 100%;
   width: 50%;
   word-break: break-all;
+  font-family: Truculenta;
 }
+
 
 h4{
   font-family: Archivo black;
   letter-spacing: 1px;
-  
+  padding-bottom: 15px;
 }
 
 .imgs{
