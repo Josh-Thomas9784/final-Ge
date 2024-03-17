@@ -649,3 +649,55 @@ p{
     max-width: 20rem;
   }
 }
+
+
+/*javascript animations*/
+
+.hidden{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hidden2{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show2{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden3{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show3{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.fact-holder:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.fact-holder:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.fact-holder:nth-child(4){
+  transition-delay: 600ms;
+}

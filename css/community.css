@@ -330,3 +330,42 @@ h4{
     font-size: 25px;
   }
 }
+
+/*javascript animations*/
+
+.hidden{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hidden2{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(-50%);
+}
+
+.show2{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden3{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateY(-50%);
+}
+
+.show3{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
