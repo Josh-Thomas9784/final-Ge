@@ -20,7 +20,7 @@
 
     <div class="preloader"></div>
 
-    <header class="header">
+    <header class="header" id="header">
       <a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
       <input type="checkbox" id="check">
@@ -50,8 +50,9 @@
 
       </div>
       <div class="d-holder">
-        <iframe src='https://my.spline.design/pedersonfinalmainfile-ab207511c35ff4067f59fb081a2af1ab/' frameborder='0'
-          width='100%' height='100%' fetchpriority="high" ></iframe>
+        <video autoplay muted plays-inline>
+          <source src="pictures/Green Illustrative Move to Renewable Energy Animated Instagram Story (4).mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -148,10 +149,109 @@
         </div>
       </div>
     </div>
-    
-    <div class="align">
-      <a class="btn" href="Energy-Solutions.html">Learn More About Energy Solutions</a>
+
+    <div class="part4">
+        <ul class='slider'>
+          <li class='item' style="background-image: url(pictures/sp.jpg)">
+            <div class='content'>
+              <h2 class='title'>Solar Panels</h2>
+              <p class='description'> 
+                Solar panels convert sunlight into electricity using photovoltaic cells, helping generate clean, renewable energy.</p>
+              <a href = "solarSUB.html">Read More</a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('pictures/wm.jpg')">
+            <div class='content'>
+              <h2 class='title'>Windmills</h2>
+              <p class='description'> Windmills harness wind energy to produce electricity through rotating blades, contributing to renewable energy production.</p>
+              <a href="windSUB.html">Read More</a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('pictures/th.jpg')">
+            <div class='content'>
+              <h2 class='title'>Smart thermostats</h2>
+              <p class='description'> Smart thermostats are advanced devices that regulate heating and cooling systems with features like remote control and energy-saving settings. </p>
+              <a href ="ThermoSUB.html">Read More</a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url(pictures/pexels-tom-fournier-16754997.jpg)">
+            <div class='content'>
+              <h2 class='title'>Geothermal Conditioning</h2>
+              <p class='description'> Geothermal conditioning uses the Earth's heat for efficient heating and cooling, reducing reliance on traditional energy sources.
+              </p>
+              <a href="geoSUB.html">Read More</a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('pictures/EEV.jpg')">
+            <div class='content'>
+              <h2 class='title'>Electric Vehicles</h2>
+              <p class='description'>Electric vehicles (EVs) run on electricity, emitting no tailpipe emissions. They're charged using electric power, reducing reliance on fossil fuels for transportation.
+              </p>
+              <a href="evSUB.html">Read More</a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('pictures/pexels-hilary-halliwell-698485.jpg')">
+            <div class='content'>
+              <h2 class='title'>Battery Storage</h2>
+              <p class='description'> 
+                Battery storage stores excess electricity for later use, helping balance energy supply and demand efficiently.  </p>
+              <a href="batSUB.html">Read More</a>
+            </div>
+          </li>
+        </ul>
+        <nav class='nav'>
+          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+      
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </div>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>GE Pages</h4>
+            <ul>
+              <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+              <li><a href="Additional-Practices.html">Additional Practices</a></li>
+              <li><a href="Effects.html">Effects</a></li>
+              <li><a href="Community.html">Community</a></li>
+              <li><a href="Resources.html">Resources</a></li>
+              <li><a href="sign-up.html">Sign Up</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="ApplianceSUB.html">Appliances</a></li>
+              <li><a href="batSUB.html">Batteries</a></li>
+              <li><a href="evSUB.html">Ev</a></li>
+              <li><a href="geoSUB.html">Geothermal</a></li>
+              <li><a href="solarSUB.html">Solar</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="Community.html">News</a></li>
+              <li><a href="Energy-Solutions.html">FRQ</a></li>
+              <li><a href="sign-up.html">Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/">Fb</a>
+              <a href="https://www.instagram.com/">I</a>
+              <a href="https://www.youtube.com/">Yt</a>
+              <a href="https://twitter.com/?lang=en">Tw</a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </footer>
     
 
     <script>
@@ -162,7 +262,19 @@
           document.body.removeChild(document.querySelector(".preloader"));
         })
       })
+
+      const slider = document.querySelector('.slider');
+
+      function activate(e) {
+        const items = document.querySelectorAll('.item');
+        e.target.matches('.next') && slider.append(items[0])
+        e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+      }
+
+      document.addEventListener('click',activate,false);
     </script>
+
+
 
   </body>
 </html>

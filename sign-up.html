@@ -24,7 +24,7 @@
 			<i class='bx bx-x' id="close-icon" ></i>
 		</label>
 
-		<nav class="navbar">
+		<nav class="navbar" id="header">
 			<a href="Energy-Solutions.html">Energy Solutions</a>
 			<a href="Additional-Practices.html">Additional Practices</a>
 			<a href="Effects.html">Effects</a>
@@ -35,24 +35,27 @@
 	</header>
 
 
-  <div class="container">
+  <div class="container hidden">
     <div class="login-container">
       <div class="first-half">
-        <div class="glass">
+        <form class="glass" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="a28eb31d-a06a-4e69-b901-7b0eb0583601">
           <div class="piece">
             <h1>Sign Up Now</h1>
-            <p>Already have an account? <a href="login.html">Login Now</a></p>
+            <p>Sign up for our newsletter and stay up to date!</p>
           </div>
           <div class="input">
             <h2>Name</h2>
-            <input type="text" id="name" placeholder="Your Name (Optional)">
+            <input type="text" id="name" name="name" placeholder="Your Name (Optional)">
           </div>
           <div class="input">
             <h2>Email</h2>
-            <input type="email" id="email" placeholder="Please Enter Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Please Enter A VALID Email" required>
           </div>
-          <button>Submit</button>
-        </div>
+          <div class="btn-div">
+            <button>Submit</button>
+          </div>
+        </form>
       </div>
       <div class="second-half">
         <img src="pictures/Hands Holding Earth (HD).png">

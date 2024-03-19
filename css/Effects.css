@@ -1,6 +1,5 @@
 body{
   height: 4000px;
-  padding-top: 80px;
 }
 
 .part1{
@@ -70,6 +69,7 @@ h1{
   font-size: 25px;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   font-family: Bebas Neue;
   margin-top: 1%;
@@ -162,21 +162,28 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 60vh;
 }
 
 .align{
-  height: 95%;
-  width: 80%;
+  height: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
-
+  justify-content: space-around;
 }
 
 .d-holder{
-  height: 80%;
+  min-height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video{
   width: 80%;
-  background-color: var(--tertiary-color);
+  border-radius: 50px;
 }
 
 .text2{
@@ -204,6 +211,8 @@ p{
   background-position: center;
   background-size: cover;
   background-image: url("../pictures/Copy\ of\ Effects\ \(1\).png");
+
+  margin-bottom: 15%;;
 }
 
 .wrapper{
@@ -600,7 +609,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 60vh;
     margin-top: 20%;
   }
   

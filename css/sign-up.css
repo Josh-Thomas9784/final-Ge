@@ -119,6 +119,7 @@ button{
 
   transition: all 0.3s ease-in;
   background-color: var(--tertiary-color);
+  width: 100%;
 }
 
 button:hover{
@@ -141,4 +142,86 @@ input{
 
 .piece p a:hover{
   text-decoration: underline;
+}
+
+.btn-div{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/*javascript animations*/
+
+.hidden{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden2{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show2{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden3{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateY(-100%);
+}
+
+.show3{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media(max-width: 1068px){
+  .container .second-half img{
+    height: 0px;
+  }
+
+  input{
+    width: 225px;
+    font-size: 14px;
+  }
+
+  .login-container{
+    width: 90%;
+    height: 75%;
+  }
+
+  button{
+    padding: 10px 0px;
+    width: 350px;
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+  h1{
+    font-size: 55px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+
 }
