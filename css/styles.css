@@ -102,6 +102,43 @@ footer {
   visibility: hidden;
 }
 
+
+/*HIGHLIGHT TEXT*/
+
+@keyframes highlight {
+	to {
+		background-position: 0;
+	}
+}
+
+mark {
+	animation: highlight linear forwards;
+	animation-timeline: view(60% 20%);
+	background: linear-gradient(
+		to right,
+		var(--primary-color) 50%,
+		transparent 50%
+	);
+	background-position: 100%;
+	background-size: 200% 100%;
+	border-radius: 0.125rem;
+	padding-inline: 0.125rem;
+}
+
+.mark1 {
+	animation: highlight linear forwards;
+	animation-timeline: view(60% 20%);
+	background: linear-gradient(
+		to right,
+		var(--tertiary-color) 50%,
+		transparent 50%
+	);
+	background-position: 100%;
+	background-size: 200% 100%;
+	border-radius: 0.125rem;
+	padding-inline: 0.125rem;
+}
+
 /*SCROLL BAR*/
 ::-webkit-scrollbar{
   width: 1em;
