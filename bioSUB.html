@@ -1,296 +1,469 @@
-<html>
-  <head>
-    <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-    <title>GE Solutions</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script defer src="app.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="index.js"></script>
+  <title>Document</title>
+</head>
+  <header class="header" id="header">
+		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
+		<input type="checkbox" id="check">
+		<label for="check" class="icons">
+			<i class='bx bx-menu' id="menu-icon"></i>
+			<i class='bx bx-x' id="close-icon" ></i>
+		</label>
+
+		<nav class="navbar">
+			<a href="Energy-Solutions.html">Energy Solutions</a>
+			<a href="Additional-Practices.html">Additional Practices</a>
+			<a href="Effects.html">Effects</a>
+			<a href="Community.html">Community</a>
+			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
+		</nav>
+	</header>
+  <style>
+    .conti {
+      
+      width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+      padding-bottom: 300px;
+    }
+    @media only screen and (min-width: 769px) {
+    .conti {
+      
+      display: flex;
+      flex-wrap: nowrap; /* Ensure the cards don't wrap to the next line */
+      /* Add horizontal scroll if necessary */
+      justify-content: flex-start; /* Align cards from the start */
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+    }
+}
+
+
+    .card {
+      width: 100%; /* Adjusted width to make the cards regular-sized */
+      margin: 10px;
+      height: 300px; /* Adjust height as needed */
+      perspective: 500px;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background: #0c9c9c;
+      color:  #f5f5dc;
+      transform: rotateY(180deg);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px); /* 50% width for each card with margin */
+        height: 250px; /* Adjust height as needed */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 20px); /* Full width for each card with margin */
+        height: 200px; /* Adjust height as needed */
+      }
+    }
+
+    body {
+      font-family: Truculenta;
+      background-color: #f5f5dc; /* Updated background color */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h3, h4 {
+      margin-top: 0;
+    }
+
+    #hero-image {
+      height: 100vh;
+      background-image: url(pictures/Untitled\ design\ \(66\).png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #hero-image h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    #hero-image h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      color: #fff;
+      background-color: #000000;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 0 5px;
+    }
+
+    .button:hover {
+      background-color: #1e92b8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 300px; /* Increased margin between sections */
+    }
+
+    .columns {
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    .columns img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .columns h4 {
+      color: #3d43ff;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .columns p {
+      color: #666;
+      font-size: 1em;
+    }
+
+    .section-text {
+      order: 1;
+    }
+
+    .section-image {
+      order: 2;
+    }
+
+    .section-alternate .section-text {
+      order: 2;
+    }
+
+    .section-alternate .section-image {
+      order: 1;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
-  <main>
-    <div class="card">
-      <div class="card__title">
-        <div class="icon">
-          <a href="Energy-Solutions.html"><i class="">← Back</i></a>
-        </div>
-        <h3>Green Energy</h3>
-      </div>
-      <div class="card__body">
-        <div class="half">
-          <div class="featured_text">
-            <h1>Biomass</h1>
+  <div id="hero-image">
+    <h1>Biomass Stoves</h1>
+    <h5>"Invest in eco-friendly heating solutions, while enjoying efficient and cost-effective warmth."</h5>
+    <div>
+      <a class="button" href="#overview">Overview</a>
+      <a class="button" href="#diy">D.I.Y</a>
+      <a class="button" href="#fun-facts">Fun Facts</a>
+      <a class="button" href="#kids-activities">Kids Activities</a>
+      <a class="button" href="#recommendations">Recommendations</a>
+    </div>
+  </div>
 
-            <p class="sub">Stoves</p>
-            <p class="price">$1,000 to $5,000</p>
-          </div>
-          <div class="image">
-            <img src="pictures/Untitled design (40).png" alt="image">
-          </div>
-        </div>
-        <div class="half">
-          <div class="description">
-            <p>
-Biomass stoves represent a sustainable heating solution that utilizes organic materials, or biomass, as a renewable fuel source. With applications in residential, commercial, and industrial settings, these stoves play a crucial role in providing warmth while contributing to environmental sustainability.
+  <div class="container">
+    <section id="overview" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Overview - $1,000 to $5,000</h3>
+        <p>Biomass stoves are sustainable heating solutions that use organic materials as fuel. They are versatile, using wood pellets, agricultural residues, or other organic matter. Despite emitting CO2 when burned, they are considered carbon-neutral as the plants absorbed the same amount of CO2 during growth. Modern designs enhance efficiency and minimize emissions, with features like automatic ignition and variable heat output. In developing countries, they provide a sustainable alternative for cooking and heating, improving indoor air quality.
+          
 
-2. Fuel Sources:
-Biomass stoves are versatile in their fuel sources, with common options including wood pellets, agricultural residues, and other organic matter. This flexibility allows users to choose materials based on availability and environmental considerations, promoting a diverse and sustainable approach to fueling.
-
-3. Environmental Benefits:
-The use of biomass stoves offers significant environmental benefits. While burning biomass releases carbon dioxide, the overall impact is considered carbon-neutral. This is because the plants used as biomass absorb an equivalent amount of CO2 during growth, creating a closed carbon cycle. Compared to traditional fossil fuel-based heating systems, biomass stoves contribute to reducing overall carbon emissions and dependence on non-renewable resources.
-
-4. Efficiency and Modern Designs:
-Modern biomass stoves incorporate advanced technologies to enhance efficiency and minimize emissions. Automatic ignition, variable heat output, and programmable controls contribute to user convenience. The design of biomass stoves focuses on optimizing combustion, ensuring a cleaner burn and maximizing the energy extracted from the biomass fuel.
-
-5. Application in Developing Countries:
-Biomass stoves play a crucial role in developing countries where access to traditional energy sources may be limited. They offer a sustainable and locally available alternative for cooking and heating, improving indoor air quality and reducing reliance on non-renewable fuels. Initiatives promoting the use of efficient biomass stoves in these regions contribute to both environmental sustainability and public health.
-
-6. Cost Considerations:
-The cost of biomass stoves varies depending on factors such as design, features, and heating capacity. Initial investments can range from a few hundred to a few thousand dollars. While biomass stoves may have upfront expenses, the use of locally available and renewable biomass fuel can potentially result in long-term cost savings, especially in regions with abundant biomass resources.
-
-7. Tax Rebates and Incentives:
+ Tax Rebates and Incentives:
 Governments in some regions may offer tax credits or financial incentives to encourage the adoption of biomass heating systems. These incentives can help offset initial purchase and installation costs, making biomass stoves economically attractive. Individuals considering biomass stoves should stay informed about available tax rebates or incentives, as these programs can vary and may change over time. As of current, a 30% tax credit on both the purchase and installation costs, capped annually at $2,000.
 
 In summary, biomass stoves represent a sustainable and eco-friendly option for heating, with a range of environmental, social, and economic benefits. As technology continues to advance and policies evolve, biomass stoves are poised to play a pivotal role in transitioning towards cleaner and more sustainable heating solutions worldwide.
-			</p>
+        </p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (67).png" alt="Overview Image">
+      </div>
+    </section>
+
+    <section id="diy" class="row">
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (21).gif" alt="DIY Image">
+      </div>
+      <div class="columns section-text">
+        <h3>D.I.Y</h3>
+        <p>
+
+          Materials Needed:
+          <br>
+          1. Large metal can or bucket (with a lid)
+          <br>
+          2. Metal grate or wire mesh
+          <br>
+          3. Tin snips or metal cutter
+          <br>
+          4. Insulating material (such as vermiculite or firebricks)
+          <br>
+          5. Drill with metal drill bits
+          <br>
+          6. Chimney pipe or stovepipe (optional)
+          <br>
+          <br>
+          
+          Steps to Build:
+          <br>
+          
+          1. Prepare the Can: Ensure the can or bucket is clean and free of any residues. Remove any labels or coatings that could emit toxic fumes when heated.
+          <br>
+          2. Create Air Vents: Use the drill to create several holes near the bottom of the can for air intake. These holes allow oxygen to enter and fuel the combustion process.
+          <br>
+          3. Cut Openings for Fuel and Exhaust: Using tin snips or a metal cutter, cut an opening on the top of the can to serve as the fuel loading port. Additionally, cut a smaller hole near the top for exhaust gases to escape.
+          <br>
+          4. Insert Grate or Mesh: Place a metal grate or wire mesh inside the can, a few inches above the bottom. This creates a platform for the biomass fuel to sit on while allowing air to circulate underneath.
+          <br>
+          5. Add Insulation (Optional): Line the interior of the can with insulating material like vermiculite or firebricks. This helps retain heat and improves combustion efficiency.
+          <br>
+          6. Test and Adjust: Before lighting a fire, double-check all openings and ensure proper ventilation. Test the stove with a small amount of biomass fuel to ensure it burns efficiently. Adjust air intake and fuel placement as needed for optimal performance.
+          <br>
+          7. Install Chimney Pipe (Optional): If using indoors, consider installing a chimney pipe or stovepipe to safely vent exhaust gases outside. Ensure proper ventilation to prevent carbon monoxide buildup.
+          <br>
+          <br>
+          Safety Considerations:
+          <br>
+          - Always operate the biomass stove in a well-ventilated area, especially if indoors, to prevent carbon monoxide poisoning.
+          <br>
+          - Use appropriate safety gear when cutting metal and handling hot surfaces.
+          <br>
+          - Keep flammable materials away from the stove during operation.
+          <br>
+          - Monitor the stove closely while in use and extinguish any fires properly when finished.
+          <br>
+          While DIY biomass stoves can be effective, it's essential to prioritize safety and efficiency. Consider researching specific designs or consulting with experts for more complex projects.</p>
+      </div>
+    </section>
+
+    <section id="kids-activities" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Kids Activities</h3>
+        <p>Biomass Fuel Identification: Take children on a nature walk and teach them to identify different types of biomass fuels, such as fallen branches, leaves, and pine cones. Collect samples and discuss which ones would be suitable for burning in a biomass stove.
+          <br>
+          <br>
+          DIY Miniature Biomass Stove: Help children build a miniature biomass stove using safe materials like cardboard, aluminum foil, and non-toxic glue. Encourage them to get creative with the design while emphasizing the importance of proper ventilation and safety precautions.
+          <br>
+          <br>
+          Science Experiments: Conduct simple science experiments to demonstrate the principles behind biomass combustion. For example, demonstrate how oxygen fuels a fire by conducting a controlled burn experiment with various biomass materials.
+          <br>
+          <br>
+          Outdoor Cooking: Set up an outdoor cooking station where children can safely cook simple recipes using a biomass stove. Teach them about fire safety and proper stove operation while enjoying tasty treats like s'mores or roasted marshmallows.
+          <br>
+          <br>
+          Art and Crafts: Encourage children to express their creativity by making artwork or crafts inspired by biomass stoves and renewable energy. They could create drawings, paintings, or sculptures depicting biomass fuels, stoves, or scenes of sustainable living.
+        </p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/star (6).gif" alt="Fun Fact Image">
+      </div>
+    </section>
+
+
+    </div>
+    <div class="columns section-text" id="fun-facts">
+      <h3>Fun Facts</h3>
+      <p>Hover over the Stoves to see what's inside!</p>
+    </div>
+    <div class="conti">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (40).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="reviews">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o"></i></li>
-            </ul>
+          <div class="back">
+            ㅤㅤ• Biomass stoves can run on a variety of unconventional fuels, including coffee grounds, nutshells, and even discarded olive pits, making them versatile and eco-friendly.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (40).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="back">
+            ㅤㅤ• Some modern biomass stoves are so efficient that they produce minimal smoke and ash, making them cleaner and more convenient than traditional wood-burning stoves.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (40).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="back">
+            ㅤㅤ• In addition to heating homes, biomass stoves can also be used for cooking, drying crops, and even generating electricity, showcasing their diverse range of applications in sustainable living.
           </div>
         </div>
       </div>
     </div>
-  </main>
+
+    <section id="recommendations" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Recommendations</h3>
+        <p>Harman Stoves: Harman Stoves offers a range of biomass heating solutions, including pellet stoves and boilers. They are known for their innovative designs, advanced technology, and high efficiency.
+          <br>
+          <br>
+          Lopi Stoves: Lopi Stoves manufactures wood and pellet stoves that are renowned for their craftsmanship, durability, and heating performance. They offer a variety of models to suit different heating needs and preferences.
+          <br>
+          <br>
+          Quadra-Fire: Quadra-Fire produces biomass stoves, inserts, and fireplaces that combine style, efficiency, and environmental sustainability. Their products feature advanced combustion technology and customizable heat settings.
+          <br>
+          <br>
+          Enviro: Enviro offers a diverse lineup of biomass heating appliances, including wood and pellet stoves, fireplace inserts, and furnaces. They are known for their reliable performance, energy efficiency, and environmentally friendly design.
+          <br>
+          <br>
+          Breckwell: Breckwell specializes in pellet stoves and inserts that deliver consistent heat and easy operation. Their products are designed for both residential and commercial applications, offering reliability and convenience.
+          <br>
+          <br>
+          England's Stove Works: England's Stove Works manufactures a wide range of biomass heating products, including wood, pellet, and multi-fuel stoves. They are known for their affordable yet high-quality stoves suitable for various heating needs.
+          <br>
+          <br>
+          Piazzetta: Piazzetta offers a selection of biomass stoves and fireplaces with elegant Italian design and advanced heating technology. Their products combine aesthetics with efficiency, providing both warmth and style to any space.
+          <br>
+          <br>
+          Napoleon: Napoleon produces biomass stoves and inserts that prioritize performance, innovation, and reliability. Their products feature customizable heat settings, advanced combustion systems, and user-friendly controls.
+          <br>
+          <br>
+          Ravelli: Ravelli specializes in pellet stoves and boilers that are efficient, eco-friendly, and easy to use. They offer a range of models with sleek designs and advanced features for convenient heating solutions.
+          <br>
+          <br>
+          HearthStone: HearthStone manufactures wood and gas stoves known for their classic craftsmanship, durable construction, and efficient heating capabilities. Their products are designed to provide reliable warmth and timeless style.</p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (22).gif" alt="Recommendations Image">
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>GE Pages</h4>
+          <ul>
+            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+            <li><a href="Additional-Practices.html">Additional Practices</a></li>
+            <li><a href="Effects.html">Effects</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="ApplianceSUB.html">Appliances</a></li>
+            <li><a href="batSUB.html">Batteries</a></li>
+            <li><a href="evSUB.html">Ev</a></li>
+            <li><a href="geoSUB.html">Geothermal</a></li>
+            <li><a href="solarSUB.html">Solar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="Community.html">News</a></li>
+            <li><a href="Energy-Solutions.html">FRQ</a></li>
+            <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/">Fb</a>
+            <a href="https://www.instagram.com/">I</a>
+            <a href="https://www.youtube.com/">Yt</a>
+            <a href="https://twitter.com/?lang=en">Tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const scrollTo = target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>
-<style>
-	@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
 
-body {
-  background-image: linear-gradient(
-    to right bottom,
-    #41da1e,
-    #63ba67,
-    #2c9641,
-    #17851c,
-    #0c8754
-  );
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-main {
-  max-width: 720px;
-  margin: 5% auto;
-}
-
-.card {
-  box-shadow: 0 6px 6px rgba(#000, 0.3);
-  transition: 200ms;
-  background: #fff;
-
-  .card__title {
-    display: flex;
-    align-items: center;
-    padding: 30px 40px;
-
-    h3 {
-      flex: 0 1 200px;
-      text-align: right;
-      margin: 0;
-      color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    .icon {
-      flex: 1 0 10px;
-      background: #50d811;
-      color: #fff;
-      padding: 10px 10px;
-      transition: 200ms;
-
-      > a {
-        color: #fff;
-      }
-
-      &:hover {
-        background: #252525;
-      }
-    }
-  }
-
-  .card__body {
-    padding: 0 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    margin-bottom: 25px;
-
-    > .half {
-      box-sizing: border-box;
-      padding: 0 15px;
-      flex: 1 0 50%;
-    }
-
-    .featured_text {
-      h1 {
-        margin: 0;
-        padding: 0;
-        font-weight: 800;
-        font-family: "Montserrat", sans-serif;
-        font-size: 64px;
-        line-height: 50px;
-        color: #181e28;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-
-        &.sub {
-          font-family: "Montserrat", sans-serif;
-          font-size: 26px;
-          text-transform: uppercase;
-          color: #686e77;
-          font-weight: 300;
-          margin-bottom: 5px;
-        }
-
-        &.price {
-          font-family: "Fjalla One", sans-serif;
-          color: #252525;
-          font-size: 26px;
-        }
-      }
-    }
-
-    .image {
-      padding-top: 15px;
-      width: 100%;
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .description {
-      margin-bottom: 25px;
-
-      p {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        line-height: 27px;
-        font-size: 16px;
-        color: #555;
-      }
-    }
-
-    span.stock {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      color: #a1cc16;
-    }
-
-    .reviews {
-      .stars {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-
-        > li {
-          display: inline-block;
-
-          .fa {
-            color: #f7c01b;
-          }
-        }
-      }
-
-      > span {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        margin-left: 5px;
-        color: #555;
-      }
-    }
-  }
-
-  .card__footer {
-    padding: 30px 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    align-items: center;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 40px;
-      width: calc(100% - 40px);
-      height: 3px;
-      background: #115dd8;
-      background: linear-gradient(
-        to right,
-        #115dd8 0%,
-        #115dd8 20%,
-        #ddd 20%,
-        #ddd 100%
-      );
-    }
-
-    .recommend {
-      flex: 1 0 10px;
-
-      p {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-      }
-
-      h3 {
-        margin: 0;
-        font-size: 20px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #115dd8;
-      }
-    }
-
-    .action {
-      button {
-        cursor: pointer;
-        border: 1px solid #115dd8;
-        padding: 14px 30px;
-        border-radius: 200px;
-        color: #fff;
-        background: #115dd8;
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        transition: 200ms;
-
-        &:hover {
-          background: #fff;
-          color: #115dd8;
-        }
-      }
-    }
-  }
-}
-</style>

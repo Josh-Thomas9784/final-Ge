@@ -1,306 +1,417 @@
-<html>
-  <head>
-    <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-    <title>GE Solutions</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script defer src="app.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="index.js"></script>
+  <title>Document</title>
+</head>
+  <header class="header" id="header">
+		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
+		<input type="checkbox" id="check">
+		<label for="check" class="icons">
+			<i class='bx bx-menu' id="menu-icon"></i>
+			<i class='bx bx-x' id="close-icon" ></i>
+		</label>
+
+		<nav class="navbar">
+			<a href="Energy-Solutions.html">Energy Solutions</a>
+			<a href="Additional-Practices.html">Additional Practices</a>
+			<a href="Effects.html">Effects</a>
+			<a href="Community.html">Community</a>
+			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
+		</nav>
+	</header>
+  <style>
+    .conti {
+      
+      width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+      padding-bottom: 300px;
+    }
+    @media only screen and (min-width: 769px) {
+    .conti {
+      
+      display: flex;
+      flex-wrap: nowrap; /* Ensure the cards don't wrap to the next line */
+      /* Add horizontal scroll if necessary */
+      justify-content: flex-start; /* Align cards from the start */
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+    }
+}
+
+
+    .card {
+      width: 100%; /* Adjusted width to make the cards regular-sized */
+      margin: 10px;
+      height: 300px; /* Adjust height as needed */
+      perspective: 500px;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background: #0c9c9c;
+      color:  #f5f5dc;
+      transform: rotateY(180deg);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px); /* 50% width for each card with margin */
+        height: 250px; /* Adjust height as needed */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 20px); /* Full width for each card with margin */
+        height: 200px; /* Adjust height as needed */
+      }
+    }
+
+    body {
+      font-family: Truculenta;
+      background-color: #f5f5dc; /* Updated background color */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h3, h4 {
+      margin-top: 0;
+    }
+
+    #hero-image {
+      height: 100vh;
+      background-image: url(pictures/Untitled\ design\ \(23\).gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #hero-image h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    #hero-image h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      color: #fff;
+      background-color: #000000;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 0 5px;
+    }
+
+    .button:hover {
+      background-color: #1e92b8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 300px; /* Increased margin between sections */
+    }
+
+    .columns {
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    .columns img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .columns h4 {
+      color: #3d43ff;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .columns p {
+      color: #666;
+      font-size: 1em;
+    }
+
+    .section-text {
+      order: 1;
+    }
+
+    .section-image {
+      order: 2;
+    }
+
+    .section-alternate .section-text {
+      order: 2;
+    }
+
+    .section-alternate .section-image {
+      order: 1;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
-  <main>
-    <div class="card">
-      <div class="card__title">
-        <div class="icon">
-          <a href="Energy-Solutions.html"><i class="">← Back</i></a>
-        </div>
-        <h3>Green Energy</h3>
+  <div id="hero-image">
+    <h1>Battery Storage</h1>
+    <h5>"Invest in battery storage solutions for reliable energy backup, increased sustainability, and optimized usage of renewable resources.
+
+
+
+
+
+      "</h5>
+    <div>
+      <a class="button" href="#overview">Overview</a>
+      <a class="button" href="#diy">D.I.Y</a>
+      <a class="button" href="#fun-facts">Fun Facts</a>
+      <a class="button" href="#kids-activities">Kids Activities</a>
+      <a class="button" href="#recommendations">Recommendations</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="overview" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Overview - Cost Varies</h3>
+        <p>Battery storage systems are crucial for efficiently managing and storing electrical energy in today's energy landscape. They integrate with renewable sources like solar and wind, storing excess energy for times of high demand or low production. These systems enhance grid stability and reliability by providing services such as frequency regulation and backup power during outages. Although historically costly, advancements are driving down prices, making battery storage increasingly economically viable. They find applications in residential, commercial, and industrial settings, contributing to grid stability and supporting the integration of renewables. While batteries offer environmental benefits, their production and disposal pose challenges, necessitating sustainable practices. Government incentives and policies further support the deployment of battery storage systems, with there currently being a 30% tex credit avaliable. Overall, battery storage is pivotal for a sustainable and resilient energy future, with advancements expected to accelerate its widespread adoption.
+        </p></p>
       </div>
-      <div class="card__body">
-        <div class="half">
-          <div class="featured_text">
-            <h1>Battery</h1>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (68).png" alt="Overview Image">
+      </div>
+    </section>
 
-            <p class="sub"> Storage</p>
-            <p class="price"> $245/kWh, $326/kWh</p>
+    <section id="diy" class="row">
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (24).gif" alt="DIY Image">
+      </div>
+      <div class="columns section-text">
+        <h3>D.I.Y</h3>
+        <p>Gather Materials: Start by gathering the necessary materials, including rechargeable batteries, battery holders or cases, wires, a charge controller, and optional components like a solar panel or wind turbine for charging the batteries.
+
+          Select Batteries: Choose the appropriate type and size of batteries for your project. Common options include lead-acid, lithium-ion, or nickel-metal hydride batteries. Consider factors such as capacity, voltage, and compatibility with the intended application.
+          
+          Build Battery Packs: Assemble the batteries into packs or banks using battery holders or cases. Follow safety guidelines and ensure proper insulation and protection to prevent short circuits or overheating.
+          
+          Connect Charge Controller: Install a charge controller to regulate the charging process and prevent overcharging or damage to the batteries. Connect the charge controller to the solar panel or wind turbine, as well as to the battery packs.
+          
+          Wire Components: Use insulated wires to connect the battery packs, charge controller, and any additional components like inverters or load controllers. Follow wiring diagrams and instructions provided with the equipment to ensure correct connections and polarity.
+          
+          Test and Monitor: Test the system to ensure proper operation and monitor performance regularly. Use a multimeter or voltage tester to check battery voltage levels, charging currents, and system efficiency. Make adjustments as needed to optimize performance and reliability.
+          
+          Safety Precautions: Prioritize safety throughout the DIY process, especially when working with electrical components and batteries. Wear appropriate protective gear, avoid overloading circuits, and follow best practices for handling and storing batteries.
+          
+          Expand and Improve: Once you have successfully built a basic battery storage system, consider expanding or improving it over time. You can add more batteries, upgrade to higher-capacity batteries, or integrate additional renewable energy sources to increase the system's capabilities and versatility.</p>
+      </div>
+    </section>
+
+    <section id="kids-activities" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Kids Activities</h3>
+        <p>DIY Battery Science Experiment: Teach children about the basics of battery storage with a simple science experiment. Gather materials like zinc-coated screws, copper wire, and vinegar. Guide children through the process of creating homemade batteries using these materials and observing how they produce electricity. Discuss the importance of battery storage for renewable energy systems and how it helps capture and store energy for later use.
+          <br>
+          <br>
+          Renewable Energy Treasure Hunt: Turn learning about renewable energy and battery storage into an exciting treasure hunt around the house or backyard. Hide pictures or small models of solar panels, wind turbines, and batteries in various locations, and create clues or riddles for children to solve to find each item. Along the way, share fun facts about renewable energy and battery storage systems to keep children engaged and informed.
+          <br>
+          <br>
+          Design Your Own Battery Storage System: Encourage children to use their creativity and imagination to design their own battery storage system for renewable energy. Provide art supplies like paper, markers, cardboard, and recyclable materials, and let children design and build miniature models of battery storage units. Prompt them to think about factors like size, shape, capacity, and features such as safety mechanisms and smart monitoring technology.
+          <br>
+          <br>
+          Energy Efficiency Game: Play a game with children to teach them about the importance of energy efficiency and how battery storage can help optimize energy usage. Create a pretend home setup with appliances like lights, fans, and electronics, and give children scenarios where they have to choose how to use energy wisely. For example, they can decide when to charge the battery using solar power, when to use stored energy from the battery, and when to conserve energy to maximize efficiency.
+          <br>
+          <br>
+          Renewable Energy Storytime: Read books or stories with children that feature renewable energy and battery storage systems. Look for children's books or educational resources that explain concepts like solar power, wind energy, and energy storage in a fun and engaging way. After reading, discuss the story and its themes with children, and encourage them to share their thoughts and ideas about renewable energy and sustainability.
+        </p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/star (7).gif" alt="Fun Fact Image">
+      </div>
+    </section>
+
+
+    </div>
+    <div class="columns section-text" id="fun-facts">
+      <h3>Fun Facts</h3>
+      <p>Hover over the Batteries to learn their power!</p>
+    </div>
+    <div class="conti">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/tery.png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="image">
-            <img src="pictures/tery.png" alt="image">
+          <div class="back">
+            ㅤㅤ• Modern battery storage systems, like the Tesla Powerwall, are compact and stylish, resembling sleek home appliances rather than bulky industrial equipment. They can be easily installed in homes and seamlessly integrated with existing solar panel setups.
+
+
           </div>
         </div>
-        <div class="half">
-          <div class="description">
-            <p>
-				Battery storage systems are integral components of the modern energy landscape, playing a crucial role in efficiently managing and storing electrical energy. These systems use advanced battery technologies to store electricity during periods of low demand or high renewable energy production, and release it when demand is high or renewable sources are not generating power. Here is an in-depth look at key aspects of battery storage:
-
-				1. Technology and Types of Batteries:
-				
-				Battery storage employs a variety of technologies, each with its unique characteristics. Common types include lithium-ion batteries, lead-acid batteries, and flow batteries. Lithium-ion batteries, popularized by their use in electric vehicles and portable electronics, dominate the market due to their high energy density and efficiency.
-				
-				2. Integration with Renewable Energy:
-				
-				Battery storage is a critical component for the integration of renewable energy sources like solar and wind into the power grid. These systems store excess energy generated during peak production periods and release it during times of low production or high demand. This enables a more consistent and reliable energy supply, addressing the intermittent nature of renewable sources.
-				
-				3. Grid Stability and Reliability:
-				
-				Battery storage enhances grid stability and reliability by providing services such as frequency regulation, voltage support, and backup power during outages. The ability of batteries to respond rapidly to fluctuations in demand or supply contributes to a more resilient and adaptable power grid.
-				
-				4. Cost Considerations:
-				
-				While the cost of battery storage has historically been a limiting factor, ongoing technological advancements and economies of scale are driving down prices. Lithium-ion battery costs, in particular, have seen significant reductions. The total cost of a battery storage system includes installation, maintenance, and replacement costs over its lifespan. As these costs continue to decrease, the economic viability of battery storage becomes increasingly attractive.
-				
-				5. Applications:
-				
-				Battery storage finds applications in various sectors, including residential, commercial, and industrial settings. Residential battery systems provide backup power and enable homeowners to store excess solar energy. On a larger scale, utility-scale battery storage projects contribute to grid stability, support peak demand, and facilitate the integration of renewable energy sources.
-				
-				6. Environmental Impact:
-				
-				While batteries offer environmental benefits by facilitating the transition to renewable energy, their production and disposal present environmental challenges. Sustainable battery manufacturing processes and responsible recycling practices are essential to minimize the environmental impact. Research and innovation continue to address these challenges, aiming for more eco-friendly battery technologies.
-				
-				7. Government Incentives and Policies:
-				
-				Governments worldwide recognize the importance of battery storage in achieving energy goals and reducing carbon emissions. Various incentives, subsidies, and policies support the deployment of battery storage systems. These may include tax credits, grants, and regulations promoting the integration of energy storage into the broader energy infrastructure. With there currently being a 30% tax credit avaliable.
-				
-				In conclusion, battery storage is a key enabler of a more sustainable and resilient energy future. As technology advances and economies of scale drive down costs, the widespread adoption of battery storage systems is expected to accelerate, playing a pivotal role in the global transition towards cleaner and more efficient energy systems.
-			</p>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/tery.png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="reviews">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o"></i></li>
-            </ul>
+          <div class="back">
+            ㅤㅤ• Battery storage systems allow solar and wind energy to be stored for use when the sun isn't shining or the wind isn't blowing, ensuring a steady and reliable power supply even during cloudy or calm weather.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/tery.png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="back">
+            ㅤㅤ• Battery storage systems not only provide a sustainable source of energy but also offer backup power during emergencies. With a fully charged battery, homeowners can keep essential appliances running even during grid outages, turning their homes into resilient energy islands.
           </div>
         </div>
       </div>
     </div>
-  </main>
+
+    <section id="recommendations" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Recommendations</h3>
+        <p>Tesla Powerwall: The Tesla Powerwall is a popular choice for residential battery storage. It offers a sleek design, reliable performance, and seamless integration with solar panels and home energy management systems. The Powerwall can provide backup power during outages and help maximize self-consumption of solar energy.
+          <br>
+          <br>
+          LG Chem RESU: LG Chem offers a range of lithium-ion battery storage solutions for both residential and commercial applications. The RESU series features high energy density, long cycle life, and compatibility with various inverters and solar systems. It's a flexible option for homeowners looking to optimize their energy usage and reduce grid reliance.
+          <br>
+          <br>
+          Sonnen Battery: Sonnen specializes in smart energy storage solutions that prioritize self-consumption and grid independence. The Sonnen eco series offers modular battery storage systems with advanced monitoring and management capabilities. It's suitable for residential and commercial installations seeking reliable backup power and energy optimization.</p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (25).gif" alt="Recommendations Image">
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>GE Pages</h4>
+          <ul>
+            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+            <li><a href="Additional-Practices.html">Additional Practices</a></li>
+            <li><a href="Effects.html">Effects</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="ApplianceSUB.html">Appliances</a></li>
+            <li><a href="batSUB.html">Batteries</a></li>
+            <li><a href="evSUB.html">Ev</a></li>
+            <li><a href="geoSUB.html">Geothermal</a></li>
+            <li><a href="solarSUB.html">Solar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="Community.html">News</a></li>
+            <li><a href="Energy-Solutions.html">FRQ</a></li>
+            <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/">Fb</a>
+            <a href="https://www.instagram.com/">I</a>
+            <a href="https://www.youtube.com/">Yt</a>
+            <a href="https://twitter.com/?lang=en">Tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const scrollTo = target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>
-<style>
-	@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
-
-body {
-  background-image: linear-gradient(
-    to right bottom,
-    #41da1e,
-    #63ba67,
-    #2c9641,
-    #17851c,
-    #0c8754
-  );
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-main {
-  max-width: 720px;
-  margin: 5% auto;
-}
-
-.card {
-  box-shadow: 0 6px 6px rgba(#000, 0.3);
-  transition: 200ms;
-  background: #fff;
-
-  .card__title {
-    display: flex;
-    align-items: center;
-    padding: 30px 40px;
-
-    h3 {
-      flex: 0 1 200px;
-      text-align: right;
-      margin: 0;
-      color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    .icon {
-      flex: 1 0 10px;
-      background: #50d811;
-      color: #fff;
-      padding: 10px 10px;
-      transition: 200ms;
-
-      > a {
-        color: #fff;
-      }
-
-      &:hover {
-        background: #252525;
-      }
-    }
-  }
-
-  .card__body {
-    padding: 0 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    margin-bottom: 25px;
-
-    > .half {
-      box-sizing: border-box;
-      padding: 0 15px;
-      flex: 1 0 50%;
-    }
-
-    .featured_text {
-      h1 {
-        margin: 0;
-        padding: 0;
-        font-weight: 800;
-        font-family: "Montserrat", sans-serif;
-        font-size: 64px;
-        line-height: 50px;
-        color: #181e28;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-
-        &.sub {
-          font-family: "Montserrat", sans-serif;
-          font-size: 26px;
-          text-transform: uppercase;
-          color: #686e77;
-          font-weight: 300;
-          margin-bottom: 5px;
-        }
-
-        &.price {
-          font-family: "Fjalla One", sans-serif;
-          color: #252525;
-          font-size: 26px;
-        }
-      }
-    }
-
-    .image {
-      padding-top: 15px;
-      width: 100%;
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .description {
-      margin-bottom: 25px;
-
-      p {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        line-height: 27px;
-        font-size: 16px;
-        color: #555;
-      }
-    }
-
-    span.stock {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      color: #a1cc16;
-    }
-
-    .reviews {
-      .stars {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-
-        > li {
-          display: inline-block;
-
-          .fa {
-            color: #f7c01b;
-          }
-        }
-      }
-
-      > span {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        margin-left: 5px;
-        color: #555;
-      }
-    }
-  }
-
-  .card__footer {
-    padding: 30px 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    align-items: center;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 40px;
-      width: calc(100% - 40px);
-      height: 3px;
-      background: #115dd8;
-      background: linear-gradient(
-        to right,
-        #115dd8 0%,
-        #115dd8 20%,
-        #ddd 20%,
-        #ddd 100%
-      );
-    }
-
-    .recommend {
-      flex: 1 0 10px;
-
-      p {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-      }
-
-      h3 {
-        margin: 0;
-        font-size: 20px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #115dd8;
-      }
-    }
-
-    .action {
-      button {
-        cursor: pointer;
-        border: 1px solid #115dd8;
-        padding: 14px 30px;
-        border-radius: 200px;
-        color: #fff;
-        background: #115dd8;
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        transition: 200ms;
-
-        &:hover {
-          background: #fff;
-          color: #115dd8;
-        }
-      }
-    }
-  }
-}
-</style>

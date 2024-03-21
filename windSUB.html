@@ -1,283 +1,478 @@
-<html>
-  <head>
-    <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-    <title>GE Solutions</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/footer.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="app.js"></script>
+  <title>Document</title>
+</head>
+  <header class="header" id="header">
+		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
+		<input type="checkbox" id="check">
+		<label for="check" class="icons">
+			<i class='bx bx-menu' id="menu-icon"></i>
+			<i class='bx bx-x' id="close-icon" ></i>
+		</label>
+
+		<nav class="navbar">
+			<a href="Energy-Solutions.html">Energy Solutions</a>
+			<a href="Additional-Practices.html">Additional Practices</a>
+			<a href="Effects.html">Effects</a>
+			<a href="Community.html">Community</a>
+			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
+		</nav>
+	</header>
+  <style>
+    .conti {
+      
+      width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+      padding-bottom: 300px;
+    }
+    @media only screen and (min-width: 769px) {
+    .conti {
+      
+      display: flex;
+      flex-wrap: nowrap; /* Ensure the cards don't wrap to the next line */
+      /* Add horizontal scroll if necessary */
+      justify-content: flex-start; /* Align cards from the start */
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+    }
+}
+
+
+    .card {
+      width: 100%; /* Adjusted width to make the cards regular-sized */
+      margin: 10px;
+      height: 300px; /* Adjust height as needed */
+      perspective: 500px;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background: #0c719c;
+      color:  #f5f5dc;
+      transform: rotateY(180deg);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px); /* 50% width for each card with margin */
+        height: 250px; /* Adjust height as needed */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 20px); /* Full width for each card with margin */
+        height: 200px; /* Adjust height as needed */
+      }
+    }
+
+    body {
+      font-family: Truculenta;
+      background-color: #f5f5dc; /* Updated background color */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h3, h4 {
+      margin-top: 0;
+    }
+
+    #hero-image {
+      height: 100vh;
+      background-image: url(pictures/Untitled\ design\ \(5\).gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #hero-image h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    #hero-image h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      color: #fff;
+      background-color: #000000;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 0 5px;
+    }
+
+    .button:hover {
+      background-color: #1eb845;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 300px; /* Increased margin between sections */
+    }
+
+    .columns {
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    .columns img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .columns h4 {
+      color: #3d9aff;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .columns p {
+      color: #666;
+      font-size: 1em;
+    }
+
+    .section-text {
+      order: 1;
+    }
+
+    .section-image {
+      order: 2;
+    }
+
+    .section-alternate .section-text {
+      order: 2;
+    }
+
+    .section-alternate .section-image {
+      order: 1;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
-  <main>
-    <div class="card">
-      <div class="card__title">
-        <div class="icon">
-          <a href="Energy-Solutions.html"><i class="">← Back</i></a>
-        </div>
-        <h3>Green Energy</h3>
+  <div id="hero-image">
+    <h1>Wind Turbines</h1>
+    <h5>"Harness the Power of Wind, and save money while doing it."</h5>
+    <div>
+      <a class="button" href="#overview">Overview</a>
+      <a class="button" href="#diy">D.I.Y</a>
+      <a class="button" href="#fun-facts">Fun Facts</a>
+      <a class="button" href="#kids-activities">Kids Activities</a>
+      <a class="button" href="#recommendations">Recommendations</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="overview" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Overview - usually +$10,000</h3>
+        <p>Wind turbines represent a renewable energy solution, capable of generating electricity for homes through harnessing the power of the wind. While large wind farms are common, smaller-scale wind turbines designed for residential use have become an option for homeowners seeking to generate their electricity sustainably. The effectiveness of these turbines is heavily influenced by the location, making proper siting crucial for optimal energy production.
+
+          2. Cost Dynamics:
+          
+          The installation costs for small wind turbines vary based on factors such as size and location. Generally ranging from $10,000, these upfront costs are influenced by the turbine's capacity and the wind resource at the installation site. Despite the initial investment, wind turbines offer the potential for long-term financial benefits by generating electricity and reducing dependence on grid power. As technology advances and the market for residential wind turbines evolves, it is likely that costs will continue to decrease, making this renewable energy option more accessible to a broader range of homeowners.
+          
+          3. Tax Incentives:
+          
+          To encourage the adoption of wind turbines, various federal incentives and state programs offer financial benefits to homeowners. These incentives may come in the form of tax credits or rebates, helping to offset the initial costs of installation. Staying informed about these programs and understanding the eligibility criteria is essential for homeowners looking to take advantage of available incentives. Federal incentives, in particular, contribute significantly to making wind turbines a financially viable and attractive option for those interested in incorporating renewable energy into their homes. As with any evolving industry, it is advisable to stay updated on policy changes that may impact the availability and extent of these incentives. As of 2019, residential Wind turbines are allowed a 26% rebate after purchase.</p>
       </div>
-      <div class="card__body">
-        <div class="half">
-          <div class="featured_text">
-            <h1>Wind</h1>
-            <p class="sub">Turbines</p>
-            <p class="price">Up to $10,000 </p>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (59).png" alt="Overview Image">
+      </div>
+    </section>
+
+    <section id="diy" class="row">
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (6).gif" alt="DIY Image">
+      </div>
+      <div class="columns section-text">
+        <h3>D.I.Y</h3>
+        <p>** Requires a good understanding of electrical systems and safety precautions. If you're unsure about any aspect of the process, it's best to consult with a professional. Additionally, always prioritize safety when working with electricity and power tools. - Research local regulations and obtain any necessary permits before installing a wind turbine. 
+
+          <br>
+          <br>
+
+  
+
+          Materials Needed: 
+          <br>
+          
+          1. Generator (can be salvaged from an old treadmill or purchased online) 
+          <br>
+          2. PVC pipes or wooden dowels 
+          <br>
+          3. PVC fittings 
+          <br>
+          4. Blades (can be made from PVC, wood, or other lightweight materials) 
+          <br>
+          5. Bearings or bushings 
+          <br>
+          6. Metal tubing or pipe for the tower 
+          <br>
+          7. Wires and connectors 
+          <br>
+          8. Batteries and charge controller (for storing electricity) 
+          <br>
+            <br>
+          
+          Steps: 
+          <br>
+            
+          
+          1. Design the Blades: 
+          
+             - The blades are crucial for capturing wind energy efficiently. Design them to be aerodynamic and lightweight. You can use online resources or books to guide you in designing the optimal shape and size for your turbine blades. 
+          <br>
+            
+          
+          2. Build the Blades: 
+          
+             - Cut the material you've chosen for your blades into the desired shape. Ensure that each blade is identical for balance. 
+          
+             - Attach the blades to a hub, which can be made from PVC or wood. 
+          
+            <br>
+          
+          3. Construct the Generator: 
+          
+             - Connect the generator to the hub of your blades. The rotation of the blades should turn the generator to produce electricity. 
+          
+             - If you're using a salvaged treadmill motor, you might need to remove its casing and reconfigure it for your wind turbine. 
+          
+            <br>
+          
+          4. Build the Tower: 
+          
+             - Construct a sturdy tower to mount your turbine. You can use metal tubing or pipe for this purpose. Ensure that the tower is tall enough to capture sufficient wind. 
+          
+            <br>
+          
+          5. Install the Bearings: 
+          
+             - Attach bearings or bushings to the top and bottom of your turbine to allow it to rotate freely. 
+          
+            <br>
+          
+          6. Connect the Wires: 
+          
+             - Wire the generator to a charge controller and batteries. The charge controller will regulate the electricity produced by the turbine and prevent overcharging of the batteries. 
+          
+            <br>
+          
+          7.Testing and Adjustments: 
+          
+             - Test your wind turbine in a location with consistent wind. Monitor its performance and make any necessary adjustments to optimize its efficiency. 
+          
+             - Ensure safety precautions are taken during testing, especially when dealing with electricity and moving parts.  </p>
+      </div>
+    </section>
+
+    <section id="kids-activities" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Kids Activities</h3>
+        <p>Paper Wind Turbine Craft:
+
+
+          Have children create their own miniature wind turbines using paper, straws, and other craft materials. They can experiment with different blade designs and sizes to see how it affects the turbine's rotation.
+          <br>
+          <br>
+          Wind-Powered Vehicle Races:
+          
+          Encourage children to design and build small vehicles (such as cars or boats) powered by wind. They can use materials like cardboard, plastic bottles, and wooden skewers. Then, have a race to see whose vehicle travels the farthest using wind energy.
+        </p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/star (1).gif" alt="Fun Fact Image">
+      </div>
+    </section>
+
+
+    </div>
+    <div class="columns section-text" id="fun-facts">
+      <h3>Fun Facts</h3>
+      <p>Hover over the Wind turbines to uncover their mysteries</p>
+    </div>
+    <div class="conti">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (37).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="image">
-            <img src="pictures/Untitled design (37).png" alt="image">
+          <div class="back">
+            ㅤㅤ• The concept of harnessing wind energy is not new. Ancient civilizations, including the Persians and Egyptians, used wind power to sail ships and grind grain as early as 5,000 years ago.
           </div>
         </div>
-        <div class="half">
-          <div class="description">
-            <p>
-				Wind turbines represent a renewable energy solution, capable of generating electricity for homes through harnessing the power of the wind. While large wind farms are common, smaller-scale wind turbines designed for residential use have become an option for homeowners seeking to generate their electricity sustainably. The effectiveness of these turbines is heavily influenced by the location, making proper siting crucial for optimal energy production.
-
-2. Cost Dynamics:
-
-The installation costs for small wind turbines vary based on factors such as size and location. Generally ranging from $10,000, these upfront costs are influenced by the turbine's capacity and the wind resource at the installation site. Despite the initial investment, wind turbines offer the potential for long-term financial benefits by generating electricity and reducing dependence on grid power. As technology advances and the market for residential wind turbines evolves, it is likely that costs will continue to decrease, making this renewable energy option more accessible to a broader range of homeowners.
-
-3. Tax Incentives:
-
-To encourage the adoption of wind turbines, various federal incentives and state programs offer financial benefits to homeowners. These incentives may come in the form of tax credits or rebates, helping to offset the initial costs of installation. Staying informed about these programs and understanding the eligibility criteria is essential for homeowners looking to take advantage of available incentives. Federal incentives, in particular, contribute significantly to making wind turbines a financially viable and attractive option for those interested in incorporating renewable energy into their homes. As with any evolving industry, it is advisable to stay updated on policy changes that may impact the availability and extent of these incentives. As of 2019, residential Wind turbines are allowed a 26% rebate after purchase.
-			</p>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (37).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="reviews">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o"></i></li>
-            </ul>
+          <div class="back">
+            ㅤㅤ• A single modern wind turbine has the potential to generate enough electricity to power around 1,500 average households. This demonstrates the impressive energy-producing capacity of wind farms.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (37).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="back">
+            ㅤㅤ•  The tip of a wind turbine blade can reach speeds of up to 200 miles per hour (322 kilometers per hour) when the turbine is operating at full speed. This makes it one of the fastest rotating objects on Earth, yet it's designed to do so safely and efficiently.
           </div>
         </div>
       </div>
     </div>
-  </main>
+
+    <section id="recommendations" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Recommendations</h3>
+        <p>Vestas: Vestas is one of the largest manufacturers of wind turbines globally, known for its innovative designs and high-performance turbines. They offer a wide range of onshore and offshore wind turbines suitable for various applications and wind conditions.
+
+          Siemens Gamesa: Siemens Gamesa is another major player in the wind energy industry, providing reliable and efficient wind turbines for both onshore and offshore projects. They are known for their advanced technology and commitment to sustainability.
+          <br>
+          <br>
+          Enercon: Enercon is a German manufacturer known for its direct-drive wind turbines, which eliminate the need for a gearbox, resulting in higher efficiency and reliability. They have a strong presence in the European market and are expanding globally.
+          <br>
+          <br>
+          Nordex Group: Nordex Group specializes in onshore wind turbines, offering a range of products tailored to different wind conditions and customer needs. They are known for their robust and reliable turbines, suitable for various applications and environments.
+          <br>
+          <br>
+          Suzlon Energy: Suzlon Energy is a leading renewable energy company based in India, known for its innovative wind turbine designs and sustainable energy solutions. They offer a range of onshore and offshore wind turbines optimized for performance and cost-effectiveness.</p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (8).gif" alt="Recommendations Image">
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>GE Pages</h4>
+          <ul>
+            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+            <li><a href="Additional-Practices.html">Additional Practices</a></li>
+            <li><a href="Effects.html">Effects</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="ApplianceSUB.html">Appliances</a></li>
+            <li><a href="batSUB.html">Batteries</a></li>
+            <li><a href="evSUB.html">Ev</a></li>
+            <li><a href="geoSUB.html">Geothermal</a></li>
+            <li><a href="solarSUB.html">Solar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="Community.html">News</a></li>
+            <li><a href="Energy-Solutions.html">FRQ</a></li>
+            <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/">Fb</a>
+            <a href="https://www.instagram.com/">I</a>
+            <a href="https://www.youtube.com/">Yt</a>
+            <a href="https://twitter.com/?lang=en">Tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const scrollTo = target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>
-<style>
-	@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
-
-body {
-  background-image: linear-gradient(
-    to right bottom,
-    #41da1e,
-    #63ba67,
-    #2c9641,
-    #17851c,
-    #0c8754
-  );
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-main {
-  max-width: 720px;
-  margin: 5% auto;
-}
-
-.card {
-  box-shadow: 0 6px 6px rgba(#000, 0.3);
-  transition: 200ms;
-  background: #fff;
-
-  .card__title {
-    display: flex;
-    align-items: center;
-    padding: 30px 40px;
-
-    h3 {
-      flex: 0 1 200px;
-      text-align: right;
-      margin: 0;
-      color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    .icon {
-      flex: 1 0 10px;
-      background: #50d811;
-      color: #fff;
-      padding: 10px 10px;
-      transition: 200ms;
-
-      > a {
-        color: #fff;
-      }
-
-      &:hover {
-        background: #252525;
-      }
-    }
-  }
-
-  .card__body {
-    padding: 0 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    margin-bottom: 25px;
-
-    > .half {
-      box-sizing: border-box;
-      padding: 0 15px;
-      flex: 1 0 50%;
-    }
-
-    .featured_text {
-      h1 {
-        margin: 0;
-        padding: 0;
-        font-weight: 800;
-        font-family: "Montserrat", sans-serif;
-        font-size: 64px;
-        line-height: 50px;
-        color: #181e28;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-
-        &.sub {
-          font-family: "Montserrat", sans-serif;
-          font-size: 26px;
-          text-transform: uppercase;
-          color: #686e77;
-          font-weight: 300;
-          margin-bottom: 5px;
-        }
-
-        &.price {
-          font-family: "Fjalla One", sans-serif;
-          color: #252525;
-          font-size: 26px;
-        }
-      }
-    }
-
-    .image {
-      padding-top: 15px;
-      width: 100%;
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .description {
-      margin-bottom: 25px;
-
-      p {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        line-height: 27px;
-        font-size: 16px;
-        color: #555;
-      }
-    }
-
-    span.stock {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      color: #a1cc16;
-    }
-
-    .reviews {
-      .stars {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-
-        > li {
-          display: inline-block;
-
-          .fa {
-            color: #f7c01b;
-          }
-        }
-      }
-
-      > span {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        margin-left: 5px;
-        color: #555;
-      }
-    }
-  }
-
-  .card__footer {
-    padding: 30px 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    align-items: center;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 40px;
-      width: calc(100% - 40px);
-      height: 3px;
-      background: #115dd8;
-      background: linear-gradient(
-        to right,
-        #115dd8 0%,
-        #115dd8 20%,
-        #ddd 20%,
-        #ddd 100%
-      );
-    }
-
-    .recommend {
-      flex: 1 0 10px;
-
-      p {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-      }
-
-      h3 {
-        margin: 0;
-        font-size: 20px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #115dd8;
-      }
-    }
-
-    .action {
-      button {
-        cursor: pointer;
-        border: 1px solid #115dd8;
-        padding: 14px 30px;
-        border-radius: 200px;
-        color: #fff;
-        background: #115dd8;
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        transition: 200ms;
-
-        &:hover {
-          background: #fff;
-          color: #115dd8;
-        }
-      }
-    }
-  }
-}
-</style>

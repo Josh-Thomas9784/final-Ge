@@ -1,288 +1,472 @@
-<html>
-  <head>
-    <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-    <title>GE Solutions</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script defer src="app.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="index.js"></script>
+  <title>Document</title>
+</head>
+  <header class="header" id="header">
+		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
+		<input type="checkbox" id="check">
+		<label for="check" class="icons">
+			<i class='bx bx-menu' id="menu-icon"></i>
+			<i class='bx bx-x' id="close-icon" ></i>
+		</label>
+
+		<nav class="navbar">
+			<a href="Energy-Solutions.html">Energy Solutions</a>
+			<a href="Additional-Practices.html">Additional Practices</a>
+			<a href="Effects.html">Effects</a>
+			<a href="Community.html">Community</a>
+			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
+		</nav>
+	</header>
+  <style>
+    .conti {
+      
+      width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+      padding-bottom: 300px;
+    }
+    @media only screen and (min-width: 769px) {
+    .conti {
+      
+      display: flex;
+      flex-wrap: nowrap; /* Ensure the cards don't wrap to the next line */
+      /* Add horizontal scroll if necessary */
+      justify-content: flex-start; /* Align cards from the start */
+      margin: 50px auto; /* Add margin to the top to place it under the header and subheader */
+    }
+}
+
+
+    .card {
+      width: 100%; /* Adjusted width to make the cards regular-sized */
+      margin: 10px;
+      height: 300px; /* Adjust height as needed */
+      perspective: 500px;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background: #9c0e0c;
+      color:  #f5f5dc;
+      transform: rotateY(180deg);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px); /* 50% width for each card with margin */
+        height: 250px; /* Adjust height as needed */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 20px); /* Full width for each card with margin */
+        height: 200px; /* Adjust height as needed */
+      }
+    }
+
+    body {
+      font-family: Truculenta;
+      background-color: #f5f5dc; /* Updated background color */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h3, h4 {
+      margin-top: 0;
+    }
+
+    #hero-image {
+      height: 100vh;
+      background-image: url(pictures/Untitled\ design\ \(61\).png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #hero-image h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    #hero-image h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      color: #fff;
+      background-color: #000000;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin: 0 5px;
+    }
+
+    .button:hover {
+      background-color: #b81e1e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 300px; /* Increased margin between sections */
+    }
+
+    .columns {
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    .columns img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .columns h4 {
+      color: #3d43ff;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .columns p {
+      color: #666;
+      font-size: 1em;
+    }
+
+    .section-text {
+      order: 1;
+    }
+
+    .section-image {
+      order: 2;
+    }
+
+    .section-alternate .section-text {
+      order: 2;
+    }
+
+    .section-alternate .section-image {
+      order: 1;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
-  <main>
-    <div class="card">
-      <div class="card__title">
-        <div class="icon">
-          <a href="Energy-Solutions.html"><i class="">← Back</i></a>
-        </div>
-        <h3>Green Energy</h3>
+  <div id="hero-image">
+    <h1>Geothermal Conditioning</h1>
+    <h5>"Harnessing the Earth's natural energy for reliable warmth and cost savings."</h5>
+    <div>
+      <a class="button" href="#overview">Overview</a>
+      <a class="button" href="#diy">D.I.Y</a>
+      <a class="button" href="#fun-facts">Fun Facts</a>
+      <a class="button" href="#kids-activities">Kids Activities</a>
+      <a class="button" href="#recommendations">Recommendations</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="overview" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Overview - $15,000 to $38,000</h3>
+        <p>Geothermal heating and cooling systems harness the Earth's consistent temperature to provide an efficient and eco-friendly solution for maintaining comfortable indoor climates. Unlike traditional heating and cooling methods, which rely on external energy sources, geothermal systems capitalize on the Earth's stable thermal energy, offering a sustainable alternative with minimal environmental impact.
+
+          2. Cost Dynamics:
+          
+          While the installation costs for geothermal systems are generally higher compared to conventional heating and cooling systems, the long-term benefits justify the investment. These systems achieve payback through substantially lower energy bills over time. The operational efficiency of geothermal systems results in reduced energy consumption, making them a cost-effective choice for environmentally conscious homeowners. Despite the higher upfront costs, the financial and environmental advantages position geothermal systems as a compelling option for those seeking sustainable and energy-efficient solutions for their homes.
+          
+          3. Federal Tax Incentives:
+          
+          To further encourage the adoption of geothermal systems, the Federal Investment Tax Credit (ITC) provides a significant financial incentive. This program covers 26% of the installation costs for geothermal heating and cooling systems, making them more financially accessible for homeowners. The ITC acts as a crucial support mechanism, aligning with broader national goals of promoting renewable energy and reducing carbon footprints. As with any tax incentive, it's essential to stay informed about the current status and any potential changes to maximize the benefits associated with the Federal ITC.
+          
+          In conclusion, geothermal heating and cooling systems offer a sustainable and efficient alternative for homeowners, combining eco-friendly benefits with long-term cost savings. The availability of federal tax incentives further enhances the appeal of geothermal systems, contributing to the overall shift towards greener and more sustainable residential energy solutions</p>
       </div>
-      <div class="card__body">
-        <div class="half">
-          <div class="featured_text">
-            <h1>Geo-</h1>
-			<h1>Thermal</h1>
-            <p class="sub">Conditioning</p>
-            <p class="price">$15,000 to $38,000</p>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (62).png" alt="Overview Image">
+      </div>
+    </section>
+
+    <section id="diy" class="row">
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (13).gif" alt="DIY Image">
+      </div>
+      <div class="columns section-text">
+        <h3>D.I.Y</h3>
+        <p>**It's essential to prioritize safety and compliance with regulations throughout the process. Consult with professionals or experienced individuals if you're unsure about any aspect of the installation. 
+
+          <br>
+          <br>
+
+          1. Research and Planning: 
+          
+             Understand how geothermal systems work and whether they're suitable for your location. Geothermal systems are more effective in regions with moderate to extreme temperature variations. 
+          
+             Research local regulations and permits required for installing geothermal systems. 
+          
+            <br>
+            <br>
+          
+          2. Site Assessment: 
+          
+             Conduct a site assessment to determine the feasibility of installing a geothermal system. Factors to consider include soil composition, land availability, and local climate conditions. 
+          
+             Identify the best location for drilling boreholes or trenches for the ground loop system. This typically involves assessing the accessibility and space available on your property. 
+          
+            <br>
+            <br>
+          
+          3. Design the System: 
+          
+             Design the geothermal system based on your heating and cooling needs, property size, and soil conditions. 
+          
+             Choose between a closed-loop or open-loop system. Closed-loop systems are more common for residential applications and can be installed horizontally or vertically, depending on available space. 
+          
+            <br>
+            <br>
+          
+          4. Gather Materials and Equipment: 
+          
+             Purchase necessary materials such as piping, heat exchangers, pumps, and a ground-source heat pump (GSHP). Ensure all components are suitable for geothermal applications and meet local regulations. 
+          
+             Rent or purchase any specialized equipment needed for drilling boreholes or trenches. 
+          
+            <br>
+            <br>
+          
+          5. Installation: 
+          
+              Install the ground loop system according to the design plan. This may involve drilling boreholes or trenches and laying the piping system. 
+          
+             Install the indoor components including the GSHP, ductwork, and ventilation system. Follow manufacturer instructions carefully during installation. 
+          
+             Connect the ground loop system to the heat pump and indoor components, ensuring proper sealing and insulation to prevent heat loss. 
+          
+            <br>
+            <br>
+          
+          6. Testing and Commissioning: 
+          
+             - Test the system to ensure all components are functioning correctly. This may involve pressure testing the piping system and conducting performance tests on the heat pump. 
+          
+             - Adjust settings and fine-tune the system for optimal performance and energy efficiency.</p>
+      </div>
+    </section>
+
+    <section id="kids-activities" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Kids Activities</h3>
+        <p>
+
+          Conduct simple experiments to demonstrate the principles of geothermal energy. For example, create a model geothermal system using household materials to show how heat from the earth can be used to generate electricity or heat buildings.
+          
+          <br>
+          <br>
+          Geothermal Coloring Pages:
+          Find coloring pages related to geothermal energy and volcanoes. Kids can learn about different geothermal features while expressing their creativity through coloring.
+
+          <br>
+          <br>
+          Virtual Field Trips:
+          Take virtual field trips to geothermal power plants or natural geothermal features such as geysers and hot springs. Many educational websites offer virtual tours that provide insight into how geothermal energy is harnessed and its impact on the environment.
+        </p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/star (4).gif" alt="Fun Fact Image">
+      </div>
+    </section>
+
+
+    </div>
+    <div class="columns section-text" id="fun-facts">
+      <h3>Fun Facts</h3>
+      <p>Hover over the Globes to uncover their mysteries</p>
+    </div>
+    <div class="conti">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (35).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="image">
-            <img src="pictures/Untitled design (35).png" alt="image">
+          <div class="back">
+            ㅤㅤ• Geothermal energy is a renewable energy source that comes from the heat stored beneath the Earth's surface. It's considered sustainable because the heat is continuously produced by natural processes like radioactive decay and planetary formation.
           </div>
         </div>
-        <div class="half">
-          <div class="description">
-            <p>
-				1. Geothermal Heating and Cooling Overview:
-
-Geothermal heating and cooling systems harness the Earth's consistent temperature to provide an efficient and eco-friendly solution for maintaining comfortable indoor climates. Unlike traditional heating and cooling methods, which rely on external energy sources, geothermal systems capitalize on the Earth's stable thermal energy, offering a sustainable alternative with minimal environmental impact.
-
-2. Cost Dynamics:
-
-While the installation costs for geothermal systems are generally higher compared to conventional heating and cooling systems, the long-term benefits justify the investment. These systems achieve payback through substantially lower energy bills over time. The operational efficiency of geothermal systems results in reduced energy consumption, making them a cost-effective choice for environmentally conscious homeowners. Despite the higher upfront costs, the financial and environmental advantages position geothermal systems as a compelling option for those seeking sustainable and energy-efficient solutions for their homes.
-
-3. Federal Tax Incentives:
-
-To further encourage the adoption of geothermal systems, the Federal Investment Tax Credit (ITC) provides a significant financial incentive. This program covers 26% of the installation costs for geothermal heating and cooling systems, making them more financially accessible for homeowners. The ITC acts as a crucial support mechanism, aligning with broader national goals of promoting renewable energy and reducing carbon footprints. As with any tax incentive, it's essential to stay informed about the current status and any potential changes to maximize the benefits associated with the Federal ITC.
-
-In conclusion, geothermal heating and cooling systems offer a sustainable and efficient alternative for homeowners, combining eco-friendly benefits with long-term cost savings. The availability of federal tax incentives further enhances the appeal of geothermal systems, contributing to the overall shift towards greener and more sustainable residential energy solutions.
-			</p>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (35).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="reviews">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o"></i></li>
-            </ul>
+          <div class="back">
+            ㅤㅤ• Humans have been utilizing geothermal energy for thousands of years. Ancient civilizations such as the Romans, Chinese, and Native Americans used hot springs for bathing and heating. The first recorded use of geothermal energy for heating dates back over 10,000 years in China.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img src="pictures/Untitled design (35).png" alt="Front Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="back">
+            ㅤㅤ• Geothermal power plants generate electricity by harnessing the steam or hot water from geothermal reservoirs deep underground. These plants operate in various locations worldwide, including Iceland, the United States, the Philippines, and New Zealand. Iceland, in particular, relies heavily on geothermal energy, with about 90% of its homes heated by geothermal sources.
           </div>
         </div>
       </div>
     </div>
-  </main>
+
+    <section id="recommendations" class="row section-alternate">
+      <div class="columns section-text">
+        <h3>Recommendations</h3>
+        <p>WaterFurnace: WaterFurnace is one of the leading manufacturers of geothermal heat pumps. They offer a wide range of residential and commercial geothermal systems known for their energy efficiency, advanced technology, and durability.
+          <br>
+          <br>
+          Carrier: Carrier is a well-known HVAC brand that offers geothermal heat pump systems alongside their traditional heating and cooling products. Their geothermal systems are designed for high efficiency and can provide both heating and cooling for homes and businesses.
+          <br>
+          <br>
+          ClimateMaster: ClimateMaster specializes in geothermal heat pumps for residential, commercial, and institutional applications. They offer a variety of models designed to suit different heating and cooling needs, with a focus on energy efficiency and comfort.
+          <br>
+          <br>
+          Trane: Trane is another reputable HVAC brand that offers geothermal heat pump systems. Their geothermal units are known for their reliability, performance, and advanced features, such as variable-speed technology and smart controls.
+          <br>
+          <br>
+          Bosch: Bosch Thermotechnology offers a range of geothermal heat pump systems under the Bosch and FHP (Florida Heat Pump) brands. Their geothermal units are known for their high efficiency, quiet operation, and innovative design.
+          <br>
+          <br>
+          Enertech Global: Enertech Global manufactures geothermal heat pumps under the brand name GeoComfort. Their geothermal systems are designed for residential and light commercial applications, with a focus on energy efficiency, comfort, and reliability.
+          <br>
+          <br>
+          NIBE Energy Systems: NIBE Energy Systems is a European manufacturer known for its high-quality heat pumps, including geothermal systems. Their geothermal heat pumps are designed for efficient heating, cooling, and domestic hot water production in residential and commercial buildings.</p>
+      </div>
+      <div class="columns section-image">
+        <img src="pictures/Untitled design (14).gif" alt="Recommendations Image">
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>GE Pages</h4>
+          <ul>
+            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+            <li><a href="Additional-Practices.html">Additional Practices</a></li>
+            <li><a href="Effects.html">Effects</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="ApplianceSUB.html">Appliances</a></li>
+            <li><a href="batSUB.html">Batteries</a></li>
+            <li><a href="evSUB.html">Ev</a></li>
+            <li><a href="geoSUB.html">Geothermal</a></li>
+            <li><a href="solarSUB.html">Solar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="Community.html">News</a></li>
+            <li><a href="Energy-Solutions.html">FRQ</a></li>
+            <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/">Fb</a>
+            <a href="https://www.instagram.com/">I</a>
+            <a href="https://www.youtube.com/">Yt</a>
+            <a href="https://twitter.com/?lang=en">Tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const scrollTo = target.offsetTop - window.innerHeight / 2 + target.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-
 </html>
-<style>
-	@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
-
-body {
-  background-image: linear-gradient(
-    to right bottom,
-    #41da1e,
-    #63ba67,
-    #2c9641,
-    #17851c,
-    #0c8754
-  );
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-main {
-  max-width: 720px;
-  margin: 5% auto;
-}
-
-.card {
-  box-shadow: 0 6px 6px rgba(#000, 0.3);
-  transition: 200ms;
-  background: #fff;
-
-  .card__title {
-    display: flex;
-    align-items: center;
-    padding: 30px 40px;
-
-    h3 {
-      flex: 0 1 200px;
-      text-align: right;
-      margin: 0;
-      color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    .icon {
-      flex: 1 0 10px;
-      background: #50d811;
-      color: #fff;
-      padding: 10px 10px;
-      transition: 200ms;
-
-      > a {
-        color: #fff;
-      }
-
-      &:hover {
-        background: #252525;
-      }
-    }
-  }
-
-  .card__body {
-    padding: 0 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    margin-bottom: 25px;
-
-    > .half {
-      box-sizing: border-box;
-      padding: 0 15px;
-      flex: 1 0 50%;
-    }
-
-    .featured_text {
-      h1 {
-        margin: 0;
-        padding: 0;
-        font-weight: 800;
-        font-family: "Montserrat", sans-serif;
-        font-size: 64px;
-        line-height: 50px;
-        color: #181e28;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-
-        &.sub {
-          font-family: "Montserrat", sans-serif;
-          font-size: 26px;
-          text-transform: uppercase;
-          color: #686e77;
-          font-weight: 300;
-          margin-bottom: 5px;
-        }
-
-        &.price {
-          font-family: "Fjalla One", sans-serif;
-          color: #252525;
-          font-size: 26px;
-        }
-      }
-    }
-
-    .image {
-      padding-top: 15px;
-      width: 100%;
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .description {
-      margin-bottom: 25px;
-
-      p {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        line-height: 27px;
-        font-size: 16px;
-        color: #555;
-      }
-    }
-
-    span.stock {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      color: #a1cc16;
-    }
-
-    .reviews {
-      .stars {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-
-        > li {
-          display: inline-block;
-
-          .fa {
-            color: #f7c01b;
-          }
-        }
-      }
-
-      > span {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        margin-left: 5px;
-        color: #555;
-      }
-    }
-  }
-
-  .card__footer {
-    padding: 30px 40px;
-    display: flex;
-    flex-flow: row no-wrap;
-    align-items: center;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 40px;
-      width: calc(100% - 40px);
-      height: 3px;
-      background: #115dd8;
-      background: linear-gradient(
-        to right,
-        #115dd8 0%,
-        #115dd8 20%,
-        #ddd 20%,
-        #ddd 100%
-      );
-    }
-
-    .recommend {
-      flex: 1 0 10px;
-
-      p {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        color: #555;
-      }
-
-      h3 {
-        margin: 0;
-        font-size: 20px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #115dd8;
-      }
-    }
-
-    .action {
-      button {
-        cursor: pointer;
-        border: 1px solid #115dd8;
-        padding: 14px 30px;
-        border-radius: 200px;
-        color: #fff;
-        background: #115dd8;
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        transition: 200ms;
-
-        &:hover {
-          background: #fff;
-          color: #115dd8;
-        }
-      }
-    }
-  }
-}
-</style>

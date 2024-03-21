@@ -372,7 +372,7 @@ video{
   }
 
   & .description {
-    line-height: 1.5;
+    line-height: 1.7;
     margin: 1rem 0 1.5rem;
     font-size: 18px;
   }
@@ -453,8 +453,8 @@ video{
 @media (width < 650px) {
   .content {
     & .title        { font-size: 2rem; }
-    & .description  { font-size: 1rem; }
-    & button        { font-size: 1rem; }
+    & .description  { font-size: 1.2rem; }
+    & button        { font-size: 1.2rem; }
   }
   .item {
     width: 130px;
@@ -611,10 +611,6 @@ video{
   .c-d:hover .text3{
     transform: translateY(100%);
     opacity: 1;
-  }
-
-  .part4{
-    height: 10%;
   }
 }
 
