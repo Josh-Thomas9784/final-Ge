@@ -178,15 +178,9 @@ h3{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../pictures/site-link1.png);
+  background-image: url("../pictures/haikei-400x300.jpg");
 }
 
-.i-7{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(../pictures/12972-WG9i-nPeDiKseBH7VdaQ8N_0LFF1yfD15DtjpBHXXio.png);
-}
 
 @media screen and (max-width: 767px) {
   h1{

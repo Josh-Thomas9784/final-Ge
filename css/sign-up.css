@@ -223,18 +223,5 @@ input{
   p{
     font-size: 15px;
   }
-  .login-container{
-    width: 75%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  
-    background: transparent;
-    border-radius: 16px;
-    box-shadow: none;
-    backdrop-filter: blur(3px);
-  }
 
 }
