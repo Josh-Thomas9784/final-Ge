@@ -1,128 +1,129 @@
 
 body{
   height: 2200px;
+  padding-top: 0px;
   }
   
   /*1st part*/
-  .part1{
-    width: 100%;
-    height: 60vh;
-    background-color: #85bb65;
-    display: flex;
-    align-items: center;
+.part1{
+  width: 100%;
+  height: 60vh;
+  background-color: #85bb65;
+  display: flex;
+  align-items: center;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../pictures/polygon-scatter-haikei\ \(1\).svg);
-  }
-  
-  .entry-box{
-    height: 75%;
-    width: 100%;
-    max-width: 1600px;
-    display: flex;
-    align-items: self-start;
-    justify-content: space-between;
-    padding: 20px;
-  
-  }
-  
-  .text-box1{
-    width: 500px;
-    color: #f5f5dc;
-  }
-  
-  h1{
-    color: #f5f5dc;
-    font-size: 3rem;
-    font-family: Bebas Neue;
-    letter-spacing: 3px;
-  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../pictures/polygon-scatter-haikei\ \(1\).svg);
+}
 
-  h2{
-    font-family: Archivo Black;
-    font-size: 1.5rem;
-  }
-  
-  .text2{
-    font-size: 1.65rem;
-    font-family: Archivo Black;
-  }
+.entry-box{
+  height: 75%;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  padding: 20px;
 
-  .text3{
-    font-family: Bebas Neue;
-    letter-spacing: 5px;
-  }
-  
-  .pic-box{
-    height: 100%;
-  }
-  
-  .pic-2{
-    height: 275px;
-    border-radius: 10px;
-    margin: 0 10px;
-    transition: all 0.15s;
-  }
-  
-  .pic-2:hover{
-    transform: scale(1.06);
-  }
-  
+}
 
-  /*3rd part*/
-  .part3{
-    background-color: #262e22;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../pictures/wave-haikei\ \(1\).svg);
-    aspect-ratio: 960/2000;
+.text-box1{
+  width: 500px;
+  color: #f5f5dc;
+}
 
-    width: 100%;
-    height: 95vh;
+h1{
+  color: #f5f5dc;
+  font-size: 3rem;
+  font-family: Bebas Neue;
+  letter-spacing: 3px;
+}
 
-    display: flex;
-    justify-content: center;
-  }
-  
-  .part3-section{
-    padding-top: 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h2{
+  font-family: Archivo Black;
+  font-size: 1.5rem;
+}
 
-  }
-  
-  .list{
-    margin-top: 50px;
-  }
-  
-  .list .list2{
-    width: 50em;
-    color: #f5f5dc;
-    border: solid 1px #f5f5dc;
-    padding: 20px;
-    transition: all 0.5s;
-  }
-  
-  .list .list2 a{
-    text-decoration: none;
-    color:#f5f5dc;
-    font-size: 1.2rem;
-    font-family: Archivo Black;
-  }
-  
-  .list .list2:hover{
-    transform: scale(1.06);
-  }
-  
-  .text3{
-    color:#f5f5dc;
-    font-size: 2rem;
-  }
+.text2{
+  font-size: 1.65rem;
+  font-family: Archivo Black;
+}
+
+.text3{
+  font-family: Bebas Neue;
+  letter-spacing: 5px;
+}
+
+.pic-box{
+  height: 100%;
+}
+
+.pic-2{
+  height: 275px;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: all 0.15s;
+}
+
+.pic-2:hover{
+  transform: scale(1.06);
+}
+
+
+/*3rd part*/
+.part3{
+  background-color: #262e22;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../pictures/wave-haikei\ \(1\).svg);
+  aspect-ratio: 960/2000;
+
+  width: 100%;
+  height: 95vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.part3-section{
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.list{
+  margin-top: 50px;
+}
+
+.list .list2{
+  width: 50em;
+  color: #f5f5dc;
+  border: solid 1px #f5f5dc;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.list .list2 a{
+  text-decoration: none;
+  color:#f5f5dc;
+  font-size: 1.2rem;
+  font-family: Archivo Black;
+}
+
+.list .list2:hover{
+  transform: scale(1.06);
+}
+
+.text3{
+  color:#f5f5dc;
+  font-size: 2rem;
+}
   
   @media screen and (max-width:768px) {
     .pic-1{
@@ -235,19 +236,19 @@ body{
 }
 
 .list2:nth-child(2){
-  transition-delay: 200ms;
+  transition-delay: 100ms;
 }
 
 .list2:nth-child(3){
-  transition-delay: 400ms;
+  transition-delay: 150ms;
 }
 
 .list2:nth-child(4){
-  transition-delay: 600ms;
+  transition-delay: 200ms;
 }
 
 .list2:nth-child(5){
-  transition-delay: 800ms;
+  transition-delay: 250ms;
 }
 
 

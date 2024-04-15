@@ -3,15 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Auth App</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <title>GE Solutions</title>
+	  <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
+
+
 </head>
 <body>
-    <button id="signInButton">Create Account / Sign In</button>
-    <button id="signOutButton">Sign Out</button>
+  <header id="header">
+    <a href="index.html" class="logo">My Logo</a>
+    <div class="menuToggle"></div>
+    <nav>
+      <ul class="ul1">
+        <li class="li1"><a href="Energy-Solutions.html">Energy Solutions</a></li>
+        <li class="li1"><a href="Effects.html">Effects</a></li>
+        <li class="li1"><a href="Community.html">Community +</a>
+          <ul>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Global Impacts</a></li>
+            <li><a href="#">Survey Form</a></li>
+          </ul>
+        </li>
+        <li class="li1"><a href="Resources.html">Resources</a></li>
+        <li class="li2"><a href="sign-up.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    menuToggle.onclick = function(){
+      header.classList.toggle('active');
+    }
+  </script>
 
-    <div id="message">
-        <p>You have signed in as <span id="userName"></span> with the email <span id="userEmail"></span> </p>
+
+  <div class="container" id="appear">
+    <div class="login-container" id="appear">
+      <div class="part" id="appear">
+        <div class="piece" id="appear">
+          <h1 id="appear">Sign Up Now</h1>
+          <p id="appear">It looks like you aren't logged in, log in with google!</p>
+        </div>
+        <button id="signInButton">Create Account / Sign In</button>
+        <div class="piece2" id="appear">
+          <div class="line" id="appear"></div><p id="appear">or</p><div class="line" id="appear"></div>
+        </div>
+        <div class="piece" id="appear">
+          <p>Feel free to continue as a <span>guest</span></p>
+        </div>
+
+      </div>
     </div>
+
+  </div>
+
+  <div class="container2" id="disappear">
+    <div class="profile-container" id="disappear">
+      <div class="profile-img" id="disappear">
+        <img src="#" id="disappear">
+      </div>
+      <div class="profile-info-container" id="disappear">
+        <div class="intro" id="disappear">
+          <h1 id="disappear">Welcome to GE</h1>
+          <p id="disappear">You are an offfical Green Actiist! Help the Enviornment!</p>
+        </div>
+  
+        <div class="extra" id="disappear">
+          <a id="disappear">Send us a message</a>
+          <a id="disappear">Learn more about GE</a>
+        </div>
+  
+        <div class="profile-info" id="disappear">
+          <div class="info1" id="disappear"><img src=# id="disappear"><h2>About</h2></div>
+          <div class="info2" id="message">
+            <p id="disappear">Name: <span id="userName"></span></p>
+            <p id="disappear">Email: <span id="userEmail"></span></p>
+          </div>
+        </div>
+  
+        <div class="modes" id="disappear">
+          <a>Dark Mode</a>
+        </div>
+  
+        <div class="btn-holder">
+          <button id="signOutButton">Sign Out</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 
   <script type="module">
     
@@ -40,6 +125,10 @@
     const userName = document.getElementById("userName");
     const userEmail = document.getElementById("userEmail");
 
+
+    const appear = document.getElementById("appear");
+    const disappear = document.getElementById("disappear");
+
     signOutButton.style.display = "none";
     message.style.display = "none";
 
@@ -64,11 +153,19 @@
       if(user) {
         signOutButton.style.display = "block";
         message.style.display = "block";
+        signInButton.style.display = "none";
         userName.innerHTML = user.displayName;
-        userEmail.innerHTML = user.email
+        userEmail.innerHTML = user.email;
+
+        appear.style.display = "none";
+        disappear.style.display = "block";
       } else {
         signOutButton.style.display = "none";
         message.style.display = "none";
+        signInButton.style.display = "block";
+
+        appear.style.display = "block";
+        disappear.style.display = "none";
       }
     })
 

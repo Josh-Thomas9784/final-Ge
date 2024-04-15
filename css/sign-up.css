@@ -1,26 +1,32 @@
 body{
-  padding-top: 80px;
-  background-color: #80ad66;
+  background-color: var(--secondary-color);
   
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../pictures/Copy\ of\ Effects\ \(1\).png");
+  padding-top: 0px;
+  color: var(--tertiary-color);
 }
 
 .container{
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .login-container{
-  width: 75%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.part{
+  width: 20%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 10px;
 
@@ -30,58 +36,27 @@ body{
   backdrop-filter: blur(3px);
 }
 
-.first-half{
-  height: 100%;
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.second-half{
-  height: 100%;
-  width: 70%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container .second-half img{
-  height: 500px;
-}
-
-.glass{
-  padding: 10%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-
-}
-
 .piece{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 40px;
   width: 100%;
 }
 
 h1{
   font-family: Bebas Neue;
-  font-size: 65px;
+  font-size: 60px;
   letter-spacing: 3px;
+  color: var(--tertiary-color);
 }
 
 p{
   font-family: Archivo black;
-  font-size: 18px;
+  font-size: 12px;
+  color: var(--tertiary-color);
 }
 
 .piece p a{
@@ -89,24 +64,13 @@ p{
   text-decoration: none;
 }
 
-.input{
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  margin-top: 25px;
-  width: 100%;
-  justify-content: space-around;
+.piece span{
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
-h2{
-  font-family: Bebas Neue;
-  font-size: 35px;
-  letter-spacing: 3px;
-  margin: 0 35px;
-}
 
 button{
-  margin-top: 65px;
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -119,7 +83,7 @@ button{
 
   transition: all 0.3s ease-in;
   background-color: var(--tertiary-color);
-  width: 100%;
+  width: 80%;
 }
 
 button:hover{
@@ -129,16 +93,6 @@ button:hover{
   border: none;
 }
 
-input{
-  padding: 20px;
-  border: none;
-  border-radius: 10px;
-  margin: 10px 5px;
-  outline: noen;
-  font-size: 16px;
-  background-color: var(--tertiary-color);
-  width: 400px;
-}
 
 .piece p a:hover{
   text-decoration: underline;
@@ -148,94 +102,162 @@ input{
   display:flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
 }
 
-/*javascript animations*/
-
-.hidden{
-  opacity: 0;
-  transition: all 2s;
-  filter: blur(5px);
-  transform: translateX(-100%);
+.piece2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
 }
 
-.show{
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+.piece2 p{
+  color:var(--fourth-color);
 }
 
-.hidden2{
-  opacity: 0;
-  transition: all 2s;
-  filter: blur(5px);
-  transform: translateX(-100%);
+.line{
+  height: 1px;
+  width: 100px;
+  background-color: var(--fourth-color);
 }
 
-.show2{
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+/*Everything with disappear tag ----- part 2*/
+.container2{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hidden3{
-  opacity: 0;
-  transition: all 2s;
-  filter: blur(5px);
-  transform: translateY(-100%);
+.profile-container{
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.show3{
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+.profile-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  height: 500px;
+  width: 15%;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
 }
+
+
+.container2 .profile-container .profile-img img{
+  height: 200px;
+}
+
+.profile-info-container{
+  height: 500px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.extra{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.extra a{
+  background-color: var(--fourth-color);
+  color: var(--tertiary-color);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: arial;
+}
+
+
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.info1{
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.info2{
+  display: flex;
+  flex-direction: column;
+  color: var(--tertiary-color);
+  padding: 2px;
+}
+
+.modes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.btn-holder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media(max-width: 1068px){
-  .container .second-half img{
-    height: 0px;
-  }
-
-  input{
-    width: 225px;
-    font-size: 14px;
-  }
-
-  .login-container{
-    width: 90%;
-    height: 75%;
-  }
-
-  button{
-    padding: 10px 0px;
-    width: 350px;
-  }
-
-  h2{
-    font-size: 25px;
-  }
 
   h1{
     font-size: 55px;
   }
 
   p{
-    font-size: 15px;
+    font-size: 10px;
   }
 
-  .login-container{
-  width: 75%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  .part{
+    height: 55%;
+    width: 75%;
+  }
 
-  background: none;
-  border-radius: 16px;
-  box-shadow: none;
-  backdrop-filter: none;
+
 }
+
+@media(max-width: 768px){
+
+  h1{
+    font-size: 55px;
+  }
+
+  p{
+    font-size: 10px;
+  }
+
+  .part{
+    height: 55%;
+    width: 90%;
+  }
+
 
 }

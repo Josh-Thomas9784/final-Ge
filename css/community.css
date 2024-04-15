@@ -1,6 +1,7 @@
 body{
   height: 4500px;
   scroll-behavior: smooth ;
+  padding-top: 0px;
 }
 
 .part1{

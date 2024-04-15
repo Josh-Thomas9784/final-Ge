@@ -5,9 +5,11 @@
 
 
 :root {
-  --primary-color: #85bb65; /* Dollar Bill Green */
-  --secondary-color: #000000; /* black */
-  --tertiary-color: #f5f5dc; /* beige */
+  --primary-color: #95BBA3; /* Green */
+  --secondary-color: #394b40; /* dark green */
+  --tertiary-color: #F8F7F6; /* white */
+  --fourth-color: #AD8152; /* yellow */
+  --fifth-color: #9C5640; /*red*/
 }
 
 body {
@@ -65,7 +67,7 @@ section {
 }
 
 section h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
 }
 
