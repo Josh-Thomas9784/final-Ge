@@ -91,6 +91,7 @@ button:hover{
   color: var(--tertiary-color);
   transform: scale(0.95, 0.95);
   border: none;
+  cursor: pointer;
 }
 
 
@@ -148,10 +149,13 @@ button:hover{
   align-items: center;
   padding: 30px;
   height: 500px;
-  width: 15%;
+  width: 20%;
   background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 
@@ -165,14 +169,17 @@ button:hover{
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .intro{
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
+  padding-top: 20px;
 }
 
 .extra{
@@ -180,15 +187,23 @@ button:hover{
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .extra a{
+  text-decoration: none;
   background-color: var(--fourth-color);
   color: var(--tertiary-color);
   padding: 15px;
   border-radius: 5px;
   font-family: arial;
+
+  transition: all 0.5s;
+}
+
+.extra a:hover{
+  background-color: var(--secondary-color);
+  transform: scale(0.98, 0.98);
 }
 
 
@@ -215,7 +230,8 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  padding-top: 25px;
 }
 
 .btn-holder{
@@ -229,7 +245,7 @@ button:hover{
 @media(max-width: 1068px){
 
   h1{
-    font-size: 55px;
+    font-size: 50px;
   }
 
   p{
@@ -239,6 +255,28 @@ button:hover{
   .part{
     height: 55%;
     width: 75%;
+  }
+
+  .profile-img{
+    display: none;
+  }
+
+  .profile-info-container{
+    border-radius: 10px;
+    width: 50%;
+  }
+
+  .intro{
+    padding-left: 10px;
+
+  }
+  
+  .extra a{
+    font-size: 10px;
+  }
+
+  .profile-info{
+    padding-left: 10px;
   }
 
 
@@ -257,6 +295,11 @@ button:hover{
   .part{
     height: 55%;
     width: 90%;
+  }
+
+  .profile-info-container{
+    width: 80%;
+    height: 550px;
   }
 
 
