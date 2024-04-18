@@ -4,10 +4,11 @@
   <link rel="stylesheet" href="css/header.css"> 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/index.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <script defer src="community.js"></script>
   <script defer src="js/app.js"></script>
-  <script defer src="js/news.js"></script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,11 +44,6 @@
       header.classList.toggle('active');
     }
   </script>
-  <style>
-    body{
-      background-color: black;
-    }
-  </style>
 
   <main>
     <div class="hero1">
@@ -59,21 +55,21 @@
 
     <div class="choose-plans">
       <div class="wrapper">
-        <div class="card">
+        <div class="card1">
           <div class="piece">
             <h1>Hi</h1>
             <p>info</p>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card1">
           <div class="piece">
             <h1>Hi</h1>
             <p>info</p>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card1">
           <div class="piece">
             <h1>Hi</h1>
             <p>info</p>
@@ -117,7 +113,10 @@
 
     </div>
     <div class="news-preview">
-      <div class="center"><h1>Latest Updates</h1></div>
+      <div class="center column">
+        <h1>Latest Updates</h1>
+        <p class="sub-text">quick descriptions </p>
+      </div>
       <div class="app">
         <div class="bento">
           <div class="bento-container">
@@ -158,284 +157,110 @@
             </div>
           </div>
         </div>
-
+        <div class="center"><a class="learn">Learn More</a></div>
       </div>
 
     </div>
+
     <div class="card-carousel">
-
+      <div class="container">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+        </label>
+      </div>
+      <div class="player">
+        <div class="upper-part">
+          <div class="play-icon">
+            <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
+              <defs/>
+              
+            </svg>
+          </div>
+          <div class="info-area" id="test">
+            <label class="song-info" id="song-info-1">
+              <div class="title">Bunker</div>
+              <div class="sub-line">
+                <div class="subtitle">Balthazar</div>
+                <div class="time">4.05</div>
+              </div>
+            </label>
+            <label class="song-info" id="song-info-2">
+              <div class="title">Words Remain</div>
+              <div class="sub-line">
+                <div class="subtitle">Moderator</div>
+                <div class="time">4.05</div>
+              </div>
+            </label>
+            <label class="song-info" id="song-info-3">
+              <div class="title">Falling Out</div>
+              <div class="sub-line">
+                <div class="subtitle">Otzeki</div>
+                <div class="time">4.05</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="slogan">
-
-    </div>
-
   </main>
 
+  <footer class="footer">
+    <div class="container1">
+      <div class="row">
+        <div class="footer-col">
+          <h4>GE Pages</h4>
+          <ul>
+            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+            <li><a href="Additional-Practices.html">Additional Practices</a></li>
+            <li><a href="Effects.html">Effects</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="ApplianceSUB.html">Appliances</a></li>
+            <li><a href="batSUB.html">Batteries</a></li>
+            <li><a href="evSUB.html">Ev</a></li>
+            <li><a href="geoSUB.html">Geothermal</a></li>
+            <li><a href="solarSUB.html">Solar</a></li>
+            <li><a href="new (1).html">Start</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="Community.html">News</a></li>
+            <li><a href="Energy-Solutions.html">FRQ</a></li>
+            <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/">Fb</a>
+            <a href="https://www.instagram.com/">I</a>
+            <a href="https://www.youtube.com/">Yt</a>
+            <a href="https://twitter.com/?lang=en">Tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
 
 
-  <style>
-
-    body{
-      height: 5000px;
-      background: var(--tertiary-color);
-    }
-    .main{
-      display: flex;
-      flex-direction: column;
-
-    }
-
-    .hero1{
-      background-color: pink;
-      height: 100vh;
-      width: 100%;
-    }
-
-    .column{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .center{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    .choose-plans{
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-
-    .wrapper{
-      display: flex;
-      background-color: green;
-      width: 75%;
-      height: 85%;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .card{
-      background-color: blue;
-      height: 80%;
-      width: 25%;
-      display: flex;
-      align-items: end;
-    }
-
-    .piece{
-      background-color: black;
-      width: 100%;
-      padding: 15px;
-    }
-
-
-    @keyframes slide{
-      from{
-        transform: translateX(0);
-      }
-      to{
-        transform: translateX(-100%);
-      }
-    }
-
-
-    .infinite-brands{
-      height: 20vh;
-      width: 100%;
-      overflow: hidden;
-      background:var(--tertiary-color);
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      flex-wrap: nowrap;
-      position: relative;
-
-      border-bottom: 3px solid rgba(0, 0, 0, 0.233);
-    }
-
-    .infinite-brands:hover .logos-slide{
-      animation-play-state: paused;
-    }
-
-    .infinite-brands:before{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      background: linear-gradient(to left, rgba(255,255,255,0), var(--tertiary-color));
-      content: " ";
-      z-index: 2;
-    }
-
-    .infinite-brands:after{
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 250px;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255,255,255,0), var(--tertiary-color));
-      content: " ";
-      z-index: 2;
-    }
-
-    .logos-slide{
-      display: inline-block;
-      animation: 20s slide infinite linear;
-    }
-
-    .logos-slide .img1{
-      height: 200px;
-      margin: 0 40px;
-    }
-
-    .yt-vid{
-      height: 50vh;
-      width: 100%;
-      background-color: pink;
-      display: flex;
-      padding-top: 20px;
-      justify-content: center;
-    }
-
-    .holder{
-      height: 100%;
-      width: 50%;
-    }
-
-    .holder video{
-      height: 45vh;
-      padding: 0px;
-      margin: 0px;
-      
-    }
-
-    .text{
-      padding: 5px;
-      
-    }
-
-    .bento{
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-
-    }
-
-    .bento-container{
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-      gap: 2rem;
-      padding: 2rem;
-      width: 100%;
-      height: inherit;
-      z-index: 10;
-    }
-
-    .bento-box{
-      position: relative;
-      backdrop-filter: blur(1rem);
-      -webkit-backdrop-filter: blur(1rem);
-      border-radius: 1rem;
-
-      background-color: var(--secondary-color);
-      transition: background-color 0.32s ease-in-out;
-
-      display: flex;
-      align-items: flex-end;
-      padding: 2rem;
-      cursor: pointer;
-    }
-    
-    .bento-box.active{
-      background-color: var(--primary-color);
-      transition: background-color 0.32s ease-in-out;
-    }
-
-    .bento-box:nth-child(1){
-      grid-area: 1/1/3/7;
-    }
-    .bento-box:nth-child(2){
-      grid-area: 1/7/3/9;
-    }
-    .bento-box:nth-child(3){
-      grid-area: 3/1/5/3;
-    }
-    .bento-box:nth-child(4){
-      grid-area: 3/3/5/5;
-    }
-    .bento-box:nth-child(5){
-      grid-area: 3/5/5/9;
-    }
-    .bento-box:nth-child(6){
-      grid-area: 15/1/5/9;
-    }
-
-    .bento-box-text{
-      overflow: hidden;
-      color:var(--fifth-color)
-    }
-
-    .bento-box-text span{
-      font-size: 1.2rem;
-      display: block;
-    }
-
-    .bento-intro{
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-
-    .bento-intro-row{
-      overflow: hidden;
-    }
-
-    .bento-intro h1 .char {
-      font-size: 24rem;
-      display: inline-block
-    }
-
-    @media screen and (max-width: 769px){
-      .bento-container{
-        grid-template-rows: repeat(8, 1fr);
-      }
-
-      .bento-box:nth-child(1){
-        grid-area: 1/1/2/9;
-      }
-      .bento-box:nth-child(2){
-        grid-area: 2/1/3/9;
-      }
-      .bento-box:nth-child(3){
-        grid-area: 3/1/4/9;
-      }
-      .bento-box:nth-child(4){
-        grid-area: 4/1/5/9;
-      }
-      .bento-box:nth-child(5){
-        grid-area: 5/1/6/9;
-      }
-      .bento-box:nth-child(6){
-        grid-area: 6/1/7/9;
-      }
-
-    }
-
-
-  </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" 
   integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" 
@@ -444,6 +269,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" 
   integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" 
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+      function activate(e) {
+        const items = document.querySelectorAll('.item');
+        e.target.matches('.next') && slider.append(items[0])
+        e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+      }
+
+      document.addEventListener('click',activate,false);
+  </script>
 
 </body>
 
