@@ -45,7 +45,23 @@
     }
   </script>
 
-  <main>
+  <main id="animated-section">
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
+    
+      <path class="path" id="path" 
+            d="M -5,0
+              Q 450 0 100 450
+              T 1200 750
+              Q 2500 600 1250 1150
+              T 750 1450  
+              Q 1150 1300 550 1800
+              T 1000 2150
+              Q 2550 2000 1000 2600
+              T 1600 3500
+              Q 1900 3550 1100 3650"
+            fill="none" stroke="var(--primary-color)" stroke-width="10" />
+    </svg>
+
     <div class="hero1">
       <div class="column center">
         <h1>Apply Parallax here</h1>
@@ -186,7 +202,7 @@
               
             </svg>
           </div>
-          <div class="info-area" id="test">
+          <div class="info-area theline" id="test">
             <label class="song-info" id="song-info-1">
               <div class="title">Bunker</div>
               <div class="sub-line">
@@ -278,6 +294,19 @@
       }
 
       document.addEventListener('click',activate,false);
+
+
+      let path = document.querySelector('path')
+      let pathLength = path.getTotalLength()
+
+      path.style.strokeDasharray = pathLength + " " + pathLength;
+      path.style.strokeDashoffset = pathLength;
+
+      window.addEventListener('scroll', () =>{
+        var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var drawLength = pathLength * scrollPercentage;
+            path.style.strokeDashoffset = pathLength - drawLength;
+      })
   </script>
 
 </body>
