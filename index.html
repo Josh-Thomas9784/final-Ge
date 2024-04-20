@@ -63,10 +63,22 @@
     </svg>
 
     <div class="hero1">
-      <div class="column center scroll" data-rate=".2" data-direction="vertical">
-        <h1>Apply Parallax here</h1>
-        <p>Little description here</p>
-      </div>
+      <div class="column center video1">
+
+        <!--<video autoplay loop muted>
+          <source src="pictures/Nature Travel Youtube Video Intro (1).mp4">
+        </video>
+        <div class="text-box1">
+          <h1>GE SOLUTIONS</h1>
+        </div> -->
+
+        <div class=" column center">
+          <h1 class="m-text">GE Solutions</h1>
+          <p class="m-ptext">Welcome to the enviornmental website of your dreams </p>
+        </div>
+      </div> 
+
+
     </div>
 
     <div class="choose-plans-div">
@@ -121,9 +133,7 @@
 
     <div class="yt-vid">
       <div class="holder">
-        <video autoplay muted plays-inline>
-          <source src="pictures/Green Illustrative Move to Renewable Energy Animated Instagram Story (5).mp4" type="video/mp4">
-        </video>
+        <a class="play" href="#" onclick="toggle();"><img src="pictures/play.png"></a>
       </div>
       <div class="text">
         <h2>
@@ -131,6 +141,10 @@
         </h2>
         <p>wow this entry videos is so intresting wowow</p>
         <a class="learn2">Learn More</a>
+      </div>
+      <div class="trailer">
+        <video src="pictures/Nature Travel Youtube Video Intro (1).mp4" controls="true"></video>
+        <img src="pictures/close.png" class="close" href="#" onclick="toggle();">
       </div>
 
     </div>
@@ -306,26 +320,13 @@
         var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
             var drawLength = pathLength * scrollPercentage;
             path.style.strokeDashoffset = pathLength - drawLength;
-
-
-        //parallax scrolling text
-        const target = document.querySelectorAll('.scroll');
-
-        var index = 0, length = target.length;
-        for (index; index < length; index++) {
-          var pos = window.pageYOffset * target[index].dataset.rate;
-
-          if (target[index].dataset.direction === 'vertical') {
-            target[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
-
-          } else{
-            var posX = window.pageYOffset * target[index].dataset.ratex;
-            var posY = window.pageYOffset * target[index].dataset.ratey;
-
-            target[index].style.transform = 'transform3d('+posX+'+px, '+posY+'px, 0px)';
-          }
-        }
       })
+
+      //video pop up
+      function toggle(){
+        var trailer = document.querySelector(".trailer")
+        trailer.classList.toggle("active")
+      }
 
   </script>
 
