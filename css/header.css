@@ -52,7 +52,7 @@ header ul li a{
 
 header ul li a:focus,
 header ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
 }
 
 header ul li a:focus:after,
@@ -69,7 +69,7 @@ header ul li a:after {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
