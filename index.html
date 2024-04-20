@@ -63,38 +63,43 @@
     </svg>
 
     <div class="hero1">
-      <div class="column center">
+      <div class="column center scroll" data-rate=".2" data-direction="vertical">
         <h1>Apply Parallax here</h1>
         <p>Little description here</p>
       </div>
     </div>
 
-    <div class="choose-plans">
-      <div class="wrapper">
-        <div class="card1">
-          <div class="piece">
-            <h1>Hi</h1>
-            <p>info</p>
+    <div class="choose-plans-div">
+      <div class="center column"> <h1>Choose your plan</h1> <p class="b-text2">Ranging from apartments to home owners- GE has it all</p></div>
+      <div class="choose-plans">
+        <div class="wrapper">
+          <div class="card1">
+            <div class="piece">
+              <h1>Hi</h1>
+              <p>info</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card1">
-          <div class="piece">
-            <h1>Hi</h1>
-            <p>info</p>
+  
+          <div class="card1">
+            <div class="piece">
+              <h1>Hi</h1>
+              <p>info</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card1">
-          <div class="piece">
-            <h1>Hi</h1>
-            <p>info</p>
+  
+          <div class="card1">
+            <div class="piece">
+              <h1>Hi</h1>
+              <p>info</p>
+            </div>
           </div>
+          
         </div>
-        
+  
       </div>
-
     </div>
+
+    <div class="center column"><h1>Our Sponsers</h1><p>Trusted by the best in green energy</p></div>
     <div class="infinite-brands">
       <div class="logos-slide">
         <img class="img1" src="pictures/Solar power.inc (1).png">
@@ -125,23 +130,18 @@
           More about us
         </h2>
         <p>wow this entry videos is so intresting wowow</p>
+        <a class="learn2">Learn More</a>
       </div>
 
     </div>
     <div class="news-preview">
       <div class="center column">
-        <h1>Latest Updates</h1>
+        <h1 class="b-text" >Latest Updates</h1>
         <p class="sub-text">quick descriptions </p>
       </div>
       <div class="app">
         <div class="bento">
           <div class="bento-container">
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
-              </div>
-            </div>
-
             <div class="bento-box">
               <div class="bento-box-text">
                 <span> date xx/xx/xxxx info info info info</span>
@@ -204,24 +204,24 @@
           </div>
           <div class="info-area theline" id="test">
             <label class="song-info" id="song-info-1">
-              <div class="title">Bunker</div>
+              <div class="title">CARBON FOOTPRINT CALCULATOR  </div>
               <div class="sub-line">
-                <div class="subtitle">Balthazar</div>
-                <div class="time">4.05</div>
+                <div class="subtitle">Calculate your carbon emissions </div>
+                <div class="time"><a href="Additional-Practices.html">Learn More</a></div>
               </div>
             </label>
             <label class="song-info" id="song-info-2">
-              <div class="title">Words Remain</div>
+              <div class="title">ENERGY SOLUTIONS</div>
               <div class="sub-line">
-                <div class="subtitle">Moderator</div>
-                <div class="time">4.05</div>
+                <div class="subtitle">Explore Green energy solutions</div>
+                <div class="time"><a href="Energy-Solutions.html">Learn More</a></div>
               </div>
             </label>
             <label class="song-info" id="song-info-3">
-              <div class="title">Falling Out</div>
+              <div class="title">EFFECTS</div>
               <div class="sub-line">
-                <div class="subtitle">Otzeki</div>
-                <div class="time">4.05</div>
+                <div class="subtitle">Learn about the effects of Green energy</div>
+                <div class="time"><a href="Effects.html">Learn More</a></div>
               </div>
             </label>
           </div>
@@ -306,7 +306,27 @@
         var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
             var drawLength = pathLength * scrollPercentage;
             path.style.strokeDashoffset = pathLength - drawLength;
+
+
+        //parallax scrolling text
+        const target = document.querySelectorAll('.scroll');
+
+        var index = 0, length = target.length;
+        for (index; index < length; index++) {
+          var pos = window.pageYOffset * target[index].dataset.rate;
+
+          if (target[index].dataset.direction === 'vertical') {
+            target[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
+
+          } else{
+            var posX = window.pageYOffset * target[index].dataset.ratex;
+            var posY = window.pageYOffset * target[index].dataset.ratey;
+
+            target[index].style.transform = 'transform3d('+posX+'+px, '+posY+'px, 0px)';
+          }
+        }
       })
+
   </script>
 
 </body>
