@@ -363,6 +363,7 @@ h1{
   width: 100%;
   height: inherit;
   z-index: 10;
+  transition: all 0.5s ease;
 }
 
 .bento-box{
@@ -370,36 +371,73 @@ h1{
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
   border-radius: 1rem;
-
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   transition: background-color 0.32s ease-in-out;
 
   display: flex;
   align-items: flex-end;
   padding: 2rem;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .bento-box:nth-child(1){
   grid-area: 1/1/3/6;
+  background-image: url("../pictures/elaine-casap-qgHGDbbSNm8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 .bento-box:nth-child(2){
   grid-area: 1/6/3/9;
+  background-image: url("../pictures/pexels-kindel-media-9800009.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 .bento-box:nth-child(3){
   grid-area: 3/1/5/5;
+  background-image: url("../pictures/pexels-pixabay-62307.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 
 .bento-box:nth-child(4){
   grid-area: 3/5/5/9;
+  background-image: url("../pictures/pexels-engin-akyurt-1463917.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 .bento-box:nth-child(5){
   grid-area: 5/9/1/9;
+  background-image: url("../pictures/pexels-karolina-grabowska-4205988.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
+
 
 .bento-box-text{
   overflow: hidden;
-  color:var(--tertiary-color)
+  color:var(--tertiary-color);
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  transform: translateY(100px);
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.bento-box:hover .bento-box-text{
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .bento-box-text span{
