@@ -132,16 +132,121 @@ h1{
 
 .card1{
   background-color: var(--primary-color);
-  height: 80%;
+  height: 90%;
   width: 30%;
   display: flex;
   align-items: end;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
 
 .piece{
-  background-color: black;
-  width: 100%;
+  position: absolute;
+  background: linear-gradient(to top,black, rgba(0, 0, 0, 0.705));
   padding: 15px;
+  width: 25%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.card1:hover .piece{
+  visibility:visible;
+  transform: translateY(0%);
+}
+
+.card-title{
+  color:white;
+  padding: 0px;
+  padding-bottom: 5px;
+}
+
+.card-sub{
+  color: white;
+  padding-bottom: 20px;
+}
+
+.card-btn{
+  color: white;
+  padding: 5px;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.card-btn:hover{
+  color: var(--primary-color);
+}
+
+.card1:nth-child(1){
+  background-image: url('../pictures/Untitled\ design\ \(46\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .9;
+}
+
+.card1:nth-child(2){
+  background-image: url('../pictures/Untitled\ design\ \(50\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .9;
+}
+
+.card1:nth-child(3){
+  background-image: url('../pictures/Untitled\ design\ \(51\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .9;
+}
+
+.card1:hover{
+  opacity: 1;
+}
+
+@media (max-width: 768px){
+  .wrapper{
+    width: 95%;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .card1{
+    background-color: var(--primary-color);
+    height: 30%;
+    width: 90%;
+    display: flex;
+  }
+  
+  .piece{
+    padding: 15px;
+    width: 80%;
+    z-index: 1;
+    height: 10%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-title{
+    font-size: 5vw;
+  }
+  
+  .card-sub{
+    font-size: 3vw
+  }
+  
+  .card-btn{
+    font-size: 3vw;
+  }
+
+  .card1:hover .piece{
+    height: 15%;
+  }
 }
 
 
@@ -315,6 +420,7 @@ h1{
     justify-content: center;
     align-items: center;
     border-left: 3px solid var(--primary-color);
+    background-attachment: scroll;
   }
 
   .learn2{
@@ -378,7 +484,7 @@ h1{
   align-items: flex-end;
   padding: 2rem;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .bento-box:nth-child(1){
@@ -388,6 +494,7 @@ h1{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  opacity: 0.8;
 }
 .bento-box:nth-child(2){
   grid-area: 1/6/3/9;
@@ -396,6 +503,7 @@ h1{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  opacity: 0.8;
 }
 .bento-box:nth-child(3){
   grid-area: 3/1/5/5;
@@ -404,6 +512,7 @@ h1{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  opacity: 0.8;
 }
 
 .bento-box:nth-child(4){
@@ -412,7 +521,8 @@ h1{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  opacity: 0.8; 
 }
 .bento-box:nth-child(5){
   grid-area: 5/9/1/9;
@@ -421,6 +531,7 @@ h1{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  opacity: 0.8;
 }
 
 
@@ -438,6 +549,10 @@ h1{
 .bento-box:hover .bento-box-text{
   visibility: visible;
   transform: translateY(0);
+}
+
+.bento-box:hover{
+  opacity: 1;
 }
 
 .bento-box-text span{
@@ -469,21 +584,39 @@ h1{
 
   .bento-box:nth-child(1){
     grid-area: 1/1/2/9;
+    background-attachment: local;
   }
   .bento-box:nth-child(2){
     grid-area: 2/1/3/9;
+    background-attachment: local;
   }
   .bento-box:nth-child(3){
     grid-area: 3/1/4/9;
+    background-attachment: local;
   }
   .bento-box:nth-child(4){
     grid-area: 4/1/5/9;
+    background-attachment: local;
   }
   .bento-box:nth-child(5){
     grid-area: 5/1/6/9;
+    background-attachment: local;
   }
   .bento-box:nth-child(6){
     grid-area: 6/1/7/9;
+    background-attachment: local;
+  }
+
+  .bento-box{
+    background-attachment: local;
+  }
+
+  .hero1{
+    background-attachment: local;
+  }
+
+  .m-text{
+    background-attachment: local;
   }
 
 }
