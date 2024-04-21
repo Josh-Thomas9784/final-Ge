@@ -17,24 +17,33 @@
 
 	<div class="preloader"></div>
 
-  <header class="header" id="header">
-		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
-
-		<input type="checkbox" id="check">
-		<label for="check" class="icons">
-			<i class='bx bx-menu' id="menu-icon"></i>
-			<i class='bx bx-x' id="close-icon" ></i>
-		</label>
-
-		<nav class="navbar">
-			<a href="Energy-Solutions.html">Energy Solutions</a>
-			<a href="Additional-Practices.html">Additional Practices</a>
-			<a href="Effects.html">Effects</a>
-			<a href="Community.html">Community</a>
-			<a href="Resources.html">Resources</a>
-			<a href="sign-up.html" class="button">Sign up</a>
-		</nav>
-	</header>
+  <header id="header">
+    <a href="index.html" class="logo">My Logo</a>
+    <div class="menuToggle"></div>
+    <nav>
+      <ul class="ul1">
+        <li class="li1"><a href="Energy-Solutions.html">Energy Solutions</a></li>
+        <li class="li1"><a href="Effects.html">Effects</a></li>
+        <li class="li1"><a href="Community.html">Community +</a>
+          <ul>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Global Impacts</a></li>
+            <li><a href="#">Survey Form</a></li>
+          </ul>
+        </li>
+        <li class="li1"><a href="Resources.html">Resources</a></li>
+				<li class="li2"><a href="sign-up.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    menuToggle.onclick = function(){
+      header.classList.toggle('active');
+    }
+  </script>
 
 	<div class="part1 hidden">
 		<div class = "text-box1"><h1>Refrences</h1></div>
