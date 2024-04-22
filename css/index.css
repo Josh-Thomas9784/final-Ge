@@ -138,17 +138,19 @@ h1{
   align-items: end;
   transition: all 0.2s ease-in-out;
   z-index: 1;
+  border-radius: 5px;
 }
 
 .piece{
   position: absolute;
   background: linear-gradient(to top,black, rgba(0, 0, 0, 0.705));
   padding: 15px;
-  width: 25%;
+  width: 25.1%;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 5px;
 
   transition: transform 0.2s ease-in-out;
 }
@@ -329,7 +331,7 @@ h1{
   border-top: 3px solid var(--primary-color);
   border-right: 3px solid var(--primary-color);
   border-bottom: 3px solid var(--primary-color);
-
+  z-index: 1;
 }
 
 .play{
@@ -396,6 +398,7 @@ h1{
 }
 
 .learn2{
+  text-decoration: none;
   background-color: var(--fourth-color);
   padding: 15px;
   color: var(--tertiary-color);
@@ -403,6 +406,11 @@ h1{
   width: 25%;
   text-align: center;
   margin-top: 2%;
+  transition: all 0.2s ease-in-out;
+}
+
+.learn2:hover{
+  transform: scale(1.06,1.06);
 }
 
 @media (max-width: 991px){
@@ -622,17 +630,37 @@ h1{
 }
 
 .learn{
-  font-size: 2em;
+  text-decoration: none;
+  font-size: 22px;
   background-color: var(--fourth-color);
   padding: 15px;
   color: var(--tertiary-color);
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.learn:hover{
+  transform: scale(1.06,1.06);
 }
 
 /* -------- CARD CAROUSEL -------- */
 
-.card-carousel{
+.carousel-title{
   margin-top: 5%;
+  padding: 15px;
+  padding-left: 50px;
+}
+
+.carousel-title p{
+  padding: 0px;
+}
+
+.carousel-title h1{
+  padding: 0px;
+}
+
+.card-carousel{
+  margin-top:1px;
   width: 100%;
   height: 90vh;
   display: flex;
@@ -649,7 +677,7 @@ input[type=radio] {
 .card {
   position: absolute;
   width: 60%;
-  height: 100%;
+  height: 80%;
   left: 0;
   right: 0;
   margin: auto;
@@ -660,7 +688,7 @@ input[type=radio] {
 .container {
   width: 100%;
   max-width: 1500px;
-  max-height: 800px;
+  max-height: 650px;
   height: 100%;
   transform-style: preserve-3d;
   display: flex;
@@ -673,12 +701,11 @@ input[type=radio] {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 20px;
 }
 
 .cards .card img {
   width: 900px;
-  height: 700px;
+  height: 500px;
   border-radius: 10px;
   object-fit: cover;
   transition: all 0.5s ease;
@@ -708,10 +735,11 @@ input[type=radio] {
 }
 
 .player {
-  background-color: #fff;
+  background-color: rgb(34, 34, 34);
   border-radius: 8px;
-  min-width: 320px;
+  min-width: 350px;
   padding: 16px 10px;
+  z-index: 1;
 }
 
 .upper-part {
@@ -728,10 +756,11 @@ input[type=radio] {
 .song-info {
   width: calc(100% - 32px);
   display: block;
+  color: white;
 }
 
 .song-info .title {
-  color: #403d40;
+  color: white;
   font-size: 14px;
   line-height: 24px;
 }
@@ -745,20 +774,19 @@ input[type=radio] {
 .subtitle, .time {
   font-size: 12px;
   line-height: 16px;
-  color: #c6c5c6;
+  color: white;
 }
 
 .time {
   font-size: 12px;
   line-height: 16px;
-  color: #a5a5a5;
+  color: white;
   font-weight: 500;
   margin-left: auto;
 }
 
 .time a{
-  text-decoration: none;
-  color: grey;
+  color: white;
   transition: all 0.2s ease-in-out
 }
 
@@ -846,7 +874,7 @@ input[type=radio] {
   .container {
     width: 100%;
     max-width: 750px;
-    max-height: 400px;
+    max-height: 350px;
     height: 100%;
     transform-style: preserve-3d;
     display: flex;
@@ -863,7 +891,7 @@ input[type=radio] {
   }
   
   .cards .card img {
-    width: 200px;
+    width: 210px;
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
@@ -878,9 +906,3 @@ input[type=radio] {
   }
 }
 
-.slogan{
-  background: pink;
-  width: 100%;
-  height: 90vh;
-  position: absolute;
-}
