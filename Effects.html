@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="css/Effects.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	<script defer src="community.js"></script>
-	<script defer src="app.js"></script>
+	<script defer src="js/app.js"></script>
+	<script defer src="js/community.js"></script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li class="li1"><a href="Resources.html">Resources</a></li>
-				<li class="li2"><a href="sign-up.html">Profile</a></li>
+        <li class="li2"><a href="sign-up.html">Profile</a></li>
       </ul>
     </nav>
   </header>
@@ -46,193 +46,246 @@
     }
   </script>
 
-			<div class="part1">
-				<div class="left-part">
-				</div>
-				<div class = "text-box-whole hidden3">
-					<h1>EFFECTS</h1>
-				</div>
-				<div class="right-part">
+	<div class="part1">
+		<div class="center column"><h1 class="m-text">Effects</h1></div>
+	</div>
+
+	<div class="part2">
+		<div class="index-bg">
+			<ul class='indexes'>
+				<li data-index='0'>01</li>
+				<li data-index='1'>02</li>
+				<li data-index='2'>03</li>
+				<li data-index='3'>04</li>
+			</ul>
+			<ul class='tabs'>
+				<li class='tab'>
+					<article class='tab-content'>
+						<h3>Midnight Station</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
+						voluptate blanditiis nemo magnam sit modi architecto officia
+						maiores magni. Necessitatibus, iste aut.</p>
+						<button>Read More</button>
+					</article>
+					<div class='tab-image'><img src='https://picsum.photos/id/345/1000/600'></div>
+				</li>
+				<li class='tab'>
+					<article class='tab-content'>
+						<h3>The Hitchhiker</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
+						voluptate blanditiis nemo magnam sit modi architecto officia
+						maiores magni. Necessitatibus, iste aut.</p>
+						<button>Read More</button>
+					</article>
+					<div class='tab-image'><img src='https://picsum.photos/id/352/1000/600'></div>
+				</li>
+				<li class='tab'>
+					<article class='tab-content'>
+						<h3>Missing Pages</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
+						voluptate blanditiis nemo magnam sit modi architecto officia
+						maiores magni. Necessitatibus, iste aut.</p>
+						<button>Read More</button>
+					</article>
+					<div class='tab-image'><img src='https://picsum.photos/id/444/1000/600'></div>
+				</li>
+				<li class='tab'>
+					<article class='tab-content'>
+						<h3>Uninvited Guests</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
+						voluptate blanditiis nemo magnam sit modi architecto officia
+						maiores magni. Necessitatibus, iste aut.</p>
+						<button>Read More</button>
+					</article>
+					<div class='tab-image'><img src='https://picsum.photos/id/451/1000/600'></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="part3">
+		<div class="holder">
+			<div class="cards-fact">
+				<div class="fact">
+					<h1>
+						Card 1 fact fact fact
+					</h1>
+					<p>
+						did yk that blank blank blank
+					</p>
 				</div>
 			</div>
+			<div class="cards-fact">
+				<div class="fact">
+					<h1>
+						Card 1 fact fact fact
+					</h1>
+					<p>
+						did yk that blank blank blank
+					</p>
+				</div>
+			</div>
+			<div class="cards-fact">
+				<div class="fact">
+					<h1>
+						Card 1 fact fact fact
+					</h1>
+					<p>
+						did yk that blank blank blank
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-		<div class="part2">
-			<div class="holder">
-				<div class="text-box"> Green Energy practices use renewable and sustainable energy sources to reduce harm to the environment. Here are some facts about these practices: </div>
-				<div class="imgs">
-					<div class ="fact-holder hidden">
-						<div class = "img-holder"><img src="pictures/green-house-fact.png"></div>
-						<div class="fact">
-							Green energy houses often use solar design to capture sunlight for warmth. This includes features like windows facing the sun,
-							 materials that hold heat well (thermal mass), and shades to control the temperature. This design reduces the need for artificial light and heating.</div>
+	<div class="part4">
+		<div class="align">
+			<div class="d-holder">
+				<a class="play" href="#" onclick="toggle();"><img src="pictures/play.png"></a>
+			</div>
+			<div class="text2"><p class="tt">
+				<br><mark>The positives of using renewable energy: </mark></br>
+				Transitioning to renewable energy sources, such as <mark>solar and wind power</mark>, offers numerous positive outcomes.
+					Apart from <mark>addressing climate change, adopting renewable energy provides</mark> various economic advantages as well. Economically, it <mark>spurs job growth</mark> and investment,
+					driving innovation and prosperity. Socially, communities enjoy cleaner air and better health outcomes. Environmentally, reducing greenhouse gas emissions helps preserve ecosystems
+						and biodiversity.This collective impact shows the transformative power of embracing renewable energy, <mark>leading us towards a cleaner, more resilient, future.</mark>
+			</div>
+		</div>
+
+		<div class="trailer">
+			<video src="pictures/Nature Travel Youtube Video Intro (1).mp4" controls="true"></video>
+			<img src="pictures/close.png" class="close" href="#" onclick="toggle();">
+		</div>
+	</div>
+
+	<div class="card-group">
+		<div class="text2"><p class="tt"> 
+			<mark>The neglect of green energy practices</mark> results in detrimental consequences across multiple fronts, including <mark>waste generation, heightened risks of forest fires,
+				increasing global warming, and destruction of ecosystems</mark>. Relying on non-renewable energy sources like fossil fuels leads to significant waste production, emitting carbon emissions,
+				toxic pollutants, and hazardous materials that contaminate environments. Moreover, <mark>climate change, fueled by greenhouse gas emissions,</mark> intensifies extreme weather events
+					such as droughts and heatwaves, elevating the likelihood of wildfires, which devastate forests and communities. Additionally, deforestation and industrial activities degrade
+					ecosystems, fragment landscapes, and disrupt ecological processes, <mark>posing threats to biodiversity</mark> and compromising the resilience of natural systems.
+				Addressing these challenges should show a transition to sustainable and renewable energy sources, increasing resilience and safeguarding the planet's health.
+		</div>
+		
+		<div class="wrapper">
+			<div class="cols">
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div class="container">
+							<div class="front" style="background-image: url(https://images.pexels.com/photos/2547565/pexels-photo-2547565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+								<div class="inner">
+									<p>Waste</p>
+									<span>Trash harms the environment and wildlife</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										Improperly disposed trash contributes to environmental pollution, posing threats to ecosystems and wildlife. </p>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<div class ="fact-holder hidden">
-						<div class = "img-holder"><img src="pictures/wind-energy-fact.png"></div>
-						<div class="fact">Windmills produce electricity without emitting greenhouse gases, such as carbon dioxide,
-							 which contribute to climate change. Their use helps to reduce reliance on fossil fuels and lowers overall carbon emissions.</div>
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div class="container">
+							<div class="front" style="background-image: url(https://images.pexels.com/photos/4335591/pexels-photo-4335591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+								<div class="inner">
+									<p>Ecosystem</p>
+									<span>Preserve Today, Sustain Tomorrow</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										Damaging the environment through pollution and deforestation leads to ecosystem degradation and loss of biodiversity.</p>
+								</div>
+							</div>
+						</div>
 					</div>
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div class="container">
+							<div class="front" style="background-image: url(https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+								<div class="inner">
+									<p>Global warming</p>
+									<span>Stop Earth's Fever</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										Contributing to global warming, excessive greenhouse gas emissions from human activities intensify climate change, with far-reaching consequences for ecosystems and communities.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col" ontouchstart="this.classList.toggle('hover');">
+						<div class="container">
+							<div class="front" style="background-image: url(https://images.pexels.com/photos/266487/pexels-photo-266487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+								<div class="inner">
+									<p>Fire</p>
+									<span>Embrace Prevention</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>Not adopting green energy can indirectly contribute to more frequent and intense wildfires by exacerbating climate change through continued use of fossil fuels.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
 
-					<div class ="fact-holder hidden">
-						<div class = "img-holder"><img src="pictures/environment-fact.png"></div>
-						<div class="fact">Many organizations and governments around the world implement reforestation programs to restore degraded lands, combat deforestation,
-							 and enhance ecosystem resilience. These initiatives contribute to global efforts to address climate change and biodiversity loss.</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>GE Pages</h4>
+					<ul>
+						<li><a href="Energy-Solutions.html">Energy Solutions</a></li>
+						<li><a href="Additional-Practices.html">Additional Practices</a></li>
+						<li><a href="Effects.html">Effects</a></li>
+						<li><a href="Community.html">Community</a></li>
+						<li><a href="Resources.html">Resources</a></li>
+						<li><a href="sign-up.html">Sign Up</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="ApplianceSUB.html">Appliances</a></li>
+						<li><a href="batSUB.html">Batteries</a></li>
+						<li><a href="evSUB.html">Ev</a></li>
+						<li><a href="geoSUB.html">Geothermal</a></li>
+						<li><a href="solarSUB.html">Solar</a></li>
+						<li><a href="new (1).html">Start</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Community</h4>
+					<ul>
+						<li><a href="Community.html">News</a></li>
+						<li><a href="Energy-Solutions.html">FRQ</a></li>
+						<li><a href="sign-up.html">Newsletter</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="https://www.facebook.com/">Fb</a>
+						<a href="https://www.instagram.com/">I</a>
+						<a href="https://www.youtube.com/">Yt</a>
+						<a href="https://twitter.com/?lang=en">Tw</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	
-		<div class="part3 hidden">
-			<div class="holder">
-				<div class="fact2">
-					<div class ="text1"> <p>In 2023, <mark>$174.9 billion </mark>worth of American agricultural products were exported around the world. <mark>1.9 million farms </mark>dot America’s rural landscape,
-						 and <mark>95% are operated by families</mark> – individuals,
-						 family partnerships or family corporations</p></div>
-					<div class="img"><img src="pictures/tree.png"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="part4">
-			<div class="align">
-				<div class="d-holder">
-					<video autoplay loop muted plays-inline>
-						<source src="pictures/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
-					</video>
-				</div>
-				<div class="text2"><p class="tt">
-					<br><mark>The positives of using renewable energy: </mark></br>
-					Transitioning to renewable energy sources, such as <mark>solar and wind power</mark>, offers numerous positive outcomes.
-					 Apart from <mark>addressing climate change, adopting renewable energy provides</mark> various economic advantages as well. Economically, it <mark>spurs job growth</mark> and investment,
-					  driving innovation and prosperity. Socially, communities enjoy cleaner air and better health outcomes. Environmentally, reducing greenhouse gas emissions helps preserve ecosystems
-						 and biodiversity.This collective impact shows the transformative power of embracing renewable energy, <mark>leading us towards a cleaner, more resilient, future.</mark>
-				</div>
-			</div>
-		</div>
-
-		<div class="card-group">
-			<div class="text2"><p class="tt"> 
-				<mark>The neglect of green energy practices</mark> results in detrimental consequences across multiple fronts, including <mark>waste generation, heightened risks of forest fires,
-					increasing global warming, and destruction of ecosystems</mark>. Relying on non-renewable energy sources like fossil fuels leads to significant waste production, emitting carbon emissions,
-				  toxic pollutants, and hazardous materials that contaminate environments. Moreover, <mark>climate change, fueled by greenhouse gas emissions,</mark> intensifies extreme weather events
-					 such as droughts and heatwaves, elevating the likelihood of wildfires, which devastate forests and communities. Additionally, deforestation and industrial activities degrade
-					  ecosystems, fragment landscapes, and disrupt ecological processes, <mark>posing threats to biodiversity</mark> and compromising the resilience of natural systems.
-				 Addressing these challenges should show a transition to sustainable and renewable energy sources, increasing resilience and safeguarding the planet's health.
-			</div>
-			<div class="wrapper">
-				<div class="cols">
-						<div class="col" ontouchstart="this.classList.toggle('hover');">
-							<div class="container">
-								<div class="front" style="background-image: url(https://images.pexels.com/photos/2547565/pexels-photo-2547565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-									<div class="inner">
-										<p>Waste</p>
-										<span>Trash harms the environment and wildlife</span>
-									</div>
-								</div>
-								<div class="back">
-									<div class="inner">
-										<p>
-											Improperly disposed trash contributes to environmental pollution, posing threats to ecosystems and wildlife. </p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col" ontouchstart="this.classList.toggle('hover');">
-							<div class="container">
-								<div class="front" style="background-image: url(https://images.pexels.com/photos/4335591/pexels-photo-4335591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-									<div class="inner">
-										<p>Ecosystem</p>
-										<span>Preserve Today, Sustain Tomorrow</span>
-									</div>
-								</div>
-								<div class="back">
-									<div class="inner">
-										<p>
-											Damaging the environment through pollution and deforestation leads to ecosystem degradation and loss of biodiversity.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col" ontouchstart="this.classList.toggle('hover');">
-							<div class="container">
-								<div class="front" style="background-image: url(https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-									<div class="inner">
-										<p>Global warming</p>
-										<span>Stop Earth's Fever</span>
-									</div>
-								</div>
-								<div class="back">
-									<div class="inner">
-										<p>
-											Contributing to global warming, excessive greenhouse gas emissions from human activities intensify climate change, with far-reaching consequences for ecosystems and communities.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col" ontouchstart="this.classList.toggle('hover');">
-							<div class="container">
-								<div class="front" style="background-image: url(https://images.pexels.com/photos/266487/pexels-photo-266487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-									<div class="inner">
-										<p>Fire</p>
-										<span>Embrace Prevention</span>
-									</div>
-								</div>
-								<div class="back">
-									<div class="inner">
-										<p>Not adopting green energy can indirectly contribute to more frequent and intense wildfires by exacerbating climate change through continued use of fossil fuels.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-			 </div>
-		</div>
-
-		<footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>GE Pages</h4>
-            <ul>
-              <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
-              <li><a href="Additional-Practices.html">Additional Practices</a></li>
-              <li><a href="Effects.html">Effects</a></li>
-              <li><a href="Community.html">Community</a></li>
-              <li><a href="Resources.html">Resources</a></li>
-              <li><a href="sign-up.html">Sign Up</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="ApplianceSUB.html">Appliances</a></li>
-              <li><a href="batSUB.html">Batteries</a></li>
-              <li><a href="evSUB.html">Ev</a></li>
-              <li><a href="geoSUB.html">Geothermal</a></li>
-              <li><a href="solarSUB.html">Solar</a></li>
-							<li><a href="new (1).html">Start</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Community</h4>
-            <ul>
-              <li><a href="Community.html">News</a></li>
-              <li><a href="Energy-Solutions.html">FRQ</a></li>
-              <li><a href="sign-up.html">Newsletter</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>follow us</h4>
-            <div class="social-links">
-              <a href="https://www.facebook.com/">Fb</a>
-              <a href="https://www.instagram.com/">I</a>
-              <a href="https://www.youtube.com/">Yt</a>
-              <a href="https://twitter.com/?lang=en">Tw</a>
-            </div>
-          </div>
-        </div>
-      </div>
-   </footer>
+	</footer>
 
 	<script>
 		window.addEventListener("load", () =>{
@@ -242,6 +295,12 @@
 				document.body.removeChild(document.querySelector(".preloader"));
 			})
 		})
+
+		//video pop up
+		function toggle(){
+      var trailer = document.querySelector(".trailer")
+      trailer.classList.toggle("active")
+    }
 	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" 
