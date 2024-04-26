@@ -23,6 +23,15 @@ body{
 
 h1{
   padding-top: 50px;
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-style: italic;
+}
+
+p{
+  font-family: roboto;
+  font-weight: 300;
 }
 
 .hero1{
@@ -60,6 +69,9 @@ h1{
 
 .m-ptext{
   color: white;
+  font-size: 20px;
+  padding-top: 1%;
+  font-family: roboto;
 }
 
 
@@ -94,6 +106,9 @@ h1{
 
 .b-text2{
   color: var(--primary-color);
+  padding-top: 5px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .wrapper{
@@ -631,10 +646,13 @@ h1{
 
 .carousel-title p{
   padding: 0px;
+  color: var(--primary-color);
+  font-weight: 500;
 }
 
 .carousel-title h1{
   padding: 0px;
+  letter-spacing: 1px;
 }
 
 .card-carousel{
