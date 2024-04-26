@@ -26,6 +26,7 @@ header .logo{
   font-size: 1.75em;
   font-weight: 600;
   text-decoration: none;
+  font-family: Poppins;
 
 }
 
@@ -47,6 +48,9 @@ header ul li a{
   display: flex;
   justify-content: space-between;
   transition: all 0.2s ease-in-out;
+
+  font-family: Poppins;
+  font-weight: 400;
 }
 
 
@@ -79,15 +83,12 @@ header ul li a:hover::before{
   width: 99%;
 }
 
-header ul .li2 a{
-  color: var(--fifth-color);
-}
 
 header ul li ul{
   position: absolute;
   left: 0;
   width: 200px;
-  background-color: rgba(0, 0, 0, 0.226);
+  background-color: rgba(0, 0, 0, 0.658);
   display: none;
   padding-top: 0px;
   padding-left: 15px;
@@ -103,12 +104,8 @@ header ul li ul li{
   top: 0;
 }
 
-header ul li ul li a:hover{
-  color: var(--fourth-color);
-}
 
-
-@media(max-width: 900px){
+@media(max-width: 1400px){
   header{
     padding: 10px 20px;
   }

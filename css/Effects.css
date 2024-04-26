@@ -46,6 +46,17 @@ body{
 
 }
 
+@media (max-width: 991px){
+  .trailer video{
+    max-width: 90%;
+  }
+
+  .m-text{
+    font-size: 15vw;
+  }
+  
+}
+
 
 
 
@@ -175,6 +186,52 @@ body{
 @media (max-width: 1568px) {
   .tab-image {
     display: none;
+  }
+
+  .part2{
+    margin-bottom: 15%;
+  }
+
+  .tab-content{
+    padding: 0px;
+  }
+
+  .tab {
+    position: absolute;
+    display: flex;
+    width: 75vw;
+    opacity: 0; 
+    padding: 90px 90px 90px 150px;
+  }
+
+  .indexes {
+    padding: 55px;
+  }
+}
+
+@media (max-width: 968px) {
+  .tab-image {
+    display: none;
+  }
+
+  .part2{
+    margin-bottom: 15%;
+  }
+
+  .tab-content{
+    padding: 0px;
+  }
+
+  .tab {
+    position: absolute;
+    display: flex;
+    width: 75vw;
+    opacity: 0; 
+    padding: 90px 90px 90px 10px;
+  }
+
+  .indexes {
+    padding: 25px;
   }
 }
 
@@ -380,7 +437,7 @@ body{
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 1468px){
   .d-holder{
     background-attachment: local;
   }
@@ -391,11 +448,15 @@ body{
 
   .d-holder{
     width: 99%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 3px solid var(--primary-color);
+  }
+
+  .trailer video{
+    max-width: 90%;
   }
 
 }
@@ -405,10 +466,7 @@ body{
 
 .card-group{
   display: flex;
-
   margin-top: 5%;
-  align-items: center;
-  justify-content: center;
   padding: 100px;
   color: var(--tertiary-color);
 
@@ -614,9 +672,15 @@ body{
 
 .front .inner span{
   color: rgba(255,255,255,0.7);
-  font-family: 'Montserrat';
+  font-family: Roboto;
   font-weight: 300;
 }
+
+.inner p{
+  font-family: roboto;
+}
+
+
 
 @media screen and (max-width: 64rem){
   .col{
@@ -637,8 +701,14 @@ body{
   }
 }
 
+@media(max-width: 1568px){
+  .inner p{
+    font-size: 16px;
+  }
+}
 
-@media(max-width: 768px){
+
+@media(max-width: 1468px){
 
   
   .tt{
@@ -673,6 +743,14 @@ body{
 
   .text3 p{
     background-color: transparent;
+  }
+
+  .card-group{
+    margin-top: 15%;
+  }
+
+  .inner p{
+    font-size: 12px;
   }
 }
 
