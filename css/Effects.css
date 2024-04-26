@@ -670,6 +670,10 @@ body{
     height: 50%;
     padding-bottom: 50px;
   }
+
+  .text3 p{
+    background-color: transparent;
+  }
 }
 
 
