@@ -1,343 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/header.css"> 
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <script defer src="community.js"></script>
-  <script defer src="js/app.js"></script>
+	<link rel="stylesheet" href="css/about.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-  <title>GE Solutions</title>
+	<script defer src="app.js"></script>
+  <title>Document</title>
 </head>
 
-<body>
-  <div class="header-align">
-    <header id="header">
-      <a href="index.html" class="logo">My Logo</a>
-      <div class="menuToggle"></div>
-      <nav>
-        <ul class="ul1">
-          <li class="li1"><a href="Resources.html">About us</a></li>
-          <li class="li1"><a href="Energy-Solutions.html">Energy Solutions</a></li>
-          <li class="li1"><a href="#">Community +</a>
-            <ul>
-              <li class="li1"><a href="Effects.html">Effects</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="survey.html">Plan a Home</a></li>
-            </ul>
-          </li>
-          <li class="li2"><a href="sign-up.html">  Profile</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="header" id="header">
+		<a href="index.html" class="logo"><img src="./pictures/Ges (2).png" alt="Logo"></a>
 
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script>
-    let menuToggle = document.querySelector('.menuToggle');
-    let header = document.querySelector('header');
-    menuToggle.onclick = function(){
-      header.classList.toggle('active');
-    }
-  </script>
+		<input type="checkbox" id="check">
+		<label for="check" class="icons">
+			<i class='bx bx-menu' id="menu-icon"></i>
+			<i class='bx bx-x' id="close-icon" ></i>
+		</label>
 
-  <main id="animated-section">
-    <svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
-    
-      <path class="path" id="path" 
-            d="M -5,0
-              Q 450 0 100 450
-              T 1200 1050
-              Q 2200 1100 1250 1580
-              T 650 1950 
-              Q 750 2000 300 2250
-              T 1000 2550
-              Q 2200 2600 1000 3050
-              T 1000 3500
-              Q 1900 3500 1000 4050
-              T 1000 5000
-              Q 2100 5100 200 5450
-              "
-            fill="none" stroke="var(--primary-color)" stroke-width="10" />
-    </svg>
-
-    <div class="hero1">
-      <div class="column center video1">
-
-        <div class=" column center">
-          <h1 class="m-text">GE Solutions</h1>
-          <p class="m-ptext">Welcome to the enviornmental website of your dreams </p>
-        </div>
-      </div> 
-
-
-    </div>
-
-    <div class="choose-plans-div">
-      <div class="center column"> <h1>Choose your plan</h1> <p class="b-text2">Ranging from apartments to home owners- GE has it all</p></div>
-      <div class="choose-plans">
-        <div class="wrapper">
-          <div class="card1">
-            <div class="piece">
-              <h1 class="card-title">Home Owners</h1>
-              <p class="card-sub">subheading what its about wow info info info info</p>
-              <a class="card-btn">Learn more</a>
-            </div>
-          </div>
+		<nav class="navbar">
+			<a href="Energy-Solutions.html">Energy Solutions</a>
+			<a href="Additional-Practices.html">Additional Practices</a>
+			<a href="Effects.html">Effects</a>
+			<a href="Community.html">Community</a>
+			<a href="Resources.html">Resources</a>
+      <a href="sign-up.html" class="button">Sign up</a>
+		</nav>
+	</header>
   
-          <div class="card1">
-            <div class="piece">
-              <h1 class="card-title">Apartment Owners</h1>
-              <p class="card-sub">subheading what its about wow info info info info</p>
-              <a class="card-btn">Learn more</a>
-            </div>
-          </div>
-  
-          <div class="card1">
-            <div class="piece">
-              <h1 class="card-title">Home Renters</h1>
-              <p class="card-sub">subheading what its about wow info info info info</p>
-              <a class="card-btn">Learn more</a>
-            </div>
-          </div>
-          
+  <main>
+    <section>
+      <div class="fixed">
+        <video autoplay loop muted>
+          <source src="pictures/Nature Travel Youtube Video Intro (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="content">
+          <h1>Protect</h1>
+          <h1>the</h1>
+          <h1>GREEN</h1>
+          <p>Save the greenery in nature and your wallet. Explore the vast amount of soloutions avaliable. </p>
+          <p>  ㅤ</p>
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
         </div>
-  
       </div>
-    </div>
-
-    <div class="center column"><h1>Our Sponsers</h1><p>Trusted by the best in green energy</p></div>
-    <div class="infinite-brands">
-      <div class="logos-slide">
-        <img class="img1" src="pictures/Solar power.inc (1).png">
-        <img  class="img1"src="pictures/Solar power.inc (2).png">
-        <img class="img1" src="pictures/Solar power.inc.png">
-        <img  class="img1"src="pictures/Light power inc (1).png">
-        <img class="img1" src="pictures/Light power inc.png">
-        <img class="img1" src="pictures/Green hands.com.png">
-        <img class="img1" src="pictures/Global green.inc.png">
-      </div>
-
-      <div class="logos-slide">
-        <img class="img1" src="pictures/Solar power.inc (1).png">
-        <img  class="img1"src="pictures/Solar power.inc (2).png">
-        <img class="img1" src="pictures/Solar power.inc.png">
-        <img  class="img1"src="pictures/Light power inc (1).png">
-        <img class="img1" src="pictures/Light power inc.png">
-        <img class="img1" src="pictures/Green hands.com.png">
-        <img class="img1" src="pictures/Global green.inc.png">
-      </div>
-
-    </div>
-
-    <div class="yt-vid">
-      <div class="holder">
-        <a class="play" href="#" onclick="toggle();"><img src="pictures/play.png"></a>
-      </div>
-      <div class="text">
-        <h2>
-          More about us
-        </h2>
-        <h3>Subheading</h3>
-        <p>wow this entry videos is so intresting wowow info info info info info information</p>
-        <a class="learn2" href="Resources.html">Learn More</a>
-      </div>
-      <div class="trailer">
-        <video src="pictures/Nature Travel Youtube Video Intro (1).mp4" controls="true"></video>
-        <img src="pictures/close.png" class="close" href="#" onclick="toggle();">
-      </div>
-
-    </div>
-    <div class="news-preview">
-      <div class="center column">
-        <h1 class="b-text" >Latest Updates</h1>
-        <p class="sub-text">quick descriptions </p>
-      </div>
-      <div class="app">
-        <div class="bento">
-          <div class="bento-container">
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
-              </div>
-            </div>
-
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
-              </div>
-            </div>
-
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
-              </div>
-            </div>
-
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
-              </div>
-            </div>
-
-            <div class="bento-box">
-              <div class="bento-box-text">
-                <span> date xx/xx/xxxx info info info info</span>
+    </section>
+    <section>
+      <article>
+        <div class="fixed">
+          <img src="pictures/Untitled design (49).png" alt="">
+        </div>
+        <div class="static">
+          <div class="content">
+            <div class="text-wrap">
+              <div class="loud-wrap">
+                <h2>Homeowner Plans</h2>
+                <p>Explore the pricing and green practices that you can apply in your daily life. Give it a Try!</p>
+                <a href="HomepageHomeOWN.html">
+                  <button class="cta-button">Learn More →</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="center"><a class="learn" href="news.html">Learn More</a></div>
-      </div>
-
-    </div>
-    <div class="carousel-title"><p>The innovations of Green energy</p><h1>Explore the best of GE Solutions</h1></div>
-    <div class="card-carousel">
-      <div class="container">
-        <input type="radio" name="slider" id="item-1" checked>
-        <input type="radio" name="slider" id="item-2">
-        <input type="radio" name="slider" id="item-3">
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <img src="pictures/EEV.jpg" alt="song">
-        </label>
-        <label class="card" for="item-2" id="song-2">
-          <img src="pictures/polygon-scatter-haikei (1).svg" alt="song">
-        </label>
-        <label class="card" for="item-3" id="song-3">
-          <img src="pictures/Green Illustrated Environmental Sustainability Presentation.png" alt="song">
-        </label>
-      </div>
-      <div class="player">
-        <div class="upper-part">
-          <div class="play-icon">
-            <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
-              <defs/>
-              
-            </svg>
-          </div>
-          <div class="info-area theline" id="test">
-            <label class="song-info" id="song-info-1">
-              <div class="title">CARBON FOOTPRINT CALCULATOR  </div>
-              <div class="sub-line">
-                <div class="subtitle">Calculate your carbon emissions </div>
-                <div class="time"><a href="Additional-Practices.html">Learn More</a></div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-2">
-              <div class="title">ENERGY SOLUTIONS</div>
-              <div class="sub-line">
-                <div class="subtitle">Explore Green energy solutions</div>
-                <div class="time"><a href="Energy-Solutions.html">Learn More</a></div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-3">
-              <div class="title">EFFECTS</div>
-              <div class="sub-line">
-                <div class="subtitle">Learn about the effects of Green energy</div>
-                <div class="time"><a href="Effects.html">Learn More</a></div>
-              </div>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
+      </article>
+    <article>
+      <h1>ioh;erjflerhf;irhi</h1>
+    </article>
+      
+    </section>
   </main>
+  
+  
 
-  <footer class="footer">
-    <div class="container1">
-      <div class="row">
-        <div class="footer-col">
-          <h4>GE Pages</h4>
-          <ul>
-            <li><a href="Energy-Solutions.html">Energy Solutions</a></li>
-            <li><a href="Additional-Practices.html">Additional Practices</a></li>
-            <li><a href="Effects.html">Effects</a></li>
-            <li><a href="Community.html">Community</a></li>
-            <li><a href="Resources.html">Resources</a></li>
-            <li><a href="sign-up.html">Sign Up</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="ApplianceSUB.html">Appliances</a></li>
-            <li><a href="batSUB.html">Batteries</a></li>
-            <li><a href="evSUB.html">Ev</a></li>
-            <li><a href="geoSUB.html">Geothermal</a></li>
-            <li><a href="solarSUB.html">Solar</a></li>
-            <li><a href="new (1).html">Start</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="Community.html">News</a></li>
-            <li><a href="Energy-Solutions.html">FRQ</a></li>
-            <li><a href="sign-up.html">Newsletter</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/">Fb</a>
-            <a href="https://www.instagram.com/">I</a>
-            <a href="https://www.youtube.com/">Yt</a>
-            <a href="https://twitter.com/?lang=en">Tw</a>
-          </div>
-        </div>
-      </div>
-    </div>
- </footer>
+  <style>
+      .arrows {
+        width: 60px;
+        height: 90px;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 20px;
+      }
+
+      .arrows path {
+        stroke: #ffffff;
+        fill: transparent;
+        stroke-width: 10px;
+        animation: arrow 2s infinite;
+        -webkit-animation: arrow 2s infinite;
+      }
+
+      @keyframes arrow {
+        0% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @-webkit-keyframes arrow /*Safari and Chrome*/ {
+        0% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .arrows path.a1 {
+        animation-delay: -1s;
+        -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+      }
+
+      .arrows path.a2 {
+        animation-delay: -0.5s;
+        -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+      }
+
+      .arrows path.a3 {
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+      }
+          h1{
+            color:  #f5f5dc;
+          }
+          
 
 
+      *,
+      *:after,
+      *:before {
+        box-sizing: border-box;
+      }
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" 
-  integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      html {
+        scroll-snap-type: y mandatory;
+      }
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" 
-  integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      body {
+        min-height: 100vh;
+        font-family: Bebas neue;
+        font-weight: 80;
+        background: black;
+        color: hsl(0 0% 90%);
+        overflow-x: hidden;
+      }
+
+      p {
+        max-width: 40ch;
+        padding-bottom: 20px;
+        font-family: Truculenta;
+        font-weight: 500;
+      }
+
+      section:nth-of-type(1) {
+        scroll-snap-align: center;
+        height: 100vh;
+      }
+
+      section:nth-of-type(2) {
+        scroll-snap-align: start;
+      }
+
+      article {
+        min-height: 100vh;
+      }
+      :is(h1, h2) {
+        font-weight: 100;
+        font-size: clamp(2.5rem, 3.35vw + 1rem, 8rem);
+        letter-spacing: -0.075ch;
+        margin: 0;
+      }
+
+      h1 {
+        color: hsl(0 0% 90%);
+        letter-spacing: 3px;
+      }
+
+      h2{
+        letter-spacing: 3px;
+      }
+
+      :is(section, article) {
+        position: relative;
+      }
+
+
+      .content {
+        margin: 0 auto;
+        width: 900px;
+        max-width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        inset: 0;
+        padding: 1rem;
+      }
+
+      .fixed img {
+        height: 100%;
+        width: 150%;
+        object-fit: cover;
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        left: 50%;
+        translate: -50% 0;
+        
+      }
+
+      section:first-of-type img {
+        left: 50%;
+        translate: -50% 0;
+      }
+
+      section:first-of-type {
+        padding: 2rem 1rem;
+        display: grid;
+        align-content: end;
+        justify-content: start;
+      }
+
+      section:first-of-type .fixed {
+        z-index: 5;
+      }
+
+      section:first-of-type .fixed .content {
+        margin: 0 auto;
+        width: 900px;
+        max-width: 100%;
+        display: grid;
+        align-content: center;
+        justify-content: start;
+        padding: 6rem 2rem;
+        height: 100%;
+      }
+
+      section:first-of-type {
+        background: black;
+      }
+
+      section:first-of-type p {
+        font-size: clamp(1rem, 0.2vw + 1rem, 2rem);
+      }
+
+      section:nth-of-type(2) article:first-of-type .fixed {
+        z-index: 2;
+      }
+
+      section:nth-of-type(2) .content {
+        display: grid;
+        padding: 4rem 1rem;
+        align-content: center;
+      }
+
+      section:nth-of-type(2) article:first-of-type .content {
+        align-content: end;
+      }
+
+      section:nth-of-type(2) article:first-of-type .fixed::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: hsl(0 0% 0% / 0.25);
+      }
+
+      section:nth-of-type(2) article:first-of-type h2 {
+        padding: 1rem 0;
+      }
+
+      section:nth-of-type(2) article:nth-of-type(2) .fixed {
+        background: black;
+        z-index: 2;
+      }
+
+      section:nth-of-type(2) article:nth-of-type(3) .content {
+        align-content: start;
+      }
+
+      section:nth-of-type(2) article:nth-of-type(3) .fixed {
+        z-index: 2;
+      }
+
+      section:nth-of-type(2) article:nth-of-type(3) img {
+        filter: saturate(0.5) brightness(0.5);
+      }
+
+      .text-blocks {
+        max-width: 100%;
+        width: 40ch;
+        justify-self: end;
+        display: grid;
+        place-items: center;
+        gap: 2rem 0;
+      }
+
+      /* Text block styling */
+      .chat-container {
+        height: 100vh;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        display: grid;
+        place-items: center;
+      }
+      .text-blocks p {
+        display: inline-block;
+        border-radius: 6px;
+        margin: 0;
+        font-size: clamp(1.5rem, 0.5vw + 1rem, 4rem);
+        font-weight: 220;
+      }
+      .text-blocks p:nth-of-type(even) {
+        justify-self: end;
+        text-align: right;
+        color: hsl(124, 100%, 51%);
+      }
+      .text-blocks p:nth-of-type(odd) {
+        justify-self: start;
+      }
+
+      .filler {
+        display: none;
+      }
+
+      @supports (animation-timeline: scroll()) {
+        @media (prefers-reduced-motion: no-preference) {
+          article {
+            view-timeline: --article;
+          }
+
+          .fixed {
+            position: fixed;
+            inset: 0;
+          }
+          .static {
+            position: absolute;
+            inset: 0;
+            z-index: 6;
+          }
+          .filler {
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 30vh;
+            padding: 1rem;
+          }
+
+          .text-blocks p {
+            animation: slide-in, fade-in;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-timeline: --article;
+          }
+
+          .text-blocks p:nth-of-type(1) {
+            animation-range: entry-crossing 50% entry-crossing 55%;
+          }
+          .text-blocks p:nth-of-type(2) {
+            animation-range: entry-crossing 55% entry-crossing 60%;
+          }
+          .text-blocks p:nth-of-type(3) {
+            animation-range: entry-crossing 60% entry-crossing 65%;
+          }
+          .text-blocks p:nth-of-type(4) {
+            animation-range: entry-crossing 65% entry-crossing 70%;
+          }
+          .text-blocks p:nth-of-type(5) {
+            animation-range: entry-crossing 70% entry-crossing 75%;
+          }
+
+          section:nth-of-type(2) article:last-of-type {
+            z-index: 5;
+          }
+          section:nth-of-type(2) article:nth-of-type(3) {
+            height: 400vh;
+          }
+          section:nth-of-type(2) article:nth-of-type(3) h2 {
+            margin-top: 80vh;
+          }
+          section:nth-of-type(2) article:last-of-type .fixed {
+            clip-path: ellipse(220% 200% at 50% 300%);
+            animation: unclip both linear;
+            animation-timeline: --article;
+            animation-range: entry 20% entry 80%;
+          }
+          .filler h2 {
+            animation: fade-away, fade-out;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-timeline: --article;
+            animation-range: exit 40% exit 75%, exit 70% exit 90%;
+          }
+          .loud-wrap {
+            clip-path: inset(0 0 0 0);
+            animation: unmask both linear;
+            animation-timeline: --article;
+            animation-range: entry 20% entry 80%;
+            mask: linear-gradient(white 50%, transparent) 0 100% / 100% 200% no-repeat;
+          }
+          .text-wrap {
+            position: sticky;
+            bottom: 4rem;
+            transform-origin: 50% 0;
+            animation: fade-away both linear, fade-out both linear;
+            animation-timeline: --article;
+            animation-range: exit 40% exit 75%, exit 70% exit 100%;
+          }
+          .text-blocks {
+            animation: fade-out both linear;
+            animation-timeline: --article;
+            animation-range: entry-crossing 75% entry-crossing 100%;
+          }
+          section:nth-of-type(2) article:nth-of-type(3) .fixed {
+            animation: fade-in both linear, fade-out both linear;
+            animation-timeline: --article, --article;
+            animation-range: entry 45% exit-crossing 0%, exit 0% exit 15%;
+          }
+
+          section:nth-of-type(2) article:nth-of-type(2) .fixed {
+            animation: fade-in;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-timeline: --article;
+            animation-range: entry 60% exit 30%;
+          }
+          section:nth-of-type(2) article:nth-of-type(2) h2 {
+            animation: slide-in, fade-in, fade-away, fade-out;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-timeline: view(), view(), --article, --article;
+            animation-range: entry 100% cover 25%, entry 100% cover 35%,
+              exit 20% exit 40%, exit 40% exit 50%;
+          }
+          section:nth-of-type(2) article:first-of-type h2 {
+            animation: slide-up both linear;
+            animation-timeline: --article;
+            animation-range: entry 20% entry 80%;
+          }
+          section:nth-of-type(2) article:first-of-type img {
+            animation: scale-down both linear;
+            animation-timeline: --article;
+            animation-range: entry;
+          }
+          section:nth-of-type(2) article:first-of-type .fixed {
+            clip-path: ellipse(220% 200% at 50% 300%);
+            animation: unclip both linear;
+            animation-timeline: --article;
+            animation-range: entry 0 entry 100%;
+          }
+          section:first-of-type {
+            view-timeline: --section;
+          }
+          section:first-of-type .fixed {
+            animation: scale-and-move both linear, fade-out both linear;
+            animation-timeline: --section;
+            animation-range: exit 0% exit 50%, exit 0% exit 25%;
+            transform-origin: 50% 0;
+          }
+          /* Keyframes collection	*/
+          @keyframes slide-in {
+            0% {
+              translate: 0 100%;
+            }
+          }
+
+          @keyframes fade-in {
+            0% {
+              opacity: 0;
+            }
+          }
+          @keyframes slide-up {
+            0% {
+              translate: 0 100%;
+            }
+          }
+          @keyframes fade-away {
+            to {
+              filter: blur(4rem);
+            }
+          }
+          @keyframes unmask {
+            to {
+              mask-position: 0 0;
+            }
+          }
+          @keyframes scale-down {
+            0% {
+              scale: 5;
+            }
+          }
+          @keyframes unclip {
+            to {
+              clip-path: ellipse(220% 200% at 50% 175%);
+            }
+          }
+          @keyframes fade-out {
+            to {
+              opacity: 0;
+            }
+          }
+          @keyframes scale-and-move {
+            to {
+              translate: 0 -10%;
+              scale: 0.35 0.5;
+            }
+          }
+        }
+      }
+  </style>
 
   <script>
-    function activate(e) {
-    const items = document.querySelectorAll('.item');
-    e.target.matches('.next') && slider.append(items[0])
-    e.target.matches('.prev') && slider.prepend(items[items.length-1]);
-  }
+          import gsap from "https://cdn.skypack.dev/gsap@3.12.2";
+          import { ScrollTrigger } from "https://cdn.skypack.dev/gsap@3.12.2/ScrollTrigger";
 
-  document.addEventListener('click',activate,false);
+      if (
+      !CSS.supports("animation-timeline: view()") &&
+      window.matchMedia("(prefers-reduced-motion: no-preference)").matches)
+      {
+        gsap.registerPlugin(ScrollTrigger);
+        // Set up all the scroll animations with ScrollTrigger instead.
+        // Blanket styles
+        gsap.set(".fixed", {
+          position: "fixed",
+          inset: 0 });
+
+        gsap.set(".static", {
+          position: "absolute",
+          inset: 0,
+          zIndex: 6 });
+
+        // First section
+        gsap.set("section:first-of-type .fixed", {
+          transformOrigin: "50% 0%" });
+
+        gsap.to("section:first-of-type .fixed", {
+          scale: "0.35 0.5",
+          yPercent: -10,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:first-of-type",
+            start: "top top",
+            end: "bottom 50%" } });
 
 
-  let path = document.querySelector('path')
-  let pathLength = path.getTotalLength()
-
-  path.style.strokeDasharray = pathLength + " " + pathLength;
-  path.style.strokeDashoffset = pathLength;
-
-  window.addEventListener('scroll', () =>{
-    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-        var drawLength = pathLength * scrollPercentage;
-        path.style.strokeDashoffset = pathLength - drawLength;
-  })
-
-    //video pop up
-    function toggle(){
-      var trailer = document.querySelector(".trailer")
-      trailer.classList.toggle("active")
-    }
+        gsap.to("section:first-of-type .fixed", {
+          opacity: 0,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:first-of-type",
+            start: "top top",
+            end: "bottom 75%" } });
 
 
+        // The second section with image scaling down, etc.
+        gsap.set("section:nth-of-type(2) article:first-of-type .fixed", {
+          clipPath: "ellipse(220% 200% at 50% 300%)",
+          zIndex: 3 });
+
+        gsap.to("section:nth-of-type(2) article:first-of-type .fixed", {
+          clipPath: "ellipse(220% 200% at 50% 175%)",
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:first-of-type",
+            start: "top bottom",
+            end: "top top" } });
+
+
+        gsap.from("section:nth-of-type(2) article:first-of-type img", {
+          scale: 5,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:first-of-type",
+            start: "top bottom",
+            end: "top top" } });
+
+
+
+        gsap.set(".loud-wrap", {
+          clipPath: "inset(0 0 0 0)",
+          mask: "linear-gradient(white 50%, transparent) 0 100% / 100% 200% no-repeat" });
+
+        gsap.set(".text-wrap", {
+          position: "sticky",
+          bottom: "4rem",
+          transformOrigin: "50% 0" });
+
+        gsap.from("section:nth-of-type(2) article:first-of-type h2", {
+          yPercent: 100,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:first-of-type",
+            start: "top 50%",
+            end: "top 0%" } });
+
+
+        gsap.to("section:nth-of-type(2) article:first-of-type .loud-wrap", {
+          maskPosition: "0 0",
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:first-of-type",
+            start: "top 50%",
+            end: "top 0%" } });
+
+
+        // Blur the text on exit
+        gsap.to("section:nth-of-type(2) article:first-of-type .text-wrap", {
+          filter: "blur(4rem)",
+          opacity: 0,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:first-of-type",
+            start: "bottom 60%",
+            end: "bottom 25%" } });
+
+
+
+        // Third section
+        gsap.set("section:nth-of-type(2) article:nth-of-type(2) .fixed", {
+          zIndex: 3 });
+
+        gsap.from("section:nth-of-type(2) article:nth-of-type(2) .fixed", {
+          opacity: 0,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:nth-of-type(2)",
+            start: "top 50%",
+            end: "top -30%" } });
+
+
+        gsap.from("section:nth-of-type(2) article:nth-of-type(2) h2", {
+          yPercent: 100,
+          opacity: 0,
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:nth-of-type(2)",
+            start: "top 50%",
+            end: "top 25%" } });
+
+
+        gsap.to("section:nth-of-type(2) article:nth-of-type(2) h2", {
+          filter: "blur(4rem)",
+          color: "transparent",
+          scrollTrigger: {
+            scrub: 0.5,
+            trigger: "section:nth-of-type(2) article:nth-of-type(2)",
+            start: "bottom bottom",
+            end: "bottom 50%" } });
+
+
+        // Fourth
+        gsap.set(".filler", {
+          display: "block",
+          position: "absolute",
+          bottom: "30vh",
+          padding: "1rem" });
+
+        gsap.set("section:nth-of-type(2) article:nth-of-type(3)", {
+          height: "400vh" });
+
+        gsap.set("section:nth-of-type(2) article:nth-of-type(3) .fixed", {
+          zIndex: 3 });
+
+        gsap.set("section:nth-of-type(2) article:nth-of-type(3) h2", {
+          marginTop: "80vh" });
+
+        gsap.from("section:nth-of-type(2) article:nth-of-type(3) .fixed", {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: "section:nth-of-type(2) article:nth-of-type(3)",
+            scrub: 0.5,
+            start: "top 80%",
+            end: "top top" } });
+
+
+        gsap.to("section:nth-of-type(2) article:nth-of-type(3) img", {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: "section:nth-of-type(2) article:nth-of-type(3)",
+            scrub: 0.5,
+            start: "bottom bottom",
+            end: "bottom 85%" } });
+
+
+        // Animate the text blocks
+        const LINES = document.querySelectorAll(".text-blocks p");
+        LINES.forEach((LINE, index) => {
+          gsap.from(LINE, {
+            yPercent: 100,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: "section:nth-of-type(2) article:nth-of-type(3)",
+              scrub: 0.5,
+              start: `top -=${90 + index * 10}%`,
+              end: `top -=${100 + index * 10}%` } });
+
+
+        });
+        gsap.to(".text-blocks", {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: "section:nth-of-type(2) article:nth-of-type(3)",
+            scrub: 0.5,
+            start: "bottom 130%",
+            end: "bottom 110%" } });
+
+
+        gsap.to(".filler h2", {
+          opacity: 0,
+          filter: "blur(4rem)",
+          scrollTrigger: {
+            trigger: "section:nth-of-type(2) article:nth-of-type(3)",
+            scrub: 0.5,
+            start: "bottom 55%",
+            end: "bottom 30%" } });
+
+
+        // The last piece is unclipping the end piece
+        gsap.set("section:nth-of-type(2) article:last-of-type .fixed", {
+          clipPath: "ellipse(220% 200% at 50% 300%)",
+          zIndex: 5 });
+
+        gsap.to("section:nth-of-type(2) article:last-of-type .fixed", {
+          clipPath: "ellipse(220% 200% at 50% 175%)",
+          scrollTrigger: {
+            trigger: "section:nth-of-type(2) article:last-of-type",
+            scrub: 0.5,
+            start: "top 80%",
+            end: "top 20%" } });
+
+
+      }
   </script>
 
-</body>
 
 
 
