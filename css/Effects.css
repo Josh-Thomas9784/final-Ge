@@ -482,9 +482,11 @@ body{
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  filter: brightness(100%);
 
+  filter: brightness(100%);
   color: var(--tertiary-color);
+  
+  position: relative;
 }
 
 .info-box2{
@@ -496,6 +498,8 @@ body{
 
   filter: brightness(100%);
   color: var(--tertiary-color);
+
+  position: relative;
   
 }
 
@@ -507,6 +511,8 @@ body{
   filter: brightness(50%);
   border-radius: 15px;
   transition: all 0.5s ease-in-out;
+
+  position: relative;
 }
 
 .info-box2 img{
@@ -516,6 +522,8 @@ body{
   filter: brightness(50%);
   border-radius: 15px;
   transition: all 0.5s ease-in-out;
+
+  position: relative;
 }
 
 .info-box1 img:hover{
