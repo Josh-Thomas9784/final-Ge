@@ -6,16 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-  --primary-color: #24a152; /* Green */
-  --secondary-color: #394b40; /* dark green */
-  --tertiary-color: #F8F7F6; /* white */
-  --fourth-color: #AD8152; /* yellow */
-  --fifth-color: #9C5640; /*red*/
+  --primary-color: #51a31e; /* Green */
+  --secondary-color: #0E1514; /* dark green */
+  --tertiary-color: #fdfbf1; /* white */
+  --fourth-color: #3d97059d;
+  --fifth-color: #1e3531;
 }
 
 body {
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
+  
 }
 
 .column{

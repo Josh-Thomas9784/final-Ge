@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
-.bgColor{
-  background-color: var(--primary-color);
+
+.header-align{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header{
@@ -13,27 +17,37 @@ header{
   position: fixed;
   width: 100%;
   min-width: 66px;
-  background-color: transparent;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3.5em;
+  height: 4em;
+
+  background: rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+
 }
 
 header .logo{
-  color: white;
   font-size: 1.75em;
   font-weight: 600;
   text-decoration: none;
   font-family: Poppins;
-
+  color: var(--secondary-color);
 }
 
 header ul{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
+
 header ul li{
   position: relative;
   list-style: none;
@@ -41,46 +55,60 @@ header ul li{
 }
 
 header ul li a{
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   font-size: 1.1em;
-  padding: 20px 25px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   font-family: Poppins;
   font-weight: 400;
 }
 
+header ul .li1 a{
+  padding: 20px 30px;
+}
+
+header ul .li2 a{
+  background-color: var(--fourth-color);
+  padding: 8px 35px;
+  border-radius: 22px
+}
+
+header ul .li2 a:hover{
+  color: var(--tertiary-color);
+  background-color: var(--fifth-color);
+}
+
 
 header ul li a:focus,
 header ul li a:hover {
-  color: var(--tertiary-color);
+  color: black;
 }
 
-header ul li a:focus:after,
-header ul li a:hover:after {
-  width: 100%;
-  left: 0%;
+header ul .li1 a:focus:after,
+header ul .li1 a:hover:after {
+  width: 80%;
+  left: 10%;
 }
 
-header ul li a:after {
+header ul .li1 a:after {
   content: "";
   pointer-events: none;
-  top: 45px;
+  top: 46px;
   left: 50%;
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
 }
 
 header ul li a:hover::before{
-  width: 99%;
+  width: 90%;
 }
 
 
@@ -88,10 +116,14 @@ header ul li ul{
   position: absolute;
   left: 0;
   width: 200px;
-  background-color: rgba(0, 0, 0, 0.658);
   display: none;
   padding-top: 0px;
   padding-left: 15px;
+
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 header ul li:hover ul{
@@ -105,9 +137,23 @@ header ul li ul li{
 }
 
 
-@media(max-width: 1400px){
+@media(max-width: 1000px){
   header{
     padding: 10px 20px;
+    background: var(--tertiary-color);
+  }
+
+  header ul li a:focus,
+  header ul li a:hover {
+  color: var(--primary-color);
+}
+
+  header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   header nav{
@@ -115,7 +161,7 @@ header ul li ul li{
     width: 100%;
     top: 53px;
     left: 0;
-    background-color: var(--primary-color);
+    background: var(--tertiary-color);
     display: none;
   }
 
@@ -123,19 +169,27 @@ header ul li ul li{
     display: initial;
   }
 
-  header nav ul li{
+  header nav ul .li1{
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  }
+
+  header ul li a:focus:after,
+  header ul li a:hover:after {
+  width: 0%;
+  left: 0%;
   }
 
   header ul li a:hover::before{
-    width: 20%;
+    width: 100%;
   }
 
   header nav ul li ul{
     position: relative;
     width: 100%;
     left: 0;
-    background-color: var(--secondary-color);
+    background-color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.178);
   }
 
   header nav ul li ul{
@@ -158,9 +212,9 @@ header ul li ul li{
     position: absolute;
     width: 70%;
     height: 3px;
-    background-color: white;
+    background-color: var(--secondary-color);
     transform: translateY(-12px);
-    box-shadow: 0 12px white;
+    box-shadow: 0 12px black;
     transition: all 0.2s ease;
   }
 
@@ -169,7 +223,7 @@ header ul li ul li{
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: white;
+    background-color: var(--secondary-color);
     transform: translateY(-12px);
     transition: all 0.2s ease;
   }
@@ -180,11 +234,21 @@ header ul li ul li{
 
   header.active .menuToggle::before{
     transform: rotate(45deg);
-    box-shadow: 0 0 white;
+    box-shadow: 0 0 var(--secondary-color);
     width: 100%;
   }
 
   header.active .menuToggle::after{
     transform: rotate(315deg);
+  }
+
+  header ul .li2 a{
+    margin-top: 15%;
+    margin-bottom: 10%;
+    background-color: var(--fourth-color);
+    padding: 12px 155px;
+    border-radius: 22px;
+    text-align: center;
+    
   }
 }

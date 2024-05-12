@@ -13,6 +13,12 @@
 
 body{
   background: var(--tertiary-color);
+
+  background-image: url("../pictures/t.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
@@ -35,7 +41,7 @@ p{
 }
 
 .hero1{
-  height: 95vh;
+  height: 100vh;
   width: 100%;
 
   background-image: url("../pictures/pexels-arnie-chou-304906-1109556.jpg");
@@ -56,14 +62,13 @@ p{
 }
 
 .m-text{
-  color: var(--tertiary-color);
+  color: var(--fifth-color);
   font-size: 100px;
   text-transform: uppercase;
   line-height: 1em;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: url("../pictures/pexels-kevinmenajang-982673.jpg");
-  background-attachment: fixed;
   background-position: center ;
 }
 
@@ -120,7 +125,6 @@ p{
 }
 
 .card1{
-  background-color: var(--primary-color);
   height: 90%;
   width: 30%;
   display: flex;
@@ -133,7 +137,7 @@ p{
 
 .piece{
   position: absolute;
-  background: linear-gradient(to top,black, rgba(0, 0, 0, 0.705));
+  background: linear-gradient(to top,var(--secondary-color), rgb(0, 0, 0));
   padding: 15px;
   width: 25.1%;
   z-index: 1;
@@ -141,13 +145,12 @@ p{
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
-  transform: translateY(5%);
+  transform: translateY(15%);
 
   transition: transform 0.2s ease-in-out;
 }
 
 .card1:hover .piece{
-  visibility:visible;
   transform: translateY(0%);
 }
 
@@ -179,7 +182,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .9;
+  opacity: .95;
 }
 
 .card1:nth-child(2){
@@ -187,7 +190,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .9;
+  opacity: .95;
 }
 
 .card1:nth-child(3){
@@ -195,7 +198,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .9;
+  opacity: .95;
 }
 
 .card1:hover{
@@ -493,8 +496,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  opacity: 0.8;
+  opacity: 0.95;
 }
 .bento-box:nth-child(2){
   grid-area: 1/6/3/9;
@@ -502,8 +504,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  opacity: 0.8;
+  opacity: 0.95;
 }
 .bento-box:nth-child(3){
   grid-area: 3/1/5/5;
@@ -511,8 +512,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 .bento-box:nth-child(4){
@@ -521,8 +521,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.8; 
+  opacity: 0.95;
 }
 .bento-box:nth-child(5){
   grid-area: 5/9/1/9;
@@ -530,8 +529,7 @@ p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 
@@ -731,7 +729,7 @@ input[type=radio] {
 }
 
 .player {
-  background-color: rgb(34, 34, 34);
+  background-color: var(--secondary-color);
   border-radius: 8px;
   min-width: 350px;
   padding: 16px 10px;
