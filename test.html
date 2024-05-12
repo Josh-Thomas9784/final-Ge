@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar with Autofill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .search-container {
+      position: relative;
+      margin: 50px auto;
+      width: 300px;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .autocomplete-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .autocomplete-item {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .autocomplete-item:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <div id="search-results" class="autocomplete-results"></div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+
+    const dataset = [
+      { name: 'Apple', keywords: ['apple', 'fruit', 'healthy'], url: 'geoSub.html' },
+      { name: 'Banana', keywords: ['banana', 'fruit', 'yellow'], url: 'geoSub.html' },
+      { name: 'Carrot', keywords: ['carrot', 'vegetable', 'orange'], url: 'geoSub.html' },
+      { name: 'Broccoli', keywords: ['broccoli', 'vegetable', 'green'], url: 'geoSub.html' },
+      { name: 'Tomato', keywords: ['tomato', 'vegetable', 'red'], url: 'geoSub.html' }
+    ];
+
+    function showAutocompleteResults() {
+      const query = searchInput.value.toLowerCase();
+      const filteredResults = dataset.filter(item =>
+        item.keywords.some(keyword => keyword.includes(query))
+      );
+
+      if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const html = filteredResults.map(result => `<div class="autocomplete-item" data-url="${result.url}">${result.name}</div>`).join('');
+      searchResults.innerHTML = html;
+
+      const autocompleteItems = document.querySelectorAll('.autocomplete-item');
+      autocompleteItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const url = item.getAttribute('data-url');
+          window.location.href = url;
+        });
+      });
+    }
+
+    searchInput.addEventListener('input', showAutocompleteResults);
+  </script>
+</body>
+</html>
