@@ -99,6 +99,29 @@ body{
   color: var(--tertiary-color)
 }
 
+@media (max-width: 968px){
+  .border-bkg{
+    width: 90%;
+  }
+
+  .heading-btns{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heading-btn1{
+
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  
+  .heading-btn2{
+    margin-bottom: 5%;
+    text-align: center;
+  }
+}
+
 /*----------------- PART 3 -------------------*/
 
 .part3{
@@ -134,7 +157,7 @@ body{
   flex-direction: column;
   width: 50%;
 
-  padding-right: 5%;
+  padding-right: 4%;
 }
 
 .scale{
@@ -220,6 +243,28 @@ body{
   transform: scale(1.1,1.1);
 }
 
+@media (max-width: 1068px){
+  .local-impact{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+
+  .impact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .scale{
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
 
 /* ------------- part 4 --------------------*/
 
@@ -241,7 +286,7 @@ body{
 }
 
 .carnival-title h1{
-  font-size: 3rem;
+  font-size: clamp(20px, 3rem, 40px);
   padding-bottom: 1%;
 }
 
@@ -249,6 +294,16 @@ body{
   font-size: 1.2rem;
   color: var(--primary-color);
   padding-bottom: 3%;
+}
+
+@media (max-width: 1068px){
+  .carnival-title{
+    padding-left: 5%;
+  }
+
+  .carnival-title p{
+    padding-bottom: 10%;
+  }
 }
 
 /* -------------------- CAROUSEL ---------------- */
@@ -392,6 +447,22 @@ body{
   font-size: 1.2rem;
 }
 
+@media (max-width: 1068px){
+  .button--left{
+    left: -40px;
+  }
+  
+  .button--right{
+    right: -40px;
+  }
+
+  .carousel-text-holder{
+    right: 30px;
+    width: 80%;
+
+  }
+}
+
 
 /*------------------- boxes ---------------------- */
 
@@ -465,7 +536,7 @@ body{
 .txt-absolute h1{
   padding-top: 3%;
   padding-bottom: 2%;
-  font-size: 3rem;
+  font-size: clamp(10px, 8vw, 3rem);
   width: 90%;
 }
 
@@ -496,4 +567,58 @@ body{
 .txt-absolute a:hover{
   background-color: var(--primary-color);
   border-color: var(--fourth-color);
+}
+
+@media (max-width: 1068px){
+  .dual-boxes{
+    flex-direction: column;
+    margin-top: 50%;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 50%;
+    height: 100vh
+  }
+
+  .info-box1{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    filter: brightness(100%);
+  
+    color: var(--tertiary-color);
+  }
+  
+  .info-box2{
+    width: 90%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .dual-boxes{
+    flex-direction: column;
+    margin-top: 60%;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 60%;
+    height: 100vh
+  }
+
+  .info-box1{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    filter: brightness(100%);
+  
+    color: var(--tertiary-color);
+  }
+  
+  .info-box2{
+    width: 90%;
+    height: 100%;
+  }
 }
