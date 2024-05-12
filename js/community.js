@@ -1,43 +1,105 @@
 const part1 = document.querySelector(".part1");
 
 const tl = new TimelineMax();
-tl.fromTo(part1, 1,{height:"0vh"}, {height:"70vh", ease: Power2.easeInOut});
+tl.fromTo(part1, 1,{height:"0vh"}, {height:"90vh", ease: Power2.easeInOut});
 
 
 
 
-// slider in effects (part1)
+// --------------------  slider in effects (carousel)-------------------------
 
-const indexes = document.querySelectorAll('.indexes li');
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
+//definitions
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nxtButton = document.querySelector('.button--right');
+const preButton = document.querySelector('.button--left');
+const dotsNav = document.querySelector('.carousel-nav');
+const dots = Array.from(dotsNav.children);
 
-function reset() {
-  for (let i = 0; i < tabs.length; i++) {
-    indexes[i].style.borderColor = 'transparent';
-    tabs[i].style.zIndex = 0;
-    tabs[i].classList.remove('active');
-    contents[i].classList.remove('active');
-  }
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// display all the slides
+const setSlidePosition = (slide, index) => {
+  slide.style.left = slideWidth * index + 'px';
 }
 
-function showTab(i) {
-  indexes[i].style.borderColor = '#24a152';
-  tabs[i].style.opacity = 1;
-  tabs[i].style.zIndex = 5;
-  tabs[i].classList.add('active');
-  contents[i].classList.add('active');
+slides.forEach(setSlidePosition); 
+
+
+//making arrow buttons work
+
+
+//general function to get amount of slide
+const moveToSlide = (track, currentSlide, targetSlide) =>{
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
 }
 
-function activate(e) {
-  if (!e.target.matches('.indexes li')) return;
-  reset();
-  showTab(e.target.dataset.index);
+const updateDots = (currentDot, targetDot) => {
+  currentDot.classList.remove('current-slide');
+  targetDot.classList.add('current-slide');
 }
 
-const init = () => showTab(0);
+const hideShowNav = (slides, preButton, nxtButton, targetIndex) =>{
+  if (targetIndex == 0){
+    preButton.classList.add('is-hidden');
+    nxtButton.classList.remove('is-hidden'); 
+    } else if (targetIndex === slides.length - 1) {
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.add('is-hidden');
+    } else{
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.remove('is-hidden');
+    }
+}
 
-window.addEventListener('load',init,false);
-window.addEventListener('click',activate,false);
+// arrow buttons
+nxtButton.addEventListener('click', e =>{
+  const currentSlide = track.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+  updateDots(currentDot, nextDot);
+
+  moveToSlide(track, currentSlide, nextSlide);
+
+  const nextIndex = slides.findIndex(slide => slide === nextSlide);
+  hideShowNav(slides, preButton, nxtButton, nextIndex);
+})
+
+preButton.addEventListener('click', e =>{
+  const currentSlide = track.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const prevDot = currentDot.previousElementSibling;
+  updateDots(currentDot, prevDot);
+
+  moveToSlide(track, currentSlide, prevSlide);
+
+  const prevIndex = slides.findIndex(slide => slide === prevSlide);
+  hideShowNav(slides, preButton, nxtButton, prevIndex);
+})
+
+
+//making dots work
+
+dotsNav.addEventListener('click', e =>{
+  const targetDot = e.target.closest('button');
+
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const targetIndex = dots.findIndex(dot => dot === targetDot);
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+
+  //making arrow reappear when on next slide
+  hideShowNav(slides, preButton, nxtButton, targetIndex);
+
+})
 
 

@@ -43,16 +43,19 @@ const hiddenElements2 = document.querySelectorAll('.hidden3');
 hiddenElements2.forEach((el) => observer2.observe(el));
 
 
-function changeBg(){
-  var navbar = document.getElementById('header');
-  var scrollValue = window.scrollY;
-  if(scrollValue < 150){
-    navbar.classList.remove("bgColor")
+
+
+// navbar scroll
+
+var lastScrollTop = 0;
+navbar = document.getElementById('header');
+window.addEventListener("scroll", function(){
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop){
+    navbar.style.top="-80px";
   } else{
-    navbar.classList.add('bgColor')
+    navbar.style.top="0px";
   }
-}
-
-window.addEventListener('scroll', changeBg);
-
+  lastScrollTop = scrollTop;
+})
 
