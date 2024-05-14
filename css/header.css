@@ -23,12 +23,12 @@ header{
   align-items: center;
   height: 4em;
 
-  background: rgba(255, 255, 255, 0.39);
+  background: var(--tertiary-color);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
   color: var(--secondary-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
 }
 
@@ -38,6 +38,19 @@ header .logo{
   text-decoration: none;
   font-family: Poppins;
   color: var(--secondary-color);
+
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  margin-left: 2%;
+}
+
+header .logo svg{
+  width: 40px;
+}
+
+header .logo .svg-color{
+  fill: var(--secondary-color);
 }
 
 header ul{
@@ -55,7 +68,7 @@ header ul li{
 }
 
 header ul li a{
-  color: var(--secondary-color);
+  color: var(--teritary-color);
   font-size: 1.1em;
   text-decoration: none;
   display: flex;
@@ -120,10 +133,10 @@ header ul li ul{
   padding-top: 0px;
   padding-left: 15px;
 
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.315);
+  background: rgba(255, 255, 255, 0.39);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+
 }
 
 header ul li:hover ul{
@@ -174,9 +187,9 @@ header ul li ul li{
     border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   }
 
-  header ul li a:focus:after,
-  header ul li a:hover:after {
-  width: 0%;
+  header ul .li1 a:focus:after,
+  header ul .li1 a:hover:after {
+  width: 50%;
   left: 0%;
   }
 
@@ -205,6 +218,7 @@ header ul li ul li{
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    margin-right: 2%;
   }
 
   .menuToggle:before{
