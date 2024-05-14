@@ -6,43 +6,36 @@ body{
 }
 
 .part1{
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   width: 100%;
-  background-image: url("../pictures/pexels-asep-abdulrahman-4151510.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  gap: 10%;
 }
 
 .main-text{
   height: 100%;
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
 }
 
 .border-bkg{
-  background: #0e15142a;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.315);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   padding: 50px;
-  width: 43%;
-  height: 70%;
-  margin-left: 5%;
-  border-radius: 14px;
+  width: 100%;
+  height: 50%;
+  margin-left: 25%;
 }
 
 .faded{
   letter-spacing: 3px;
   color: var(--primary-color);
   font-size: 16px;
-  padding-bottom: 3%;
+  padding-bottom: 5%;
 }
 
 .m-text{
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   font-size: clamp(50px, 8vw, 100px);
   text-transform: uppercase;
   line-height: 1em;
@@ -53,18 +46,19 @@ body{
 
 .mp-text{
   padding-top: 5%;
-  color: var(--tertiary-color);
-  font-size: clamp(16px, 1.2vw, 24px);
-  line-height: 1em;
+  color: var(--secondary-color);
+  font-size: clamp(12px, 1vw, 24px);
+  line-height: 1.5em;
   font-family: Poppins;
   font-weight: 300;
 }
 
 .heading-btns{
-  padding-top: 28%;
+  padding-top: 25%;
   display: flex;
-  justify-content: space-around;
-  width: 75%;
+  width: 85%;
+  justify-content: space-between;
+
 }
 
 .heading-btn1{
@@ -88,7 +82,7 @@ body{
   padding: 2% 5%;
   border-radius: 28px;
   background-color: transparent;
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -99,7 +93,72 @@ body{
   color: var(--tertiary-color)
 }
 
-@media (max-width: 968px){
+.hero-img{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-box img:hover{
+  transform: scale(1.1,1.1);
+}
+
+.hero-box{
+  margin-top: 15%;
+  width: 80%;
+  height: 60%;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  filter:brightness(80%);
+  transition: all 0.5s ease;
+}
+
+.text-box{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  top: 70%;
+
+  background: #0e15142a;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.text-box h1{
+  padding-left: 5%;
+  padding-bottom: 2%;
+  color: var(--tertiary-color);
+}
+
+.text-box p{
+  padding-left: 5%;
+  color: var(--tertiary-color);
+}
+
+@media (max-width: 768px){
+
+  .part1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 350%;
+  }
+
   .border-bkg{
     width: 90%;
   }
@@ -120,6 +179,96 @@ body{
     margin-bottom: 5%;
     text-align: center;
   }
+
+  .part1{
+    width: 100%;
+    flex-direction: column;
+    gap: 1%;
+  }
+
+  .hero-img{
+    width: 100%;
+    height: 50%;
+  
+  }
+
+  .main-text{
+    height: 50%;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .hero-box{
+    margin-top: 0%;
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    position: relative;
+    margin-left: 10%;
+  }
+
+  .border-bkg{
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 15%;
+  }
+
+  .heading-btns{
+    padding-top: 5%;
+  
+  }
+
+  .text-box{
+    height: 50%;
+    top: 50%;
+  }
+}
+
+/*-------------------- FACT HOLDER ----------------------*/
+
+.fact-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.fact-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  margin: 0 5%;
+}
+
+.fact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.fact img{
+  width: 68%;
+  transition: all 0.3s ease-in-out;
+}
+
+.fact img:hover{
+  filter: hue-rotate(30deg);
+}
+
+.fact h1{
+  padding-top: 5%;
+}
+
+.fact p{
+  padding-top: 3%;
+  text-align: center;
 }
 
 /*----------------- PART 3 -------------------*/
