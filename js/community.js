@@ -1,7 +1,7 @@
 const part1 = document.querySelector(".part1");
 
 const tl = new TimelineMax();
-tl.fromTo(part1, 1,{height:"0vh"}, {height:"90vh", ease: Power2.easeInOut});
+tl.fromTo(part1, 1,{height:"0vh"}, {height:"80vh", ease: Power2.easeInOut});
 
 
 
