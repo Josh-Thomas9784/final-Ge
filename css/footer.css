@@ -3,6 +3,7 @@
 	max-width: 1170px;
 	margin:auto;
 	z-index: 1;
+
 }
 .row{
 	display: flex;
@@ -12,10 +13,9 @@ ul{
 	list-style: none;
 }
 .footer{
-  background-color: var(--primary-color) ;
+  background-color: var(--secondary-color) ;
   padding: 70px 0;
   width: 100%;
-	margin-top: 8%;
 }
 .footer-col{
    width: 25%;

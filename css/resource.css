@@ -251,6 +251,54 @@ h3{
   }
 }
 
+.infinite-brands{
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+  background:var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-bottom: 5%;
+
+  border-bottom: 3px solid rgba(0, 0, 0, 0.055);
+  z-index: 1;
+}
+
+.infinite-brands:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255,0), var(--tertiary-color));
+  content: " ";
+  z-index: 2;
+}
+
+.infinite-brands:after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0), var(--tertiary-color));
+  content: " ";
+  z-index: 2;
+}
+
+.logos-slide{
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide .img1{
+  height: 200px;
+  margin: 0 40px;
+}
+
 /*javascript animations*/
 
 .hidden{
