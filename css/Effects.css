@@ -260,6 +260,7 @@ body{
 
 .fact img:hover{
   filter: hue-rotate(30deg);
+  transform: scale(1.01,1.01);
 }
 
 .fact h1{
