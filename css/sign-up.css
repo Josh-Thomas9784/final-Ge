@@ -1,8 +1,7 @@
 body{
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   
   padding-top: 0px;
-  color: var(--tertiary-color);
 }
 
 .container{
@@ -13,117 +12,134 @@ body{
   align-items: center;
 }
 
-.login-container{
-  width: 100%;
+.img-sign-up{
+  width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 5%;
+  background-color: pink;
 }
 
-.part{
-  width: 20%;
-  height: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-}
-
-.piece{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 40px;
+.img-sign-up img{
+  height: 100%;
   width: 100%;
 }
 
-h1{
-  font-family: Bebas Neue;
-  font-size: 60px;
-  letter-spacing: 3px;
-  color: var(--tertiary-color);
+.sign-up-container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-p{
-  font-family: Archivo black;
-  font-size: 12px;
-  color: var(--tertiary-color);
+.sign-logo{
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 6%;
 }
 
-.piece p a{
-  color: rgba(0, 0, 255, 0.815);
-  text-decoration: none;
-}
-
-.piece span{
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-
-button{
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-family: Archivo Black;
-  color: var(--secondary-color);
-  border: 1px solid var(--tertiary-color);
-
-  letter-spacing: 1px;
-
-  transition: all 0.3s ease-in;
-  background-color: var(--tertiary-color);
-  width: 80%;
-}
-
-button:hover{
-  background-color: var(--secondary-color);
-  color: var(--tertiary-color);
-  transform: scale(0.95, 0.95);
-  border: none;
+.sign-logo img{
+  height: 75px;
+  margin-left: 20%;
   cursor: pointer;
 }
 
 
-.piece p a:hover{
-  text-decoration: underline;
+.sign-logo h1{
+  font-size: 2rem;
+  font-family: Roboto Slab;
+  font-weight: 450;
+  letter-spacing: 1px;
 }
 
-.btn-div{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+.container5{
+  height: 60%;
+  width: 28%;
+  border: 1.5px solid rgba(0, 0, 0, 0.185);
+  padding: 2%;
+  border-radius: 16px;
 }
 
-.piece2{
+.textbox-signup{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding-top: 50px;
+  flex-direction: column;
+  padding: 5%;
+  height: 80%;
 }
 
-.piece2 p{
-  color:var(--fourth-color);
+.textbox-signup h1{
+  font-family: Roboto Slab;
+  margin-bottom: 3%;
+  font-size: clamp(2rem, 4vw, 2.5rem)
 }
 
-.line{
-  height: 1px;
-  width: 100px;
+.textbox-signup p{
+  font-family: Mulish;
+  margin-bottom: 12%;
+  font-size: clamp(1rem, 1vw, 1.2rem)
+}
+
+.textbox-signup button{
+  font-family: Mulish;
+  margin-bottom: 3%;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  border: 1px solid var(--fourth-color);
+
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease-in;
   background-color: var(--fourth-color);
+  width: 100%;
+  cursor: pointer;
 }
+
+.textbox-signup button:hover{
+  background-color: var(--primary-color);
+}
+
+.textbox-signup .switch-choice{
+  font-family: Mulish;
+  margin-bottom: 3%;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.textbox-signup a{
+  text-decoration: none;
+  font-family: Mulish;
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease-in;
+  background-color: var(--teritary-color);
+  width: 100%;
+  cursor: pointer;
+
+}
+
+.textbox-signup a:hover{
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color)
+}
+
 
 /*Everything with disappear tag ----- part 2*/
 .container2{
@@ -135,27 +151,12 @@ button:hover{
 }
 
 .profile-container{
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.profile-img{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  height: 500px;
-  width: 20%;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 
@@ -164,15 +165,12 @@ button:hover{
 }
 
 .profile-info-container{
-  height: 500px;
-  width: 35%;
+  height: 60%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border: 1px solid black;
+  border-radius: 16px;
 }
 
 .intro{
@@ -180,14 +178,28 @@ button:hover{
   flex-direction: column;
   padding-bottom: 35px;
   padding-top: 20px;
+  margin-left: 5%;
+}
+
+.intro h1{
+  font-family: Roboto Slab;
+  margin-bottom: 3%;
+  font-size: clamp(2rem, 4vw, 2.5rem)
+}
+
+.intro p{
+  font-family: Mulish;
+  margin-bottom: 2%;
+  font-size: clamp(1rem, 1vw, 1.2rem)
 }
 
 .extra{
   display: flex;
   width: 100%;
-  justify-content: space-around;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  margin-left:5%;
+  gap: 20%;
 }
 
 .extra a{
@@ -195,7 +207,7 @@ button:hover{
   background-color: var(--fourth-color);
   color: var(--tertiary-color);
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 22px;
   font-family: arial;
 
   transition: all 0.5s;
@@ -211,18 +223,23 @@ button:hover{
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
+  margin-left: 5%;
+  font-family: Roboto Slab;
+  padding-left: 5px;
 }
 
 .info1{
   display: flex;
   align-items: center;
-  padding-bottom: 5px;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  gap: 1%;
 }
 
 .info2{
   display: flex;
   flex-direction: column;
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   padding: 2px;
 }
 
@@ -239,6 +256,24 @@ button:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-holder button {
+  font-family: Mulish;
+  margin-bottom: 5%;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  border: 1px solid var(--fourth-color);
+
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease-in;
+  background-color: var(--fourth-color);
+  width: 80%;
+  cursor: pointer;
 }
 
 
@@ -282,7 +317,7 @@ button:hover{
 
 }
 
-@media(max-width: 768px){
+@media(max-width: 968px){
 
   h1{
     font-size: 55px;
@@ -300,6 +335,14 @@ button:hover{
   .profile-info-container{
     width: 80%;
     height: 550px;
+  }
+
+  .container5{
+    height: 60%;
+    width: 78%;
+    border: 1.5px solid rgba(0, 0, 0, 0.185);
+    padding: 2%;
+    border-radius: 16px;
   }
 
 
