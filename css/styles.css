@@ -159,14 +159,14 @@ mark {
 
 ::-webkit-scrollbar-track{
   width: 1em;
-  background-color: #f5f5dcd5;
+  background-color: var(--tertiary-color);
   border-radius: 5vw;
 }
 
 ::-webkit-scrollbar-thumb{
   width: 1em;
-  background-color: #85bb65;
-  border: 0.25em solid #f5f5dc;
+  background-color: var(--primary-color);
+  border: 0.25em solid var(--tertiary-color);
   border-radius: 85vw;
 }
 
