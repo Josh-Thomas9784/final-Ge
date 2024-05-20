@@ -9,8 +9,8 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="x-icon" href = "pictures/Ges (2).png"> 
-  <title>GE Solutions</title>
+	<link rel="shortcut icon" type="x-icon" href = "pictures//Green Geometric Wind Energy Turbine Logo (2).svg"> 
+  <title>LeafLink</title>
 </head>
 <body>
 
@@ -44,6 +44,7 @@
 			header.classList.toggle('active');
 		}
 	</script>
+	  <div class="img-fixed fixed1"><img src="pictures/day-and-night.png" id="darkmode-toggle"></div>
 
 	<div class="part1">
 		<div class="main-text">
@@ -272,8 +273,90 @@
 	integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" 
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
 	<script defer src="js/app.js"></script>
-	<script defer src="js/community.js"></script>
+
+	<script>
+		// effects animations
+		const part1 = document.querySelector(".part1");
+		const herobox = document.querySelector(".hero-box");
+		const fullscreen = document.querySelector(".full-screen");
+		
+
+		const tl = new TimelineMax();
+		tl.fromTo(part1, 1,{height:"0vh"}, {height:"80vh", ease: Power2.easeInOut});
+		tl.fromTo(herobox, 1,{height: "0%"}, {height:"60%", ease: Power2.easeInOut})
+
+		gsap.to(".main-text", {
+			opacity: 1,
+			duration: 2,
+			scrollTrigger: ".main-text"
+		})
+
+
+		let scrollTl = gsap.timeline({
+			duration: 0.5, 
+			scrollTrigger: {
+				trigger: ".fact",
+				start: "bottom 50%",
+				end: "top center",
+				srub: 5,
+				markers: true
+			}
+		})
+
+		scrollTl.to('.fact',{
+			x: 0,
+		})
+
+		let full = gsap.timeline({
+			duration: 0.5, 
+			scrollTrigger: {
+				trigger: ".full-screen",
+				start: "bottom center",
+				end: "bottom center",
+				srub: 5,
+			}
+		})
+
+		full.to('.full-screen',{
+			height: "95vh",
+		})
+
+		let local = gsap.timeline({
+			duration: 0.5, 
+			scrollTrigger: {
+				trigger: ".local-texbox",
+				start: "center 50%",
+				end: "bottom center",
+				srub: 15,
+			}
+		})
+
+		local.to('.local-impacts-container', {
+			x: 0,
+		})
+
+		gsap.to(".survey-container", {
+			opacity: 1,
+			duration: 3,
+			scrollTrigger: {
+				trigger: ".survey-container",
+				start: "top 10%",
+				end: "bottom 50%",
+				srub: 3,
+			}
+		})
+
+
+		
+
+
+	</script>
   
 </body>
 
