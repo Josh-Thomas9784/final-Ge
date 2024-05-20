@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="header.css"> 
-  <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="solutions.css">
-	<link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="css/header.css"> 
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/solutions.css">
+	<link rel="stylesheet" href="css/footer.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
   <meta charset="UTF-8">
@@ -59,11 +59,12 @@
 
 		<div class="hero-img">
 			<div class="hero-box">
-				<img src="pictures/house picture -solutions.png" alt="">
+				<img src="pictures/3dhouse (5).svg" alt="">
 				
 			</div>
 		</div>
 	</div>
+
 	<!--POPUP CODE-->
 	<div class="popup">
 		<div class="popup-content">
@@ -110,587 +111,505 @@
 	</div>
 	
 	
-		<style>
-		  :root {
-		--primary-color: #51a31e; /* Green */
-		--secondary-color: #0E1514; /* Dark green */
-		--tertiary-color: #fffef8; /* White */
-		--fourth-color: #3d97059d; 
-		--fifth-color: #1e3531;
-	}
-	
-	.popup {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	justify-content: center;
-	align-items: center;
-	}
-
-	.popup-content {
-	background-color: var(--tertiary-color);
-	padding: 20px;
-	border-radius: 5px;
-	width: 300px;
-	max-width: 90%;
-	position: relative;
-	text-align: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	animation: slideIn 0.5s ease-in-out, fadeIn 0.5s ease-in-out; /* Animation for popup appearance */
-	}
-
-	@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-	}
-
-	@keyframes slideIn {
-	from {
-		transform: translateY(-50px);
-	}
-	to {
-		transform: translateY(0);
-	}
-	}
-
-	
-
-
-	
-	.header-image {
+	<style>
+		.popup {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: auto;
-		border-radius: 5px 5px 0 0;
-	}
-	
-	.subtext {
-		font-size: 14px;
-		color: var(--fifth-color);
-		margin-bottom: 3px;
-	
-	}
-	
-	.close-btn {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		font-size: 20px;
-		cursor: pointer;
-		color: var(--secondary-color);
-	}
-	
-	form {
-		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-		margin-top: 15px;
-	}
-	
-	.name-container {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 15px;
-	}
-	
-	.name-field {
-		display: flex;
-		flex-direction: column;
-		width: 48%;
-	}
-	
-	label {
-		margin-top: 10px;
-		text-align: left;
-		color: var(--secondary-color);
-	}
-	
-	input, textarea, select, button {
-		margin-top: 5px;
-		padding: 10px;
-		border: 1px solid var(--fourth-color);
-		border-radius: 3px;
-		font-size: 14px;
-	}
-	
-	.phone-container {
-		display: flex;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		justify-content: center;
 		align-items: center;
-		margin-bottom: 15px;
-	}
-	
-	.phone-container select {
-    width: 40%; /* Adjust the width as needed */
-    margin-right: 5px;
-    padding: 10px;
-    border: 1px solid var(--fourth-color);
-    border-radius: 3px 0 0 3px;
-	}
+		z-index:1000;
+		}
 
-	.phone-container input {
-		margin-bottom: 7px;
-		width: 60%; /* Adjust the width as needed */
-		flex: 1;
-		border-radius: 0 3px 3px 0;
-	}
+		.popup-content {
+		background-color: var(--tertiary-color);
+		padding: 20px;
+		border-radius: 5px;
+		width: 500px;
+		max-width: 90%;
+		position: relative;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		animation: slideIn 0.5s ease-in-out, fadeIn 0.5s ease-in-out;
+		}
 
+		@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+		}
+
+		@keyframes slideIn {
+		from {
+			transform: translateY(-50px);
+		}
+		to {
+			transform: translateY(0);
+		}
+		}
 	
-	textarea {
-		resize: vertical;
-		margin-bottom: 15px;
-	}
+		.header-image {
+			width: 100%;
+			height: auto;
+			border-radius: 5px 5px 0 0;
+		}
+		
+		.subtext {
+			font-size: 14px;
+			color: var(--tertiary-color);
+			margin-bottom: 3px;
+		
+		}
+		
+		.close-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 20px;
+			cursor: pointer;
+			color: var(--tertiary-color);
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			margin-top: 15px;
+		}
+		
+		.name-container {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+		
+		.name-field {
+			display: flex;
+			flex-direction: column;
+			width: 48%;
+		}
+		
+		label {
+			margin-top: 10px;
+			text-align: left;
+			color: var(--secondary-color);
+		}
+		
+		input, textarea, select, button {
+			margin-top: 5px;
+			padding: 10px;
+			border: 1px solid var(--fourth-color);
+			border-radius: 3px;
+			font-size: 14px;
+		}
+		
+		.phone-container {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+		
+		.phone-container select {
+			width: 40%; /* Adjust the width as needed */
+			margin-right: 5px;
+			padding: 10px;
+			border: 1px solid var(--fourth-color);
+			border-radius: 3px 0 0 3px;
+		}
+
+		.phone-container input {
+			margin-bottom: 7px;
+			width: 60%; /* Adjust the width as needed */
+			flex: 1;
+			border-radius: 0 3px 3px 0;
+		}
+
+		
+		textarea {
+			resize: vertical;
+			margin-bottom: 15px;
+		}
+		
+		button {
+			background-color: var(--primary-color);
+			color: var(--tertiary-color);
+			border: none;
+			cursor: pointer;
+			margin-top: 15px;
+		}
+		
+		button:hover {
+			background-color: var(--secondary-color);
+		}
+		
+		#open-popup-btn {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			background-color: var(--primary-color);
+			color: var(--tertiary-color);
+			border: none;
+			border-radius: 3px;
+		}
+		
+		#open-popup-btn:hover {
+			background-color: var(--fourth-color);
+		}
 	
-	button {
-		background-color: var(--primary-color);
-		color: var(--tertiary-color);
-		border: none;
-		cursor: pointer;
-		margin-top: 15px;
-	}
 	
-	button:hover {
-		background-color: var(--secondary-color);
-	}
-	
-	#open-popup-btn {
-		padding: 10px 20px;
-		font-size: 16px;
-		cursor: pointer;
-		background-color: var(--primary-color);
-		color: var(--tertiary-color);
-		border: none;
-		border-radius: 3px;
-	}
-	
-	#open-popup-btn:hover {
-		background-color: var(--fourth-color);
-	}
-	
-	
-		</style>
-		<script>
-		   document.addEventListener('DOMContentLoaded', function() {
-			const popup = document.querySelector('.popup');
-			const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
-			const closeBtn = document.querySelector('.close-btn');
-			const form = document.getElementById('contact-form');
-			const confirmationMessage = document.getElementById('confirmation-message');
-			const popupContent = document.querySelector('.popup-content');
-	
-			openPopupBtn.addEventListener('click', function() {
-				popup.style.display = 'flex';
-			});
-	
-			closeBtn.addEventListener('click', function() {
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		const popup = document.querySelector('.popup');
+		const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
+		const closeBtn = document.querySelector('.close-btn');
+		const form = document.getElementById('contact-form');
+		const confirmationMessage = document.getElementById('confirmation-message');
+		const popupContent = document.querySelector('.popup-content');
+
+		openPopupBtn.addEventListener('click', function() {
+			popup.style.display = 'flex';
+		});
+
+		closeBtn.addEventListener('click', function() {
+			popup.style.display = 'none';
+		});
+
+		window.addEventListener('click', function(event) {
+			if (event.target === popup) {
 				popup.style.display = 'none';
-			});
-	
-			window.addEventListener('click', function(event) {
-				if (event.target === popup) {
-					popup.style.display = 'none';
-				}
-			});
-	
-			form.addEventListener('submit', function(event) {
-				event.preventDefault(); // Prevent form submission
-	
-				const firstNameInput = document.getElementById('first-name');
-				const lastNameInput = document.getElementById('last-name');
-				const phoneInput = document.getElementById('phone');
-	
-				const firstName = firstNameInput.value.trim();
-				const lastName = lastNameInput.value.trim();
-				const phone = phoneInput.value.trim();
-	
-				let isValid = true;
-	
-				// Reset previous error messages
-				removeErrorMessage(firstNameInput);
-				removeErrorMessage(lastNameInput);
-				removeErrorMessage(phoneInput);
-	
-				// Basic validation for phone number
-				const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
-				if (!phoneIsValid) {
-					addErrorMessage(phoneInput, 'Phone number must be 10 digits');
-					isValid = false;
-				}
-	
-				if (!firstName) {
-					addErrorMessage(firstNameInput, 'Please enter your first name');
-					isValid = false;
-				}
-	
-				if (!lastName) {
-					addErrorMessage(lastNameInput, 'Please enter your last name');
-					isValid = false;
-				}
-	
-				if (isValid) {
-					confirmationMessage.style.display = 'block';
-				}
-			});
-	
-			function addErrorMessage(inputElement, message) {
-				const errorMessage = document.createElement('div');
-				errorMessage.className = 'error-message';
-				errorMessage.textContent = message;
-				errorMessage.style.color = 'red';
-				errorMessage.style.fontSize = '12px';
-				popupContent.insertBefore(errorMessage, form.nextSibling);
-			}
-	
-			function removeErrorMessage(inputElement) {
-				const errorMessage = inputElement.nextElementSibling;
-				if (errorMessage && errorMessage.classList.contains('error-message')) {
-					errorMessage.parentNode.removeChild(errorMessage);
-				}
 			}
 		});
-	
-	
-	
-		</script>
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent form submission
+
+			const firstNameInput = document.getElementById('first-name');
+			const lastNameInput = document.getElementById('last-name');
+			const phoneInput = document.getElementById('phone');
+
+			const firstName = firstNameInput.value.trim();
+			const lastName = lastNameInput.value.trim();
+			const phone = phoneInput.value.trim();
+
+			let isValid = true;
+
+			// Reset previous error messages
+			removeErrorMessage(firstNameInput);
+			removeErrorMessage(lastNameInput);
+			removeErrorMessage(phoneInput);
+
+			// Basic validation for phone number
+			const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
+			if (!phoneIsValid) {
+				addErrorMessage(phoneInput, 'Phone number must be 10 digits');
+				isValid = false;
+			}
+
+			if (!firstName) {
+				addErrorMessage(firstNameInput, 'Please enter your first name');
+				isValid = false;
+			}
+
+			if (!lastName) {
+				addErrorMessage(lastNameInput, 'Please enter your last name');
+				isValid = false;
+			}
+
+			if (isValid) {
+				confirmationMessage.style.display = 'block';
+			}
+		});
+
+		function addErrorMessage(inputElement, message) {
+			const errorMessage = document.createElement('div');
+			errorMessage.className = 'error-message';
+			errorMessage.textContent = message;
+			errorMessage.style.color = 'red';
+			errorMessage.style.fontSize = '12px';
+			popupContent.insertBefore(errorMessage, form.nextSibling);
+		}
+
+		function removeErrorMessage(inputElement) {
+			const errorMessage = inputElement.nextElementSibling;
+			if (errorMessage && errorMessage.classList.contains('error-message')) {
+				errorMessage.parentNode.removeChild(errorMessage);
+			}
+		}
+		});
+
+	</script>
 	<!--POPUP CODE-->
+
+
 	<!--Section A-->
-<section class="headA">
-	<h2>Popular Solutions</h2>
-    <p>Explore some of the top Solutions from the Community</p>
-</section>
-<section class="containerA">
-    <div class="category_containerA">
-        <div class="contentA">
-            <img src="pictures/house picture -solutions (2).png" class="profession_imageA" alt="Profession" />
-            <img src="pictures/house picture -solutions (1).png" class="profile_imageA" alt="Profile" />
-            <div class="profile_detailA">
-                <span>Solar Panels</span>
-                <p>$10,000 - $30,000</p>
-            </div>
-            <div class="wrapperA">
-                <div class="profile_quoteA">
-                    <p>Convert sunlight into electricity, harnessing photovoltaic cells to generate clean, renewable energy.</p>
-                </div>
-            </div>
-            <button class="learn_moreA">Learn More</button>
-        </div>
-        <div class="contentA">
-            <img src="pictures/house picture -solutions (4).png" class="profession_imageA" alt="Profession" />
-            <img src="pictures/house picture -solutions (3).png" class="profile_imageA" alt="Profile" />
-            <div class="profile_detailA">
-                <span>Efficient Appliances</span>
-                <p>$500 - $2000</p>
-            </div>
-            <div class="wrapperA">
-                <div class="profile_quoteA">
-                    <p>Reducing consumption and impact while maintaining functionality and performance.</p>
-                </div>
-            </div>
-            <button class="learn_moreA">Learn More</button>
-        </div>
-        <div class="contentA">
-            <img src="pictures/house picture -solutions (6).png" class="profession_imageA" alt="Profession" />
-            <img src="pictures/house picture -solutions (5).png" class="profile_imageA" alt="Profile" />
-            <div class="profile_detailA">
-                <span>Electric Vehicles</span>
-                <p>$20,000 - $40,000</p>
-            </div>
-            <div class="wrapperA">
-                <div class="profile_quoteA">
-                    <p>Battery-powered vehicles with zero tailpipe emissions and Hybrids.</p>
-                </div>
-            </div>
-            <button class="learn_moreA">Learn More</button>
-        </div>
-    </div>
-</section>
-<!-- PART B-->
-<div class="containerB">
-	<div class="contentB">
-		<h1>Additional Practices</h1>
-		<p>Catalyze the next generation of forest carbon projects. Technology enables ongoing visibility into on-the-ground impacts, rigorous carbon accounting, and ecologically-positive design.</p>
-		<div id="menuB" class="accordionB">
-			<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Green+Roofs" open>
-				<summary class="accordion__item-btnB">Green Roofs</summary>
-				<div class="accordion__item-descB">
-					Green roofs offer a multitude of environmental, economic, and social benefits. They contribute to stormwater management by absorbing and controlling rainwater runoff, improve air quality through pollutant absorption, and regulate temperatures, thereby reducing the need for energy-intensive heating and cooling. Green roofs also enhance urban biodiversity, serving as habitats for wildlife, while providing aesthetic appeal and recreational spaces for communities. Additionally, these roofs can extend the lifespan of buildings by acting as a protective layer, contribute to reduced urban heat island effects, and potentially increase property values, making them a sustainable and multifaceted solution for urban development.
-				</div>
-			</details>
-			
-			<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Energy+Efficient+Windows">
-				<summary class="accordion__item-btnB">Energy-Efficient Windows</summary>
-				<div class="accordion__item-descB">
-					Energy-efficient windows offer a range of advantages in terms of environmental sustainability and economic efficiency. These windows are designed to minimize heat transfer, providing effective insulation and reducing the need for excessive heating or cooling. By preventing heat loss in colder seasons and heat gain in warmer ones, energy-efficient windows contribute to lower energy consumption, resulting in potential cost savings. Additionally, they often incorporate features such as low-emissivity coatings and multiple glazing layers to enhance thermal performance, while also blocking harmful ultraviolet rays that can damage furnishings and contribute to increased indoor comfort. Overall, energy-efficient windows play a crucial role in promoting both environmental conservation and economic benefits for building occupants.
-				</div>
-			</details>
-			
-			<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Sustainable+Building+Materials">
-				<summary class="accordion__item-btnB">Sustainable Building Materials</summary>
-				<div class="accordion__item-descB">
-					Sustainable building materials play a pivotal role in fostering environmentally conscious construction practices and long-term economic viability. These materials are sourced, produced, and utilized in ways that minimize environmental impact throughout their life cycle. Incorporating sustainable materials contributes to resource conservation, reduces carbon emissions, and promotes a healthier indoor environment. Examples include recycled steel, reclaimed wood, and low-emission adhesives. By selecting materials with eco-friendly certifications and considering factors like recyclability and energy efficiency, construction projects can achieve a reduced ecological footprint, you ensure a more sustainable and resilient built environment.
-				</div>
-			</details>
-			
-			<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Energy+Efficient+HVAC">
-				<summary class="accordion__item-btnB">Energy-Efficient HVAC</summary>
-				<div class="accordion__item-descB">
-					Energy-efficient HVAC (heating, ventilation, and air conditioning) systems offer substantial benefits in terms of both environmental sustainability and economic efficiency. These systems are designed to optimigreen;rgy usage, resulting in reduced energy consumption and lower utility costs. Features such as programmable thermostats, high-efficiency heat exchangers, and variable-speed technologies enable precise control of indoor climate conditions. By minimizing energy waste and employing advanced technologies, energy-efficient HVAC systems contribute to lower greenhouse gas emissions and lessen the overall environmental impact of buildings. Investing in such systems not only enhances energy performance but also improves indoor air quality, creating healthier and more comfortable living and working environments.
-				</div>
-			</details>
-			
-			<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Composting">
-				<summary class="accordion__item-btnB">Composting</summary>
-				<div class="accordion__item-descB">
-					Composting is the natural process of breaking down organic materials into nutrient-rich soil known as compost. It reduces waste by diverting organic matter from landfills, enriches soil, saves money on fertilizers, and promotes environmental health by reducing reliance on chemicals and mitigating climate change through carbon sequestration. Overall, composting is a simple yet powerful practice accessible to everyone, offering numerous benefits for both individuals and the planet.
-				</div>
-			</details>
+	<section class="headA">
+		<h2>Popular Solutions</h2>
+		<p>Explore some of the top Solutions from the Community</p>
+	</section>
+	<section class="containerA">
+			<div class="category_containerA">
+					<div class="contentA">
+							<img src="pictures/house picture -solutions (2).png" class="profession_imageA" alt="Profession" />
+							<img src="pictures/house picture -solutions (1).png" class="profile_imageA" alt="Profile" />
+							<div class="profile_detailA">
+									<span>Solar Panels</span>
+									<p>$10,000 - $30,000</p>
+							</div>
+							<div class="wrapperA">
+									<div class="profile_quoteA">
+											<p>Convert sunlight into electricity, harnessing photovoltaic cells to generate clean, renewable energy.</p>
+									</div>
+							</div>
+							<button class="learn_moreA">Learn More</button>
+					</div>
+					<div class="contentA">
+							<img src="pictures/house picture -solutions (4).png" class="profession_imageA" alt="Profession" />
+							<img src="pictures/house picture -solutions (3).png" class="profile_imageA" alt="Profile" />
+							<div class="profile_detailA">
+									<span>Efficient Appliances</span>
+									<p>$500 - $2000</p>
+							</div>
+							<div class="wrapperA">
+									<div class="profile_quoteA">
+											<p>Reducing consumption and impact while maintaining functionality and performance.</p>
+									</div>
+							</div>
+							<button class="learn_moreA">Learn More</button>
+					</div>
+					<div class="contentA">
+							<img src="pictures/house picture -solutions (6).png" class="profession_imageA" alt="Profession" />
+							<img src="pictures/house picture -solutions (5).png" class="profile_imageA" alt="Profile" />
+							<div class="profile_detailA">
+									<span>Electric Vehicles</span>
+									<p>$20,000 - $40,000</p>
+							</div>
+							<div class="wrapperA">
+									<div class="profile_quoteA">
+											<p>Battery-powered vehicles with zero tailpipe emissions and Hybrids.</p>
+									</div>
+							</div>
+							<button class="learn_moreA">Learn More</button>
+					</div>
+			</div>
+	</section>
+
+	<!-- PART B-->
+	<div class="containerB">
+		<div class="contentB">
+			<div class="btext">
+				<h1>Additional Practices</h1>
+				<p>Catalyze the next generation of forest carbon projects. Technology enables ongoing visibility into on-the-ground impacts, rigorous carbon accounting, and ecologically-positive design.</p>
+			</div>
+			<div id="menuB" class="accordionB">
+				<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Green+Roofs" open>
+					<summary class="accordion__item-btnB">Green Roofs</summary>
+					<div class="accordion__item-descB">
+						Green roofs offer a multitude of environmental, economic, and social benefits. They contribute to stormwater management by absorbing and controlling rainwater runoff, improve air quality through pollutant absorption, and regulate temperatures, thereby reducing the need for energy-intensive heating and cooling. Green roofs also enhance urban biodiversity, serving as habitats for wildlife, while providing aesthetic appeal and recreational spaces for communities. Additionally, these roofs can extend the lifespan of buildings by acting as a protective layer, contribute to reduced urban heat island effects, and potentially increase property values, making them a sustainable and multifaceted solution for urban development.
+					</div>
+				</details>
+				
+				<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Energy+Efficient+Windows">
+					<summary class="accordion__item-btnB">Energy-Efficient Windows</summary>
+					<div class="accordion__item-descB">
+						Energy-efficient windows offer a range of advantages in terms of environmental sustainability and economic efficiency. These windows are designed to minimize heat transfer, providing effective insulation and reducing the need for excessive heating or cooling. By preventing heat loss in colder seasons and heat gain in warmer ones, energy-efficient windows contribute to lower energy consumption, resulting in potential cost savings. Additionally, they often incorporate features such as low-emissivity coatings and multiple glazing layers to enhance thermal performance, while also blocking harmful ultraviolet rays that can damage furnishings and contribute to increased indoor comfort. Overall, energy-efficient windows play a crucial role in promoting both environmental conservation and economic benefits for building occupants.
+					</div>
+				</details>
+				
+				<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Sustainable+Building+Materials">
+					<summary class="accordion__item-btnB">Sustainable Building Materials</summary>
+					<div class="accordion__item-descB">
+						Sustainable building materials play a pivotal role in fostering environmentally conscious construction practices and long-term economic viability. These materials are sourced, produced, and utilized in ways that minimize environmental impact throughout their life cycle. Incorporating sustainable materials contributes to resource conservation, reduces carbon emissions, and promotes a healthier indoor environment. Examples include recycled steel, reclaimed wood, and low-emission adhesives. By selecting materials with eco-friendly certifications and considering factors like recyclability and energy efficiency, construction projects can achieve a reduced ecological footprint, you ensure a more sustainable and resilient built environment.
+					</div>
+				</details>
+				
+				<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Energy+Efficient+HVAC">
+					<summary class="accordion__item-btnB">Energy-Efficient HVAC</summary>
+					<div class="accordion__item-descB">
+						Energy-efficient HVAC (heating, ventilation, and air conditioning) systems offer substantial benefits in terms of both environmental sustainability and economic efficiency. These systems are designed to optimigreen;rgy usage, resulting in reduced energy consumption and lower utility costs. Features such as programmable thermostats, high-efficiency heat exchangers, and variable-speed technologies enable precise control of indoor climate conditions. By minimizing energy waste and employing advanced technologies, energy-efficient HVAC systems contribute to lower greenhouse gas emissions and lessen the overall environmental impact of buildings. Investing in such systems not only enhances energy performance but also improves indoor air quality, creating healthier and more comfortable living and working environments.
+					</div>
+				</details>
+				
+				<details class="accordion__itemB" data-imgB="https://via.placeholder.com/600x400?text=Composting">
+					<summary class="accordion__item-btnB">Composting</summary>
+					<div class="accordion__item-descB">
+						Composting is the natural process of breaking down organic materials into nutrient-rich soil known as compost. It reduces waste by diverting organic matter from landfills, enriches soil, saves money on fertilizers, and promotes environmental health by reducing reliance on chemicals and mitigating climate change through carbon sequestration. Overall, composting is a simple yet powerful practice accessible to everyone, offering numerous benefits for both individuals and the planet.
+					</div>
+				</details>
+			</div>
+		</div>
+
+		<div class="image-containerB">
+			<img src="https://via.placeholder.com/600x400?text=Green+Roofs" alt="Green Roofs" class="activeB">
+			<img src="https://via.placeholder.com/600x400?text=Energy+Efficient+Windows" alt="Energy Efficient Windows">
+			<img src="https://via.placeholder.com/600x400?text=Sustainable+Building+Materials" alt="Sustainable Building Materials">
+			<img src="https://via.placeholder.com/600x400?text=Energy+Efficient+HVAC" alt="Energy Efficient HVAC">
+			<img src="https://via.placeholder.com/600x400?text=Composting" alt="Composting">
 		</div>
 	</div>
-	<div class="image-containerB">
-		<img src="https://via.placeholder.com/600x400?text=Green+Roofs" alt="Green Roofs" class="activeB">
-		<img src="https://via.placeholder.com/600x400?text=Energy+Efficient+Windows" alt="Energy Efficient Windows">
-		<img src="https://via.placeholder.com/600x400?text=Sustainable+Building+Materials" alt="Sustainable Building Materials">
-		<img src="https://via.placeholder.com/600x400?text=Energy+Efficient+HVAC" alt="Energy Efficient HVAC">
-		<img src="https://via.placeholder.com/600x400?text=Composting" alt="Composting">
-	</div>
-</div>
 
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const accordionItemsB = document.querySelectorAll(".accordion__itemB");
-		const imagesB = document.querySelectorAll(".image-containerB img");
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const accordionItemsB = document.querySelectorAll(".accordion__itemB");
+			const imagesB = document.querySelectorAll(".image-containerB img");
 
-		accordionItemsB.forEach(itemB => {
-			const buttonB = itemB.querySelector(".accordion__item-btnB");
-			buttonB.addEventListener("click", () => {
-				const isOpenB = itemB.getAttribute("open") !== null;
-				buttonB.classList.toggle("collapsedB", !isOpenB);
-			});
+			accordionItemsB.forEach(itemB => {
+				const buttonB = itemB.querySelector(".accordion__item-btnB");
+				buttonB.addEventListener("click", () => {
+					const isOpenB = itemB.getAttribute("open") !== null;
+					buttonB.classList.toggle("collapsedB", !isOpenB);
+				});
 
-			itemB.addEventListener("toggle", () => {
-				if (itemB.open) {
-					const imgSrcB = itemB.getAttribute("data-imgB");
-					imagesB.forEach(imgB => {
-						imgB.classList.remove("activeB");
-						if (imgB.src.includes(imgSrcB)) {
-							imgB.classList.add("activeB");
-						}
-					});
-				}
+				itemB.addEventListener("toggle", () => {
+					if (itemB.open) {
+						const imgSrcB = itemB.getAttribute("data-imgB");
+						imagesB.forEach(imgB => {
+							imgB.classList.remove("activeB");
+							if (imgB.src.includes(imgSrcB)) {
+								imgB.classList.add("activeB");
+							}
+						});
+					}
+				});
 			});
 		});
-	});
 
-	class AccordionB {
-		constructor(elB) {
-			this.elB = document.querySelector(elB);
-			const itemElsB = Array.from(this.elB.querySelectorAll("details"));
-			this.itemsB = itemElsB.map((itemElB, iB) => {
-				const idB = `${iB}`;
-				itemElB.setAttribute("data-itemB", idB);
-				return new AccordionItemB(idB, this);
-			});
-		}
-	}
-
-	class AccordionItemB {
-		constructor(idB, parentB) {
-			this.parentB = parentB;
-			this.elB = this.parentB.elB.querySelector(`[data-itemB="${idB}"]`);
-			this.summaryB = this.elB.querySelector("summary");
-			this.summaryB.addEventListener("click", this.toggle.bind(this));
-			this.contentB = this.summaryB.nextElementSibling;
-			this.isCollapsingB = false;
-			this.isExpandingB = false;
-			this.animParamsB = { duration: 500, easing: "cubic-bezier(0.33,1,0.68,1)" };
-			this.animActionsExpandB = {
-				onfinish: () => this.onAnimationFinish(true),
-				oncancel: () => { this.isExpandingB = false; }
-			};
-			this.animActionsCollapseB = {
-				onfinish: () => this.onAnimationFinish(false),
-				oncancel: () => { this.isCollapsingB = false; }
-			};
+		class AccordionB {
+			constructor(elB) {
+				this.elB = document.querySelector(elB);
+				const itemElsB = Array.from(this.elB.querySelectorAll("details"));
+				this.itemsB = itemElsB.map((itemElB, iB) => {
+					const idB = `${iB}`;
+					itemElB.setAttribute("data-itemB", idB);
+					return new AccordionItemB(idB, this);
+				});
+			}
 		}
 
-		closePreviousB() {
-			const openItemsB = this.parentB.itemsB.filter(itemB => itemB.isExpandingB || itemB.elB.open);
-			openItemsB.forEach(itemB => itemB.collapse());
-		}
+		class AccordionItemB {
+			constructor(idB, parentB) {
+				this.parentB = parentB;
+				this.elB = this.parentB.elB.querySelector(`[data-itemB="${idB}"]`);
+				this.summaryB = this.elB.querySelector("summary");
+				this.summaryB.addEventListener("click", this.toggle.bind(this));
+				this.contentB = this.summaryB.nextElementSibling;
+				this.isCollapsingB = false;
+				this.isExpandingB = false;
+				this.animParamsB = { duration: 500, easing: "cubic-bezier(0.33,1,0.68,1)" };
+				this.animActionsExpandB = {
+					onfinish: () => this.onAnimationFinish(true),
+					oncancel: () => { this.isExpandingB = false; }
+				};
+				this.animActionsCollapseB = {
+					onfinish: () => this.onAnimationFinish(false),
+					oncancel: () => { this.isCollapsingB = false; }
+				};
+			}
 
-		toggle(eB) {
-			eB.preventDefault();
-			this.elB.classList.remove("collapsingB", "expandingB");
+			closePreviousB() {
+				const openItemsB = this.parentB.itemsB.filter(itemB => itemB.isExpandingB || itemB.elB.open);
+				openItemsB.forEach(itemB => itemB.collapse());
+			}
 
-			const detailsClickedB = eB.target.parentElement;
-			const dataItemClickedB = detailsClickedB.getAttribute("data-itemB");
-			const openItemB = this.parentB.itemsB.find(itemB => itemB.isExpandingB || itemB.elB.open);
+			toggle(eB) {
+				eB.preventDefault();
+				this.elB.classList.remove("collapsingB", "expandingB");
 
-			if (openItemB) {
-				const dataItemOpenB = openItemB.elB.getAttribute("data-itemB");
-				if (dataItemClickedB !== dataItemOpenB) {
-					this.closePreviousB();
+				const detailsClickedB = eB.target.parentElement;
+				const dataItemClickedB = detailsClickedB.getAttribute("data-itemB");
+				const openItemB = this.parentB.itemsB.find(itemB => itemB.isExpandingB || itemB.elB.open);
+
+				if (openItemB) {
+					const dataItemOpenB = openItemB.elB.getAttribute("data-itemB");
+					if (dataItemClickedB !== dataItemOpenB) {
+						this.closePreviousB();
+					}
+				}
+
+				if (this.elB.open) {
+					this.collapse();
+				} else {
+					this.open();
 				}
 			}
 
-			if (this.elB.open) {
-				this.collapse();
-			} else {
-				this.open();
+			open() {
+				this.elB.classList.add("expandingB");
+				this.isExpandingB = true;
+
+				const startHeightB = this.elB.offsetHeight;
+				const summaryHeightB = this.summaryB.offsetHeight;
+				const contentHeightB = this.contentB.offsetHeight;
+				const endHeightB = summaryHeightB + contentHeightB;
+
+				this.animationB?.cancel();
+				this.animationB = this.elB.animate(
+					{ height: [`${startHeightB}px`, `${endHeightB}px`] },
+					this.animParamsB
+				);
+
+				if (this.animationB) {
+					this.animationB.onfinish = this.animActionsExpandB.onfinish;
+					this.animationB.oncancel = this.animActionsExpandB.oncancel;
+				}
+			}
+
+			collapse() {
+				this.elB.classList.add("collapsingB");
+				this.isCollapsingB = true;
+
+				const startHeightB = this.elB.offsetHeight;
+				const endHeightB = this.summaryB.offsetHeight;
+
+				this.animationB?.cancel();
+				this.animationB = this.elB.animate(
+					{ height: [`${startHeightB}px`, `${endHeightB}px`] },
+					this.animParamsB
+				);
+
+				if (this.animationB) {
+					this.animationB.onfinish = this.animActionsCollapseB.onfinish;
+					this.animationB.oncancel = this.animActionsCollapseB.oncancel;
+				}
+			}
+
+			onAnimationFinish(openB) {
+				this.elB.open = openB;
+				this.animationB = null;
+				this.isCollapsingB = false;
+				this.isExpandingB = false;
+				this.elB.style.height = "";
+				this.elB.classList.remove("collapsingB", "expandingB");
 			}
 		}
 
-		open() {
-			this.elB.classList.add("expandingB");
-			this.isExpandingB = true;
+		window.addEventListener("DOMContentLoaded", () => {
+			const menuB = new AccordionB("#menuB");
+		});
+	</script>
 
-			const startHeightB = this.elB.offsetHeight;
-			const summaryHeightB = this.summaryB.offsetHeight;
-			const contentHeightB = this.contentB.offsetHeight;
-			const endHeightB = summaryHeightB + contentHeightB;
+	<div class="part3">
+		<section class = "part3-section">
+			<div class = "text-box3"><h3 class ="text3">FREQUENTLY ASKED QUESTIONS</h3></div>
+			<div class = "list-container">
+				<ul class="list">
+					<li class="list2 hidden3"><a href="Additional-Practices.html#Green">How can I contribute living in an apartment?</a></li>
+					<li class="list2 hidden3"><a href="ThermoSUB.html">Where Is a good place to start?</a></li>
+					<li class="list2 hidden3"><a href="Effects.html#text-box-whole">What are the effects of my actions?</a></li>
+					<li class="list2 hidden3"><a href="windSUB.html">What Can I do with a large yard?</a></li>
+					<li class="list2 hidden3"><a href="ApplianceSUB.html">What saves me the most money over time?</a></li>
+				</ul>
+			</div>
+		</section>
+	</div>
 
-			this.animationB?.cancel();
-			this.animationB = this.elB.animate(
-				{ height: [`${startHeightB}px`, `${endHeightB}px`] },
-				this.animParamsB
-			);
-
-			if (this.animationB) {
-				this.animationB.onfinish = this.animActionsExpandB.onfinish;
-				this.animationB.oncancel = this.animActionsExpandB.oncancel;
-			}
-		}
-
-		collapse() {
-			this.elB.classList.add("collapsingB");
-			this.isCollapsingB = true;
-
-			const startHeightB = this.elB.offsetHeight;
-			const endHeightB = this.summaryB.offsetHeight;
-
-			this.animationB?.cancel();
-			this.animationB = this.elB.animate(
-				{ height: [`${startHeightB}px`, `${endHeightB}px`] },
-				this.animParamsB
-			);
-
-			if (this.animationB) {
-				this.animationB.onfinish = this.animActionsCollapseB.onfinish;
-				this.animationB.oncancel = this.animActionsCollapseB.oncancel;
-			}
-		}
-
-		onAnimationFinish(openB) {
-			this.elB.open = openB;
-			this.animationB = null;
-			this.isCollapsingB = false;
-			this.isExpandingB = false;
-			this.elB.style.height = "";
-			this.elB.classList.remove("collapsingB", "expandingB");
-		}
-	}
-
-	window.addEventListener("DOMContentLoaded", () => {
-		const menuB = new AccordionB("#menuB");
-	});
-</script>
-
-<div class="part4">
-	<ul class='slider'>
-	  <li class='item' style="background-image: url(pictures/sp.jpg)">
-		<div class='content'>
-		  <h2 class='title'>Solar Panels</h2>
-		  <p class='description'> 
-			Solar panels convert sunlight into electricity using photovoltaic cells, helping generate clean, renewable energy.</p>
-		  <a href = "solarSUB.html">Read More</a>
-		</div>
-	  </li>
-	  <li class='item' style="background-image: url('pictures/wm.jpg')">
-		<div class='content'>
-		  <h2 class='title'>Windmills</h2>
-		  <p class='description'> Windmills harness wind energy to produce electricity through rotating blades, contributing to renewable energy production.</p>
-		  <a href="windSUB.html">Read More</a>
-		</div>
-	  </li>
-	  <li class='item' style="background-image: url('pictures/th.jpg')">
-		<div class='content'>
-		  <h2 class='title'>Smart thermostats</h2>
-		  <p class='description'> Smart thermostats are advanced devices that regulate heating and cooling systems with features like remote control and energy-saving settings. </p>
-		  <a href ="ThermoSUB.html">Read More</a>
-		</div>
-	  </li>
-	  <li class='item' style="background-image: url(pictures/pexels-tom-fournier-16754997.jpg)">
-		<div class='content'>
-		  <h2 class='title'>Geothermal Conditioning</h2>
-		  <p class='description'> Geothermal conditioning uses the Earth's heat for efficient heating and cooling, reducing reliance on traditional energy sources.
-		  </p>
-		  <a href="geoSUB.html">Read More</a>
-		</div>
-	  </li>
-	  <li class='item' style="background-image: url('pictures/EEV.jpg')">
-		<div class='content'>
-		  <h2 class='title'>Electric Vehicles</h2>
-		  <p class='description'>Electric vehicles (EVs) run on electricity, emitting no tailpipe emissions. They're charged using electric power, reducing reliance on fossil fuels for transportation.
-		  </p>
-		  <a href="evSUB.html">Read More</a>
-		</div>
-	  </li>
-	  <li class='item' style="background-image: url('pictures/pexels-hilary-halliwell-698485.jpg')">
-		<div class='content'>
-		  <h2 class='title'>Battery Storage</h2>
-		  <p class='description'> 
-			Battery storage stores excess electricity for later use, helping balance energy supply and demand efficiently.  </p>
-		  <a href="batSUB.html">Read More</a>
-		</div>
-	  </li>
-	</ul>
-	<nav class='nav'>
-	  <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-	  <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
-	</nav>
-  
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</div>
-
-<div class="part3">
-	<section class = "part3-section">
-		<div class = "text-box3"><h3 class ="text3">FREQUENTLY ASKED QUESTIONS</h3></div>
-		<div class = "list-container">
-			<ul class="list">
-				<li class="list2 hidden3"><a href="Additional-Practices.html#Green">How can I contribute living in an apartment?</a></li>
-				<li class="list2 hidden3"><a href="ThermoSUB.html">Where Is a good place to start?</a></li>
-				<li class="list2 hidden3"><a href="Effects.html#text-box-whole">What are the effects of my actions?</a></li>
-				<li class="list2 hidden3"><a href="windSUB.html">What Can I do with a large yard?</a></li>
-				<li class="list2 hidden3"><a href="ApplianceSUB.html">What saves me the most money over time?</a></li>
-			</ul>
-		</div>
-	</section>
-</div>
-
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<footer class="footer">
     <div class="container1">
       <div class="row">
