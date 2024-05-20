@@ -171,12 +171,12 @@
 .card{
   margin: 0;
   width: 45%;
-  height: 75%;
+  height: 50%;
 
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.185);
+  border: 1px solid var(--secondary-color);
 }
 
 .icon2{

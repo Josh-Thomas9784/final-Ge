@@ -34,9 +34,9 @@ header{
 
 header .logo{
   font-size: 1.75em;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: Roboto Slab;
   color: var(--secondary-color);
 
   display: flex;
@@ -75,8 +75,8 @@ header ul li a{
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
 
-  font-family: Poppins;
-  font-weight: 400;
+  font-family: Mulish;
+  font-weight: 500;
 }
 
 header ul .li1 a{
@@ -90,14 +90,14 @@ header ul .li2 a{
 }
 
 header ul .li2 a:hover{
-  color: var(--tertiary-color);
+  color: #fffef8;;
   background-color: var(--fifth-color);
 }
 
 
 header ul li a:focus,
 header ul li a:hover {
-  color: black;
+  color: var(--secondary-color);
 }
 
 header ul .li1 a:focus:after,
@@ -133,9 +133,7 @@ header ul li ul{
   padding-top: 0px;
   padding-left: 15px;
 
-  background: rgba(255, 255, 255, 0.39);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--tertiary-color)
 
 }
 
@@ -228,7 +226,7 @@ header ul li ul li{
     height: 3px;
     background-color: var(--secondary-color);
     transform: translateY(-12px);
-    box-shadow: 0 12px black;
+    box-shadow: 0 12px var(--secondary-color);
     transition: all 0.2s ease;
   }
 
@@ -238,6 +236,7 @@ header ul li ul li{
     width: 100%;
     height: 3px;
     background-color: var(--secondary-color);
+    background: var(--secondary-color);
     transform: translateY(-12px);
     transition: all 0.2s ease;
   }
@@ -254,6 +253,8 @@ header ul li ul li{
 
   header.active .menuToggle::after{
     transform: rotate(315deg);
+    box-shadow: 0 0 var(--secondary-color);
+    background-color: var(--secondary-color);
   }
 
   header ul .li2 a{

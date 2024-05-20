@@ -7,12 +7,46 @@
   --tertiary-color: #fffef8; /* white */
   --fourth-color: #3d97059d;
   --fifth-color: #1e3531;
+  --brightness: brightness(100%);
 }
+
+.dark-theme{
+  --secondary-color:  #fffef8; /* white */
+  --tertiary-color: #0E1514;
+  --brightness: brightness(70%);
+}
+
+/*DARK MODE*/
+.img-fixed{
+  background-color: var(--fourth-color);
+  padding: 15px;
+  border-radius: 200px;
+  position: fixed;
+  top: 88%;
+  right: 2%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.img-fixed img{
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.img-fixed img:hover{
+  height: 35px
+}
+
+.img-rotate{
+  transform: rotate(136deg);
+}
+
+
 
 body {
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
-  
+  transition: all 0.5s ease-in-out;
 }
 
 .column{
@@ -69,28 +103,6 @@ body {
 .hero-image img {
   height: 500px;
   border-radius: 1rem;
-}
-
-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem 0;
-}
-
-section h2 {
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
-}
-
-section ul {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  list-style: none;
-  padding: 0;
-}
-
-section li {
-  margin-bottom: 1rem;
 }
 
 footer {

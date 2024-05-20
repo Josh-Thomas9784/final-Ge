@@ -19,6 +19,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  opacity: 0;
 }
 
 .border-bkg{
@@ -135,7 +137,7 @@ body{
 
   top: 70%;
 
-  background: #0e15142a;
+  background: var(--secondary-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.315);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -239,7 +241,6 @@ body{
     height: 30%;
   
     top: 60%;
-    background: #0e151400;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -255,6 +256,7 @@ body{
   justify-content: space-between;
   width: 100%;
   margin-top: 5%;
+
 }
 
 .fact-container{
@@ -271,7 +273,9 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1;
 
+  transform: translateX(-400%);
 }
 
 .fact img{
@@ -328,13 +332,13 @@ body{
 
 .absolute-textbox h1{
   font-size: clamp(2rem, 8vw, 3.55rem);
-  color: var(--tertiary-color);
+  color: #fffef8;
   padding-bottom: 5%;
   font-family: Mulish;
 }
 
 .absolute-textbox p{
-  color: var(--tertiary-color);
+  color: #fffef8;
   padding-bottom: 5%;
   font-family: Mulish;
   font-weight: 300;
@@ -408,13 +412,15 @@ body{
 
 .local-textbox p{
   letter-spacing: 3px;
-  color: rgba(0, 0, 0, 0.411);
+  color:var(--fifth-color);
   font-family: Mulish;
 }
 
 .local-impacts-container{
   display: flex;
   flex-direction: column;
+
+  transform: translateX(-400%);
 }
 
 .local-impact{
@@ -558,7 +564,7 @@ body{
 
 
 .full-screen{
-  height: 95vh;
+  height: 25vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,6 +598,8 @@ body{
   position: relative;
   overflow: hidden;
   gap: 12%;
+
+  opacity: 0;
 }
 
 .survey-title{ 
