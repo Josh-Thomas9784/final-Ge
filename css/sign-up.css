@@ -19,7 +19,6 @@ body{
   align-items: center;
   justify-content: center;
   gap: 5%;
-  background-color: pink;
 }
 
 .img-sign-up img{
@@ -60,7 +59,7 @@ body{
 .container5{
   height: 60%;
   width: 28%;
-  border: 1.5px solid rgba(0, 0, 0, 0.185);
+  border: 1.5px solid var(--secondary-color);
   padding: 2%;
   border-radius: 16px;
 }

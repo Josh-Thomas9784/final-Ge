@@ -274,8 +274,6 @@ body{
   justify-content: center;
   align-items: center;
   opacity: 1;
-
-  transform: translateX(-400%);
 }
 
 .fact img{
@@ -420,7 +418,6 @@ body{
   display: flex;
   flex-direction: column;
 
-  transform: translateX(-400%);
 }
 
 .local-impact{
@@ -564,7 +561,7 @@ body{
 
 
 .full-screen{
-  height: 25vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -572,7 +569,7 @@ body{
   margin-top: 8%;
   margin-bottom: 0;
   width: 100%;
-  background-color: pink;
+  animation-duration: 0.75s;
 }
 
 .img-long-container2{
@@ -599,7 +596,6 @@ body{
   overflow: hidden;
   gap: 12%;
 
-  opacity: 0;
 }
 
 .survey-title{ 

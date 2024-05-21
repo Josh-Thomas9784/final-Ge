@@ -772,7 +772,7 @@ body{
   color: var(--secondary-color);
   border: solid 1px var(--secondary-color);
   padding: 20px;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .list .list2 a{
@@ -782,8 +782,10 @@ body{
   font-family: Mulish;
 }
 
-.list .list2:hover{
+.list2:hover{
   transform: scale(1.06);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .text3{
