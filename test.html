@@ -3,109 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Bar with Autofill</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    .search-container {
-      position: relative;
-      margin: 50px auto;
-      width: 300px;
-    }
-
-    #search-input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-    }
-
-    .autocomplete-results {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-top: none;
-      z-index: 1000;
-      border-radius: 0 0 5px 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .autocomplete-item {
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    .autocomplete-item:hover {
-      background-color: #f9f9f9;
-    }
-
-    .keywords {
-      font-size: 12px;
-      color: #888;
-    }
-  </style>
+  <title>Green Energy Questionnaire</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="search-container">
-    <input type="text" id="search-input" placeholder="Search...">
-    <div id="search-results" class="autocomplete-results"></div>
+  <div class="container">
+    <div class="image-container">
+      <img id="question-image" src="" alt="Question Image">
+    </div>
+    <div class="questionnaire-container">
+      <div id="progress-bar"><div class="progress"></div></div>
+      <div id="questionnaire">
+        <div id="question"></div>
+        <div id="options"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
   </div>
-
-  <script>
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-
-    const dataset = [
-      { name: 'Apple', keywords: ['apple', 'fruit', 'healthy'], url: '/apple-page.html' },
-      { name: 'Banana', keywords: ['banana', 'fruit', 'yellow'], url: '/banana-page.html' },
-      { name: 'Carrot', keywords: ['carrot', 'vegetable', 'orange'], url: '/carrot-page.html' },
-      { name: 'Broccoli', keywords: ['broccoli', 'vegetable', 'green'], url: '/broccoli-page.html' },
-      { name: 'Tomato', keywords: ['tomato', 'vegetable', 'red'], url: '/tomato-page.html' }
-    ];
-
-    function showAutocompleteResults() {
-      const query = searchInput.value.toLowerCase();
-      const filteredResults = dataset.filter(item =>
-        item.keywords.some(keyword => keyword.includes(query))
-      );
-
-      if (query.length === 0) {
-        searchResults.innerHTML = '';
-        return;
-      }
-
-      const html = filteredResults.map(result => {
-        const keywords = result.keywords.map(keyword => `<span class="keywords">${keyword}</span>`).join(', ');
-        return `
-          <div class="autocomplete-item" data-url="${result.url}">
-            ${result.name}<br>
-            <div class="keywords">${keywords}</div>
-          </div>
-        `;
-      }).join('');
-      searchResults.innerHTML = html;
-
-      const autocompleteItems = document.querySelectorAll('.autocomplete-item');
-      autocompleteItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const url = item.getAttribute('data-url');
-          window.location.href = url;
-        });
-      });
-    }
-
-    searchInput.addEventListener('input', showAutocompleteResults);
-  </script>
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
+
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.image-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.questionnaire-container {
+  flex: 2;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #f1f1f1;
+}
+
+.card.selected {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#question {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+#next-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+
+<script>
+    const questions = [
+  {
+    question: "Which renewable energy source do you prefer?",
+    image: "pictures/tery.png",
+    options: [
+      { title: "Solar Energy", price: 1000 },
+      { title: "Wind Energy", price: 1200 },
+      { title: "Hydropower", price: 1500 },
+      { title: "Geothermal Energy", price: 1800 },
+      { title: "Biomass Energy", price: 2000 }
+    ]
+  },
+  {
+    question: "Which electric vehicle do you like?",
+    image: "pictures/house picture -solutions.png",
+    options: [
+      { title: "Tesla Model S", price: 80000 },
+      { title: "Nissan Leaf", price: 30000 },
+      { title: "Chevrolet Bolt", price: 36000 },
+      { title: "BMW i3", price: 45000 },
+      { title: "Audi e-tron", price: 65000 }
+    ]
+  },
+  {
+    question: "Which green home improvement would you choose?",
+    image: "pictures/house picture -solutions (5).png",
+    options: [
+      { title: "Solar Panels", price: 20000 },
+      { title: "Insulation", price: 5000 },
+      { title: "Energy-efficient Windows", price: 10000 },
+      { title: "Smart Thermostats", price: 3000 },
+      { title: "Green Roofing", price: 15000 }
+    ]
+  },
+  {
+    question: "Which eco-friendly appliance would you prefer?",
+    image: "pictures/house picture -solutions (6).png",
+    options: [
+      { title: "Energy Star Refrigerator", price: 1500 },
+      { title: "High-efficiency Washer", price: 1200 },
+      { title: "Eco-friendly Dishwasher", price: 800 },
+      { title: "Induction Cooktop", price: 1000 },
+      { title: "Heat Pump Water Heater", price: 2000 }
+    ]
+  },
+  {
+    question: "Which sustainable transport option do you support?",
+    image: "pictures/house picture -solutions (3).png",
+    options: [
+      { title: "Electric Buses", price: 500000 },
+      { title: "Bike-sharing Programs", price: 100000 },
+      { title: "Light Rail Systems", price: 2000000 },
+      { title: "Electric Scooters", price: 50000 },
+      { title: "Carpooling Services", price: 20000 }
+    ]
+  }
+];
+
+let currentQuestion = 0;
+let totalCost = 0;
+const selectedPrices = [];
+
+function loadQuestion() {
+  const questionEl = document.getElementById('question');
+  const optionsEl = document.getElementById('options');
+  const questionImage = document.getElementById('question-image');
+
+  const questionData = questions[currentQuestion];
+  questionEl.textContent = questionData.question;
+  questionImage.src = questionData.image;
+
+  optionsEl.innerHTML = '';
+  questionData.options.forEach((option, index) => {
+    const optionCard = document.createElement('div');
+    optionCard.className = 'card';
+    optionCard.innerHTML = `<h3>${option.title}</h3><p>$${option.price}</p>`;
+    optionCard.addEventListener('click', () => selectOption(index));
+    optionsEl.appendChild(optionCard);
+  });
+
+  updateProgressBar();
+}
+
+function selectOption(index) {
+  const optionCards = document.querySelectorAll('.card');
+  optionCards.forEach(card => card.classList.remove('selected'));
+  optionCards[index].classList.add('selected');
+  
+  selectedPrices[currentQuestion] = questions[currentQuestion].options[index].price;
+}
+
+function nextQuestion() {
+  if (document.querySelector('.card.selected')) {
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  } else {
+    alert('Please select an option before proceeding.');
+  }
+}
+
+function updateProgressBar() {
+  const progressBar = document.querySelector('.progress');
+  progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
+}
+
+function showResult() {
+  const questionnaireEl = document.getElementById('questionnaire');
+  totalCost = selectedPrices.reduce((acc, price) => acc + price, 0);
+  const code = 'CODE-' + Math.floor(Math.random() * 1000000);
+
+  questionnaireEl.innerHTML = `
+    <h2>Thank you for completing the questionnaire!</h2>
+    <p>Your total selected price is: $${totalCost}</p>
+    <p>Your random code is: ${code}</p>
+  `;
+}
+
+document.addEventListener('DOMContentLoaded', loadQuestion);
+
+
+</script>
 
