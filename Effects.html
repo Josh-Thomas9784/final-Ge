@@ -6,6 +6,19 @@
 	<link rel="stylesheet" href="css/Effects.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<!--email js-->
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+				emailjs.init({
+					publicKey: "H-1ln3-LTqkT-3cxB",
+				});
+		})();
+	</script>
+		<script src="js/send-email.js"></script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +37,7 @@
 		<nav>
 			<ul class="ul1">
 				<li class="li1"><a href="Resources.html">About us</a></li>
-				<li class="li1"><a href="Energy-Solutions.html">Energy Solutions</a></li>
+				<li class="li1"><a href="solutions.html">Energy Solutions</a></li>
 				<li class="li1"><a href="#">Community +</a>
 					<ul>
 						<li class="li1"><a href="Effects.html">Effects</a></li>
@@ -72,17 +85,17 @@
 
 	<div class="fact-holder">
 		<div class="fact-container">
-			<div class="fact">
+			<div class="fact animatable bounceInLeft" style="animation-delay: 200ms;">
 				<img src="pictures/fact-1.png" alt="">
 				<h1>Fact One</h1>
 				<p>Random fact lad lad lad green energy oh wow this greeen energy that ah ah green energy omg green energy did what</p>
 			</div>
-			<div class="fact">
+			<div class="fact animatable bounceInLeft" style="animation-delay: 400ms;">
 				<img src="pictures/fact-2.png" alt="">
 				<h1>Fact One</h1>
 				<p>Random fact lad lad lad green energy oh wow this greeen energy that ah ah green energy omg green energy did what</p>
 			</div>
-			<div class="fact">
+			<div class="fact animatable bounceInLeft" style="animation-delay: 600ms;">
 				<img src="pictures/fact-3.png" alt="">
 				<h1>Fact One</h1>
 				<p>Random fact lad lad lad green energy oh wow this greeen energy that ah ah green energy omg green energy did what</p>
@@ -90,7 +103,7 @@
 		</div>
 	</div>
 
-	<div class="full-screen">
+	<div class="full-screen animatable bounceIn">
 		<div class="img-long-container2"> 
 			<img src="pictures/pexels-ollivves-1078983.jpg" alt="">
 		</div>
@@ -103,11 +116,11 @@
 	</div>
 
 	<div class="part3">
-		<div class="local-textbox"><p>GE Solutions</p><h1>Local Impacts</h1></div>
+		<div class="local-textbox animatable fadeInUp"><p>GE Solutions</p><h1>Local Impacts</h1></div>
 
 		<div class="local-impacts-container">
 			<div class="local-impact">
-				<div class="impact">
+				<div class="impact animatable fadeInUp">
 					<div class="scale"><div class="img-bkg"></div></div>
 					<div class="impact-box">	
 						<p class="faded3">Your part</p>
@@ -120,7 +133,7 @@
 							<a href="" class="green-button"> Read the Article</a>
 					</div>
 				</div>
-				<div class="impact">
+				<div class="impact animatable fadeInUp">
 					<div class="impact-box">
 						<p class="faded3">Sustainability</p>
 						<h1 class="impact-title">Fully sustainable building created with the help of GE Solutions</h1>
@@ -139,7 +152,7 @@
 		</div>
 	</div>
 
-	<div class="part5">
+	<div class="part5 animatable bounceInLeft">
 		<div class="img-long-container"> 
 			<img src="pictures/pexels-tom-fournier-16754997.jpg" alt="">
 		</div>
@@ -151,7 +164,7 @@
 		</div>
 	</div>
 
-	<div class="survey-container">
+	<div class="survey-container animatable fadeInUp">
 		<div class="survey-title">
 			<p class="faded2">Let Us Know what YOU think!</p>
 			<h1>Fill out Our Survey</h1>
@@ -182,28 +195,28 @@
 					</select>
 
 					<label for="role">Do you use green energy practices currently?: </label>
-					<select id="role" name="role" required>
+					<select id="current-practices" name="role" required>
 							<option value="">Select an option</option>
 							<option value="student">Yes</option>
 							<option value="teacher">No</option>
 
 					</select>
 
-					<label for="role">bla bla bla bla bla lab lakdjs;flkja;sldj</label>
-					<select id="role" name="role" required>
+					<label for="role">Do you believe hydropower projects have a significant environmental impact?</label>
+					<select id="question1" name="role" required>
 							<option value="">Select an option</option>
 							<option value="student">Yes</option>
 							<option value="teacher">No</option>
 					</select>
 
-					<label for="role">Role:</label>
-					<select id="role" name="role" required>
+					<label for="role">Do you face any barriers in adopting green energy practices?</label>
+					<select id="question2" name="role" required>
 							<option value="">Select an option</option>
 							<option value="student">Yes</option>
 							<option value="teacher">No</option>
 					</select>
 
-					<button type="submit">Submit</button>
+					<button type="submit" onclick="sendMail()">Submit</button>
 			</form>
 		</div>
 		<div class="img-blob"><img src="pictures/blob-haikei (5).svg" alt=""></div>
@@ -276,7 +289,11 @@
 	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+	<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
 
 	<script defer src="js/app.js"></script>
 
@@ -284,12 +301,12 @@
 		// effects animations
 		const part1 = document.querySelector(".part1");
 		const herobox = document.querySelector(".hero-box");
-		const fullscreen = document.querySelector(".full-screen");
+		const fullscreen = document.querySelector(".survey-container");
 		
 
 		const tl = new TimelineMax();
 		tl.fromTo(part1, 1,{height:"0vh"}, {height:"80vh", ease: Power2.easeInOut});
-		tl.fromTo(herobox, 1,{height: "0%"}, {height:"60%", ease: Power2.easeInOut})
+		tl.fromTo(herobox, 1,{height: "0%"}, {height:"60%", ease: Power2.easeInOut});
 
 		gsap.to(".main-text", {
 			opacity: 1,
@@ -298,62 +315,35 @@
 		})
 
 
-		let scrollTl = gsap.timeline({
-			duration: 0.5, 
-			scrollTrigger: {
-				trigger: ".fact",
-				start: "bottom 50%",
-				end: "top center",
-				srub: 5,
-				markers: true
+
+		//Jquery animation
+
+		jQuery(function($) {
+		var doAnimations = function() {
+
+			var offset = $(window).scrollTop() + $(window).height(),
+					$animatables = $('.animatable');
+
+			if ($animatables.length == 0) {
+				$(window).off('scroll', doAnimations);
 			}
-		})
 
-		scrollTl.to('.fact',{
-			x: 0,
-		})
+			$animatables.each(function(i) {
+				var $animatable = $(this);
+				if (($animatable.offset().top + $animatable.height() - 350) < offset) {
+					$animatable.removeClass('animatable').addClass('animated');
+				}
+			});
 
-		let full = gsap.timeline({
-			duration: 0.5, 
-			scrollTrigger: {
-				trigger: ".full-screen",
-				start: "bottom center",
-				end: "bottom center",
-				srub: 5,
-			}
-		})
+		};
 
-		full.to('.full-screen',{
-			height: "95vh",
-		})
+		$(window).on('scroll', doAnimations);
+		$(window).trigger('scroll');
 
-		let local = gsap.timeline({
-			duration: 0.5, 
-			scrollTrigger: {
-				trigger: ".local-texbox",
-				start: "center 50%",
-				end: "bottom center",
-				srub: 15,
-			}
-		})
-
-		local.to('.local-impacts-container', {
-			x: 0,
-		})
-
-		gsap.to(".survey-container", {
-			opacity: 1,
-			duration: 3,
-			scrollTrigger: {
-				trigger: ".survey-container",
-				start: "top 10%",
-				end: "bottom 50%",
-				srub: 3,
-			}
-		})
+	});
 
 
-		
+
 
 
 	</script>

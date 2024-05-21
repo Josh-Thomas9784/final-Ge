@@ -22,7 +22,7 @@
     <nav>
       <ul class="ul1">
         <li class="li1"><a href="Resources.html">About us</a></li>
-        <li class="li1"><a href="Energy-Solutions.html">Energy Solutions</a></li>
+        <li class="li1"><a href="solutions.html">Energy Solutions</a></li>
         <li class="li1"><a href="#">Community +</a>
           <ul>
             <li class="li1"><a href="Effects.html">Effects</a></li>
@@ -50,8 +50,8 @@
       <div class="fullpage fullpage1">
         <div class="fullpage-one-container">
           <div class="img-absolute1"><img src="pictures/Untitled design (3).svg"></div>
-          <div class="first-home-img"><img class="home-img" src="pictures/3dhouse (1).svg"></div>
-          <div class="textbox1">
+          <div class="first-home-img animatable fadeInUp"><img class="home-img" src="pictures/3dhouse (1).svg"></div>
+          <div class="textbox1 animatable bounceInLeft">
             <h1>Plan Your Home</h1>
             <p>We guide you through the steps needed to transform your home into an environmentally friendly haven.</p>
           </div>
@@ -62,9 +62,9 @@
         <div class="fullpage-two-container">
 
           <div class="img-absolute3"><img src="pictures/Untitled design (3).svg"></div>
-          <div class="second-home-img"><img class="home-img" src="pictures/3dhouse (2).svg"></div>
+          <div class="second-home-img animatable fadeInUp"><img class="home-img" src="pictures/3dhouse (2).svg"></div>
           <div class="card-and-text">
-            <div class="textbox2">
+            <div class="textbox2 animatable bounceInLeft">
               <p>Consider these essentials to include in YOUR home!</p>
               <h1>Essential Green Energy Items Every Home Should Consider</h1>
             </div>
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="second-home-img"><img class="home-img" src="pictures/3dhouse (5).svg"></div>
+          <div class="second-home-img animatable fadeInUp"><img class="home-img" src="pictures/3dhouse (5).svg"></div>
           <div class="popup" id="popup">
             <h1>Thank You!</h1>
             <p>Your Home plan request has been submitted. Thanks!</p>
@@ -143,6 +143,11 @@
   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
   
   <script>
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -214,6 +219,33 @@
       popup.classList.remove('open-popup');
       
     }
+
+
+    //Jquery animation
+
+		jQuery(function($) {
+		var doAnimations = function() {
+
+			var offset = $(window).scrollTop() + $(window).height(),
+					$animatables = $('.animatable');
+
+			if ($animatables.length == 0) {
+				$(window).off('scroll', doAnimations);
+			}
+
+			$animatables.each(function(i) {
+				var $animatable = $(this);
+				if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+					$animatable.removeClass('animatable').addClass('animated');
+				}
+			});
+
+		};
+
+		$(window).on('scroll', doAnimations);
+		$(window).trigger('scroll');
+
+	});
 
   </script>
 </body>
