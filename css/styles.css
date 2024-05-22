@@ -9,13 +9,19 @@
   --fifth-color: #1e3531;
   --brightness: brightness(100%);
   --background: rgba(0, 0, 0, 0.050);
+
+  --transparent: transparent;
+  --dark: rgba(0, 0, 0, 0.493);
 }
 
 .dark-theme{
   --secondary-color:  #fffef8; /* white */
   --tertiary-color: #0E1514;
-  --brightness: brightness(70%);
+  --brightness: brightness(80%);
   --background: rgba(255, 255, 255, 0.030);
+
+  --transparent: #fffef88f;
+  --dark: rgba(255, 255, 255, 0.493);
 }
 
 /*DARK MODE*/
