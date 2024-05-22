@@ -99,6 +99,7 @@ h1 {
   width: 100%;
   filter: var(--brightness);
   object-fit: cover;
+  overflow: hidden;
 }
 
 .hero-video img{
@@ -148,7 +149,7 @@ h1 {
 
 .headA{
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .headA h2{
@@ -164,6 +165,7 @@ h1 {
   font-size: clamp(12px, 1vw, 22px);
   font-weight: 300;
   font-family: Mulish;
+  margin-bottom: 5%;
 }
 
 
@@ -511,8 +513,8 @@ h1 {
 .info-container{
   display: flex;
   justify-content: center;
-  padding: 5%;
-  gap: 10%;
+  padding: 2.5%;
+  gap: 5%;
 }
 
 .img-info-holder{
@@ -567,8 +569,8 @@ h1 {
 .textbox{
   display: flex;
   flex-direction: column;
-  gap: 10%;
-  width: 40%;
+  gap: 2%;
+  width: 42%;
   padding: 2%;
 }
 
@@ -584,10 +586,13 @@ h1 {
 }
 
 .textbox a{
-  margin-top: 15%;
+  text-decoration: none;
+  color: var(--secondary-color);
+
+  margin-top: 12%;
   padding: 2% 5%;
   background-color: var(--fourth-color);
-  width: 150px;
+  width: 250px;
   text-align: center;
   border-radius: 22px;
   transition: all 0.5s ease-in-out;
@@ -644,6 +649,8 @@ h1 {
   justify-content: center;
   position: relative;
   background: var(--background);
+
+  margin-top: 5%;
 }
 
 .cust-quotes {
@@ -780,9 +787,12 @@ h1 {
   padding-bottom: 5%;
   font-family: Mulish;
   font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .absolute-textbox a {
+  text-decoration: none;
+  color: var(--secondary-color);
   padding: 2% 5%;
   background-color: var(--fourth-color);
   text-align: center;
@@ -883,9 +893,12 @@ h1 {
 }
 
 .textbox2 a{
+  text-decoration: none;
+  color: var(--secondary-color);
+
   padding: 2% 5%;
   background-color: var(--fourth-color);
-  width: 150px;
+  width: 250px;
   text-align: center;
   border-radius: 22px;
   transition: all 0.5s ease-in-out;

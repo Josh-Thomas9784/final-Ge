@@ -13,9 +13,10 @@ ul{
 	list-style: none;
 }
 .footer{
-  background-color: var(--secondary-color) ;
+  background-color: var(--tertiary-color) ;
   padding: 70px 0;
   width: 100%;
+	border-top: 1px solid var(--secondary-color);
 }
 .footer-col{
    width: 25%;
@@ -23,7 +24,7 @@ ul{
 }
 .footer-col h4{
 	font-size: 20px;
-	color: var(--tertiary-color);
+	color: var(--secondary-color);
 	text-transform: capitalize;
 	margin-bottom: 35px;
 	font-weight: 500;
@@ -51,13 +52,13 @@ ul{
 	color: var(--tertiary-color);
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: var(--secondary-color);
 	display: block;
 	transition: all 0.3s ease;
-  font-family: Truculenta;
+  font-family: Mulish;
 }
 .footer-col ul li a:hover{
-	color: #ffffff;
+	color: var(--primary-color);
 	padding-left: 8px;
 }
 .footer-col .social-links a{
@@ -69,14 +70,14 @@ ul{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	color: #ffffff;
+	color: var(--secondary-color);
 	transition: all 0.5s ease;
   text-decoration: none;
   list-style: none;
 }
 .footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: var(--tertiary-color);
+	color: rgb(0, 212, 28);
+	background-color: var(--secondary-color);
 }
 
 /*responsive*/

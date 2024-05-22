@@ -262,8 +262,6 @@ body{
 .fact-container{
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 5%;
   margin: 0 5%;
 }
@@ -274,10 +272,13 @@ body{
   justify-content: center;
   align-items: center;
   opacity: 1;
+  width: 30%;
 }
 
 .fact img{
-  width: 68%;
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
 
@@ -289,11 +290,11 @@ body{
 .fact h1{
   padding-top: 5%;
   font-family: Roboto Slab;
+  font-size: 2rem;
 }
 
 .fact p{
   padding-top: 3%;
-  text-align: center;
   font-family: Mulish;
 }
 
@@ -329,21 +330,26 @@ body{
 }
 
 .absolute-textbox h1{
-  font-size: clamp(2rem, 8vw, 3.55rem);
+  font-size: clamp(2rem, 8vw, 3.2rem);
   color: #fffef8;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   font-family: Mulish;
 }
 
 .absolute-textbox p{
   color: #fffef8;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   font-family: Mulish;
   font-weight: 300;
+  font-size: 1.5rem;
+  width: 80%;
+  text-align: center;
 }
 
 .absolute-textbox a {
-  padding: 2% 5%;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  padding: 1% 5%;
   background-color: var(--fourth-color);
   text-align: center;
   border-radius: 28px;
@@ -493,6 +499,11 @@ body{
   color: var(--tertiary-color);
   border-radius: 22px;
   font-family: Mulish;
+  transition: all 0.5s ease-in-out;
+}
+
+.impact-box a:hover{
+  background-color: var(--primary-color);
 }
 
 .img-bkg{
