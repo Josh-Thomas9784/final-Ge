@@ -1,88 +1,111 @@
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.querySelector('.popup');
-    const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
-    const closeBtn = document.querySelector('.close-btn');
-    const form = document.getElementById('contact-form');
-    const confirmationMessage = document.getElementById('confirmation-message');
-    const popupContent = document.querySelector('.popup-content');
-    const phoneInput = document.getElementById('phone');
-
-    openPopupBtn.addEventListener('click', function() {
-        popup.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', function() {
-        popup.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        const firstNameInput = document.getElementById('first-name');
-        const lastNameInput = document.getElementById('last-name');
-        const phone = phoneInput.value.trim();
-
-        let isValid = true;
-
-        // Reset previous error messages
-        removeErrorMessage(phoneInput);
-        removeErrorMessage(firstNameInput);
-        removeErrorMessage(lastNameInput);
-
-        // Basic validation for phone number
-        const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
-        if (!phoneIsValid) {
-            addErrorMessage(phoneInput, 'Phone number must be 10 digits');
-            isValid = false;
-        }
-
-        if (!firstNameInput.value.trim()) {
-            addErrorMessage(firstNameInput, 'Please enter your first name');
-            isValid = false;
-        }
-
-        if (!lastNameInput.value.trim()) {
-            addErrorMessage(lastNameInput, 'Please enter your last name');
-            isValid = false;
-        }
-
-        if (isValid) {
-            confirmationMessage.style.display = 'block';
-        }
-    });
-
-    phoneInput.addEventListener('input', function() {
-        const phone = phoneInput.value.trim();
-        const phoneIsValid = /^\d{10}$/.test(phone);
-
-        if (phoneIsValid) {
-            removeErrorMessage(phoneInput);
-        }
-    });
-
-    function addErrorMessage(inputElement, message) {
-        removeErrorMessage(inputElement); // Ensure no duplicate error messages
-        const errorMessage = document.createElement('div');
-        errorMessage.className = 'error-message';
-        errorMessage.textContent = message;
-        errorMessage.style.color = 'red';
-        errorMessage.style.fontSize = '12px';
-        popupContent.appendChild(errorMessage);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar with Autofill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
     }
 
-    function removeErrorMessage(inputElement) {
-        const errorMessages = popupContent.getElementsByClassName('error-message');
-        while (errorMessages[0]) {
-            errorMessages[0].parentNode.removeChild(errorMessages[0]);
-        }
+    .search-container {
+      position: relative;
+      margin: 50px auto;
+      width: 300px;
     }
-});
-</script>
 
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .autocomplete-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .autocomplete-item {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .autocomplete-item:hover {
+      background-color: #f9f9f9;
+    }
+
+    .keywords {
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <div id="search-results" class="autocomplete-results"></div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+
+    const dataset = [
+      { name: 'Apple Money', keywords: ['apple', 'fruit', 'healthy'], url: '/apple-page.html' },
+      { name: 'Banana', keywords: ['banana', 'fruit', 'yellow'], url: '/banana-page.html' },
+      { name: 'Carrot', keywords: ['carrot', 'vegetable', 'orange'], url: '/carrot-page.html' },
+      { name: 'Broccoli', keywords: ['broccoli', 'vegetable', 'green'], url: '/broccoli-page.html' },
+      { name: 'Tomato', keywords: ['tomato', 'vegetable', 'red'], url: '/tomato-page.html' }
+    ];
+
+    function showAutocompleteResults() {
+      const query = searchInput.value.toLowerCase();
+      const filteredResults = dataset.filter(item =>
+        item.name.toLowerCase().includes(query) ||
+        item.keywords.some(keyword => keyword.includes(query))
+      );
+
+      if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const html = filteredResults.map(result => {
+        const keywords = result.keywords.map(keyword => `<span class="keywords">${keyword}</span>`).join(', ');
+        return `
+          <div class="autocomplete-item" data-url="${result.url}">
+            ${result.name}<br>
+            <div class="keywords">${keywords}</div>
+          </div>
+        `;
+      }).join('');
+      searchResults.innerHTML = html;
+
+      const autocompleteItems = document.querySelectorAll('.autocomplete-item');
+      autocompleteItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const url = item.getAttribute('data-url');
+          window.location.href = url;
+        });
+      });
+    }
+
+    searchInput.addEventListener('input', showAutocompleteResults);
+  </script>
+</body>
+</html>
