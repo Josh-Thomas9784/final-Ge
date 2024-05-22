@@ -267,84 +267,93 @@
 	
 	</style>
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		const popup = document.querySelector('.popup');
-		const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
-		const closeBtn = document.querySelector('.close-btn');
-		const form = document.getElementById('contact-form');
-		const confirmationMessage = document.getElementById('confirmation-message');
-		const popupContent = document.querySelector('.popup-content');
 
-		openPopupBtn.addEventListener('click', function() {
-			popup.style.display = 'flex';
-		});
+	    document.addEventListener('DOMContentLoaded', function() {
+	    const popup = document.querySelector('.popup');
+	    const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
+	    const closeBtn = document.querySelector('.close-btn');
+	    const form = document.getElementById('contact-form');
+	    const confirmationMessage = document.getElementById('confirmation-message');
+	    const popupContent = document.querySelector('.popup-content');
+	    const phoneInput = document.getElementById('phone');
+	
+	    openPopupBtn.addEventListener('click', function() {
+	        popup.style.display = 'flex';
+	    });
+	
+	    closeBtn.addEventListener('click', function() {
+	        popup.style.display = 'none';
+	    });
+	
+	    window.addEventListener('click', function(event) {
+	        if (event.target === popup) {
+	            popup.style.display = 'none';
+	        }
+	    });
+	
+	    form.addEventListener('submit', function(event) {
+	        event.preventDefault(); // Prevent form submission
+	
+	        const firstNameInput = document.getElementById('first-name');
+	        const lastNameInput = document.getElementById('last-name');
+	        const phone = phoneInput.value.trim();
+	
+	        let isValid = true;
+	
+	        // Reset previous error messages
+	        removeErrorMessage(phoneInput);
+	        removeErrorMessage(firstNameInput);
+	        removeErrorMessage(lastNameInput);
+	
+	        // Basic validation for phone number
+	        const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
+	        if (!phoneIsValid) {
+	            addErrorMessage(phoneInput, 'Phone number must be 10 digits');
+	            isValid = false;
+	        }
+	
+	        if (!firstNameInput.value.trim()) {
+	            addErrorMessage(firstNameInput, 'Please enter your first name');
+	            isValid = false;
+	        }
+	
+	        if (!lastNameInput.value.trim()) {
+	            addErrorMessage(lastNameInput, 'Please enter your last name');
+	            isValid = false;
+	        }
+	
+	        if (isValid) {
+	            confirmationMessage.style.display = 'block';
+	        }
+	    });
+	
+	    phoneInput.addEventListener('input', function() {
+	        const phone = phoneInput.value.trim();
+	        const phoneIsValid = /^\d{10}$/.test(phone);
+	
+	        if (phoneIsValid) {
+	            removeErrorMessage(phoneInput);
+	        }
+	    });
+	
+	    function addErrorMessage(inputElement, message) {
+	        removeErrorMessage(inputElement); // Ensure no duplicate error messages
+	        const errorMessage = document.createElement('div');
+	        errorMessage.className = 'error-message';
+	        errorMessage.textContent = message;
+	        errorMessage.style.color = 'red';
+	        errorMessage.style.fontSize = '12px';
+	        popupContent.appendChild(errorMessage);
+	    }
+	
+	    function removeErrorMessage(inputElement) {
+	        const errorMessages = popupContent.getElementsByClassName('error-message');
+	        while (errorMessages[0]) {
+	            errorMessages[0].parentNode.removeChild(errorMessages[0]);
+	        }
+	    }
+	});
 
-		closeBtn.addEventListener('click', function() {
-			popup.style.display = 'none';
-		});
-
-		window.addEventListener('click', function(event) {
-			if (event.target === popup) {
-				popup.style.display = 'none';
-			}
-		});
-
-		form.addEventListener('submit', function(event) {
-			event.preventDefault(); // Prevent form submission
-
-			const firstNameInput = document.getElementById('first-name');
-			const lastNameInput = document.getElementById('last-name');
-			const phoneInput = document.getElementById('phone');
-
-			const firstName = firstNameInput.value.trim();
-			const lastName = lastNameInput.value.trim();
-			const phone = phoneInput.value.trim();
-
-			let isValid = true;
-
-			// Reset previous error messages
-			removeErrorMessage(firstNameInput);
-			removeErrorMessage(lastNameInput);
-			removeErrorMessage(phoneInput);
-
-			// Basic validation for phone number
-			const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
-			if (!phoneIsValid) {
-				addErrorMessage(phoneInput, 'Phone number must be 10 digits');
-				isValid = false;
-			}
-
-			if (!firstName) {
-				addErrorMessage(firstNameInput, 'Please enter your first name');
-				isValid = false;
-			}
-
-			if (!lastName) {
-				addErrorMessage(lastNameInput, 'Please enter your last name');
-				isValid = false;
-			}
-
-			if (isValid) {
-				confirmationMessage.style.display = 'block';
-			}
-		});
-
-		function addErrorMessage(inputElement, message) {
-			const errorMessage = document.createElement('div');
-			errorMessage.className = 'error-message';
-			errorMessage.textContent = message;
-			errorMessage.style.color = 'red';
-			errorMessage.style.fontSize = '12px';
-			popupContent.insertBefore(errorMessage, form.nextSibling);
-		}
-
-		function removeErrorMessage(inputElement) {
-			const errorMessage = inputElement.nextElementSibling;
-			if (errorMessage && errorMessage.classList.contains('error-message')) {
-				errorMessage.parentNode.removeChild(errorMessage);
-			}
-		}
-		});
 
 	</script>
 	<!--POPUP CODE-->
