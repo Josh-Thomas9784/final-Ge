@@ -1,65 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.querySelector('.popup');
+    const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
+    const closeBtn = document.querySelector('.close-btn');
+    const form = document.getElementById('contact-form');
+    const confirmationMessage = document.getElementById('confirmation-message');
+    const popupContent = document.querySelector('.popup-content');
+    const phoneInput = document.getElementById('phone');
+
+    openPopupBtn.addEventListener('click', function() {
+        popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const firstNameInput = document.getElementById('first-name');
+        const lastNameInput = document.getElementById('last-name');
+        const phone = phoneInput.value.trim();
+
+        let isValid = true;
+
+        // Reset previous error messages
+        removeErrorMessage(phoneInput);
+        removeErrorMessage(firstNameInput);
+        removeErrorMessage(lastNameInput);
+
+        // Basic validation for phone number
+        const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
+        if (!phoneIsValid) {
+            addErrorMessage(phoneInput, 'Phone number must be 10 digits');
+            isValid = false;
+        }
+
+        if (!firstNameInput.value.trim()) {
+            addErrorMessage(firstNameInput, 'Please enter your first name');
+            isValid = false;
+        }
+
+        if (!lastNameInput.value.trim()) {
+            addErrorMessage(lastNameInput, 'Please enter your last name');
+            isValid = false;
+        }
+
+        if (isValid) {
+            confirmationMessage.style.display = 'block';
+        }
+    });
+
+    phoneInput.addEventListener('input', function() {
+        const phone = phoneInput.value.trim();
+        const phoneIsValid = /^\d{10}$/.test(phone);
+
+        if (phoneIsValid) {
+            removeErrorMessage(phoneInput);
+        }
+    });
+
+    function addErrorMessage(inputElement, message) {
+        removeErrorMessage(inputElement); // Ensure no duplicate error messages
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.textContent = message;
+        errorMessage.style.color = 'red';
+        errorMessage.style.fontSize = '12px';
+        popupContent.appendChild(errorMessage);
     }
 
-    header {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #f0f0f0;
+    function removeErrorMessage(inputElement) {
+        const errorMessages = popupContent.getElementsByClassName('error-message');
+        while (errorMessages[0]) {
+            errorMessages[0].parentNode.removeChild(errorMessages[0]);
+        }
     }
-
-    .video-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .paragraph {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>About Us</h1>
-    <p>Learn more about who we are and what we do.</p>
-  </header>
-
-  <div class="video-container">
-    <!-- Replace the iframe src with your YouTube video embed code -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <div class="content">
-    <div class="paragraph">
-      <p>At [Company Name], we're passionate about [describe your passion, mission, or purpose]. Our journey began [mention when your company started or its founding story]. Since then, we've been dedicated to [briefly describe your main objectives or goals]. Through our commitment to [mention any values or principles your company stands for], we strive to [explain the impact or change you aim to create].</p>
-    </div>
-
-    <div class="paragraph">
-      <p>[Company Name] is more than just a [mention what your company does]; we're a community [mention any community or customer-centric initiatives]. Whether you're [describe your target audience or customers], we're here to [mention how you serve or support your audience]. Join us in our journey to [mention your overarching vision or goal]. Together, we can [mention the positive change or impact you envision].</p>
-    </div>
-  </div>
-</body>
-</html>
+});
+</script>
 
