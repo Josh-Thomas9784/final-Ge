@@ -1,164 +1,65 @@
-<div class="carousel">
-  <button class="carousel-button button--left is-hidden">
-    <img src="pictures/arrow-left.svg">
-  </button>
-
-  <div class="carousel-track-container">
-    <ul class="carousel-track">
-      <li class="carousel-slide current-slide">
-        <div class="carousel-text-holder">
-          <h1>WildFires</h1>
-          <p>Not adopting green energy can indirectly contribute to more frequent and intense wildfires by exacerbating climate change through continued use of fossil fuels.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Waste</h1>
-          <p>Improperly disposed trash contributes to environmental pollution, posing threats to ecosystems and wildlife.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Global Warming</h1>
-          <p>Contributing to global warming, excessive greenhouse gas emissions from human activities intensify climate change, with far-reaching consequences for ecosystems and communities.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Deforestation</h1>
-          <p>Deforestation leads to habitat loss, decreased biodiversity, and increased carbon dioxide levels in the atmosphere.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Water Pollution</h1>
-          <p>Contaminants in water bodies pose serious health risks to both humans and aquatic life, impacting ecosystems globally.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Air Pollution</h1>
-          <p>Air pollution results from harmful emissions and chemicals, contributing to respiratory diseases and environmental damage.</p>
-        </div>
-      </li>
-      <li class="carousel-slide">
-        <div class="carousel-text-holder">
-          <h1>Overfishing</h1>
-          <p>Overfishing depletes fish stocks, disrupts marine ecosystems, and threatens food security for communities relying on fishing.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <button class="carousel-button button--right">
-    <img src="pictures/arrow-right.svg" alt="">
-  </button>
-
-  <div class="carousel-nav">
-    <button class="carousel-indicator current-slide"></button>
-    <button class="carousel-indicator"></button>
-    <button class="carousel-indicator"></button>
-    <button class="carousel-indicator"></button>
-    <button class="carousel-indicator"></button>
-    <button class="carousel-indicator"></button>
-    <button class="carousel-indicator"></button>
-  </div>
-</div>
-
-<!--styles of the carousel-->
-<style>
-  /* Carousel styles as provided in the original code */
-</style>
-
-<script>
-  // Carousel functionality as provided in the original code
-
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nxtButton = document.querySelector('.button--right');
-  const preButton = document.querySelector('.button--left');
-  const dotsNav = document.querySelector('.carousel-nav');
-  const dots = Array.from(dotsNav.children);
-
-  const slideWidth = slides[0].getBoundingClientRect().width;
-
-  // display all the slides
-  const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-  }
-
-  slides.forEach(setSlidePosition);
-
-  // general function to get amount of slide
-  const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
-  }
-
-  const updateDots = (currentDot, targetDot) => {
-    currentDot.classList.remove('current-slide');
-    targetDot.classList.add('current-slide');
-  }
-
-  const hideShowNav = (slides, preButton, nxtButton, targetIndex) => {
-    if (targetIndex == 0) {
-      preButton.classList.add('is-hidden');
-      nxtButton.classList.remove('is-hidden');
-    } else if (targetIndex === slides.length - 1) {
-      preButton.classList.remove('is-hidden');
-      nxtButton.classList.add('is-hidden');
-    } else {
-      preButton.classList.remove('is-hidden');
-      nxtButton.classList.remove('is-hidden');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-  }
 
-  // arrow buttons
-  nxtButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
-    const nextSlide = currentSlide.nextElementSibling;
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #f0f0f0;
+    }
 
-    const currentDot = dotsNav.querySelector('.current-slide');
-    const nextDot = currentDot.nextElementSibling;
-    updateDots(currentDot, nextDot);
+    .video-container {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-    moveToSlide(track, currentSlide, nextSlide);
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-    const nextIndex = slides.findIndex(slide => slide === nextSlide);
-    hideShowNav(slides, preButton, nxtButton, nextIndex);
-  })
+    .paragraph {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-  preButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
-    const prevSlide = currentSlide.previousElementSibling;
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <p>Learn more about who we are and what we do.</p>
+  </header>
 
-    const currentDot = dotsNav.querySelector('.current-slide');
-    const prevDot = currentDot.previousElementSibling;
-    updateDots(currentDot, prevDot);
+  <div class="video-container">
+    <!-- Replace the iframe src with your YouTube video embed code -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </div>
 
-    moveToSlide(track, currentSlide, prevSlide);
+  <div class="content">
+    <div class="paragraph">
+      <p>At [Company Name], we're passionate about [describe your passion, mission, or purpose]. Our journey began [mention when your company started or its founding story]. Since then, we've been dedicated to [briefly describe your main objectives or goals]. Through our commitment to [mention any values or principles your company stands for], we strive to [explain the impact or change you aim to create].</p>
+    </div>
 
-    const prevIndex = slides.findIndex(slide => slide === prevSlide);
-    hideShowNav(slides, preButton, nxtButton, prevIndex);
-  })
-
-  // making dots work
-  dotsNav.addEventListener('click', e => {
-    const targetDot = e.target.closest('button');
-
-    if (!targetDot) return;
-
-    const currentSlide = track.querySelector('.current-slide');
-    const currentDot = dotsNav.querySelector('.current-slide');
-    const targetIndex = dots.findIndex(dot => dot === targetDot);
-    const targetSlide = slides[targetIndex];
-
-    moveToSlide(track, currentSlide, targetSlide);
-    updateDots(currentDot, targetDot);
-
-    // making arrow reappear when on next slide
-    hideShowNav(slides, preButton, nxtButton, targetIndex);
-  })
-</script>
+    <div class="paragraph">
+      <p>[Company Name] is more than just a [mention what your company does]; we're a community [mention any community or customer-centric initiatives]. Whether you're [describe your target audience or customers], we're here to [mention how you serve or support your audience]. Join us in our journey to [mention your overarching vision or goal]. Together, we can [mention the positive change or impact you envision].</p>
+    </div>
+  </div>
+</body>
+</html>
 
