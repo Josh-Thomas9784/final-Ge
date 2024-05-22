@@ -267,149 +267,247 @@
 	
 	</style>
 	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		const popup = document.querySelector('.popup');
+		const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
+		const closeBtn = document.querySelector('.close-btn');
+		const form = document.getElementById('contact-form');
+		const confirmationMessage = document.getElementById('confirmation-message');
+		const popupContent = document.querySelector('.popup-content');
 
-	    document.addEventListener('DOMContentLoaded', function() {
-	    const popup = document.querySelector('.popup');
-	    const openPopupBtn = document.querySelector('.heading-btn2'); // Selecting the button by class
-	    const closeBtn = document.querySelector('.close-btn');
-	    const form = document.getElementById('contact-form');
-	    const confirmationMessage = document.getElementById('confirmation-message');
-	    const popupContent = document.querySelector('.popup-content');
-	    const phoneInput = document.getElementById('phone');
-	
-	    openPopupBtn.addEventListener('click', function() {
-	        popup.style.display = 'flex';
-	    });
-	
-	    closeBtn.addEventListener('click', function() {
-	        popup.style.display = 'none';
-	    });
-	
-	    window.addEventListener('click', function(event) {
-	        if (event.target === popup) {
-	            popup.style.display = 'none';
-	        }
-	    });
-	
-	    form.addEventListener('submit', function(event) {
-	        event.preventDefault(); // Prevent form submission
-	
-	        const firstNameInput = document.getElementById('first-name');
-	        const lastNameInput = document.getElementById('last-name');
-	        const phone = phoneInput.value.trim();
-	
-	        let isValid = true;
-	
-	        // Reset previous error messages
-	        removeErrorMessage(phoneInput);
-	        removeErrorMessage(firstNameInput);
-	        removeErrorMessage(lastNameInput);
-	
-	        // Basic validation for phone number
-	        const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
-	        if (!phoneIsValid) {
-	            addErrorMessage(phoneInput, 'Phone number must be 10 digits');
-	            isValid = false;
-	        }
-	
-	        if (!firstNameInput.value.trim()) {
-	            addErrorMessage(firstNameInput, 'Please enter your first name');
-	            isValid = false;
-	        }
-	
-	        if (!lastNameInput.value.trim()) {
-	            addErrorMessage(lastNameInput, 'Please enter your last name');
-	            isValid = false;
-	        }
-	
-	        if (isValid) {
-	            confirmationMessage.style.display = 'block';
-	        }
-	    });
-	
-	    phoneInput.addEventListener('input', function() {
-	        const phone = phoneInput.value.trim();
-	        const phoneIsValid = /^\d{10}$/.test(phone);
-	
-	        if (phoneIsValid) {
-	            removeErrorMessage(phoneInput);
-	        }
-	    });
-	
-	    function addErrorMessage(inputElement, message) {
-	        removeErrorMessage(inputElement); // Ensure no duplicate error messages
-	        const errorMessage = document.createElement('div');
-	        errorMessage.className = 'error-message';
-	        errorMessage.textContent = message;
-	        errorMessage.style.color = 'red';
-	        errorMessage.style.fontSize = '12px';
-	        popupContent.appendChild(errorMessage);
-	    }
-	
-	    function removeErrorMessage(inputElement) {
-	        const errorMessages = popupContent.getElementsByClassName('error-message');
-	        while (errorMessages[0]) {
-	            errorMessages[0].parentNode.removeChild(errorMessages[0]);
-	        }
-	    }
-	});
+		openPopupBtn.addEventListener('click', function() {
+			popup.style.display = 'flex';
+		});
 
+		closeBtn.addEventListener('click', function() {
+			popup.style.display = 'none';
+		});
+
+		window.addEventListener('click', function(event) {
+			if (event.target === popup) {
+				popup.style.display = 'none';
+			}
+		});
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent form submission
+
+			const firstNameInput = document.getElementById('first-name');
+			const lastNameInput = document.getElementById('last-name');
+			const phoneInput = document.getElementById('phone');
+
+			const firstName = firstNameInput.value.trim();
+			const lastName = lastNameInput.value.trim();
+			const phone = phoneInput.value.trim();
+
+			let isValid = true;
+
+			// Reset previous error messages
+			removeErrorMessage(firstNameInput);
+			removeErrorMessage(lastNameInput);
+			removeErrorMessage(phoneInput);
+
+			// Basic validation for phone number
+			const phoneIsValid = /^\d{10}$/.test(phone); // Checks if the phone number contains exactly 10 digits
+			if (!phoneIsValid) {
+				addErrorMessage(phoneInput, 'Phone number must be 10 digits');
+				isValid = false;
+			}
+
+			if (!firstName) {
+				addErrorMessage(firstNameInput, 'Please enter your first name');
+				isValid = false;
+			}
+
+			if (!lastName) {
+				addErrorMessage(lastNameInput, 'Please enter your last name');
+				isValid = false;
+			}
+
+			if (isValid) {
+				confirmationMessage.style.display = 'block';
+			}
+		});
+
+		function addErrorMessage(inputElement, message) {
+			const errorMessage = document.createElement('div');
+			errorMessage.className = 'error-message';
+			errorMessage.textContent = message;
+			errorMessage.style.color = 'red';
+			errorMessage.style.fontSize = '12px';
+			popupContent.insertBefore(errorMessage, form.nextSibling);
+		}
+
+		function removeErrorMessage(inputElement) {
+			const errorMessage = inputElement.nextElementSibling;
+			if (errorMessage && errorMessage.classList.contains('error-message')) {
+				errorMessage.parentNode.removeChild(errorMessage);
+			}
+		}
+		});
 
 	</script>
 	<!--POPUP CODE-->
 
 
 	<!--Section A-->
-	<section class="headA animatable bounceInLeft" >
-		<h2>Popular Solutions</h2>
-		<p>Explore some of the top Solutions from the Community</p>
-	</section>
-	<section class="containerA animatable fadeInUp">
-			<div class="category_containerA">
-					<div class="contentA">
-							<img src="pictures/house picture -solutions (2).png" class="profession_imageA" alt="Profession" />
-							<img src="pictures/house picture -solutions (1).png" class="profile_imageA" alt="Profile" />
-							<div class="profile_detailA">
-									<span>Solar Panels</span>
-									<p>$10,000 - $30,000</p>
-							</div>
-							<div class="wrapperA">
-									<div class="profile_quoteA">
-											<p>Convert sunlight into electricity, harnessing photovoltaic cells to generate clean, renewable energy.</p>
-									</div>
-							</div>
-							<button class="learn_moreA">Learn More</button>
-					</div>
-					<div class="contentA">
-							<img src="pictures/house picture -solutions (4).png" class="profession_imageA" alt="Profession" />
-							<img src="pictures/house picture -solutions (3).png" class="profile_imageA" alt="Profile" />
-							<div class="profile_detailA">
-									<span>Efficient Appliances</span>
-									<p>$500 - $2000</p>
-							</div>
-							<div class="wrapperA">
-									<div class="profile_quoteA">
-											<p>Reducing consumption and impact while maintaining functionality and performance.</p>
-									</div>
-							</div>
-							<button class="learn_moreA">Learn More</button>
-					</div>
-					<div class="contentA">
-							<img src="pictures/house picture -solutions (6).png" class="profession_imageA" alt="Profession" />
-							<img src="pictures/house picture -solutions (5).png" class="profile_imageA" alt="Profile" />
-							<div class="profile_detailA">
-									<span>Electric Vehicles</span>
-									<p>$20,000 - $40,000</p>
-							</div>
-							<div class="wrapperA">
-									<div class="profile_quoteA">
-											<p>Battery-powered vehicles with zero tailpipe emissions and Hybrids.</p>
-									</div>
-							</div>
-							<button class="learn_moreA">Learn More</button>
-					</div>
-			</div>
-	</section>
+<div class="carousel">
+  <button class="carousel-button button--left is-hidden">
+    <img src="pictures/arrow-left.svg">
+  </button>
+
+  <div class="carousel-track-container">
+    <ul class="carousel-track">
+      <li class="carousel-slide current-slide">
+        <div class="carousel-text-holder">
+          <h1>WildFires</h1>
+          <p>Not adopting green energy can indirectly contribute to more frequent and intense wildfires by exacerbating climate change through continued use of fossil fuels.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Waste</h1>
+          <p>Improperly disposed trash contributes to environmental pollution, posing threats to ecosystems and wildlife.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Global Warming</h1>
+          <p>Contributing to global warming, excessive greenhouse gas emissions from human activities intensify climate change, with far-reaching consequences for ecosystems and communities.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Deforestation</h1>
+          <p>Deforestation leads to habitat loss, decreased biodiversity, and increased carbon dioxide levels in the atmosphere.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Water Pollution</h1>
+          <p>Contaminants in water bodies pose serious health risks to both humans and aquatic life, impacting ecosystems globally.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Air Pollution</h1>
+          <p>Air pollution results from harmful emissions and chemicals, contributing to respiratory diseases and environmental damage.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Overfishing</h1>
+          <p>Overfishing depletes fish stocks, disrupts marine ecosystems, and threatens food security for communities relying on fishing.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button class="carousel-button button--right">
+    <img src="pictures/arrow-right.svg" alt="">
+  </button>
+
+  <div class="carousel-nav">
+    <button class="carousel-indicator current-slide"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+  </div>
+</div>
+
+<script>
+  // Carousel functionality as provided in the original code
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nxtButton = document.querySelector('.button--right');
+  const preButton = document.querySelector('.button--left');
+  const dotsNav = document.querySelector('.carousel-nav');
+  const dots = Array.from(dotsNav.children);
+
+  const slideWidth = slides[0].getBoundingClientRect().width;
+
+  // display all the slides
+  const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+  }
+
+  slides.forEach(setSlidePosition);
+
+  // general function to get amount of slide
+  const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+  }
+
+  const updateDots = (currentDot, targetDot) => {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+  }
+
+  const hideShowNav = (slides, preButton, nxtButton, targetIndex) => {
+    if (targetIndex == 0) {
+      preButton.classList.add('is-hidden');
+      nxtButton.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.add('is-hidden');
+    } else {
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.remove('is-hidden');
+    }
+  }
+
+  // arrow buttons
+  nxtButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const nextDot = currentDot.nextElementSibling;
+    updateDots(currentDot, nextDot);
+
+    moveToSlide(track, currentSlide, nextSlide);
+
+    const nextIndex = slides.findIndex(slide => slide === nextSlide);
+    hideShowNav(slides, preButton, nxtButton, nextIndex);
+  })
+
+  preButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const prevDot = currentDot.previousElementSibling;
+    updateDots(currentDot, prevDot);
+
+    moveToSlide(track, currentSlide, prevSlide);
+
+    const prevIndex = slides.findIndex(slide => slide === prevSlide);
+    hideShowNav(slides, preButton, nxtButton, prevIndex);
+  })
+
+  // making dots work
+  dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closest('button');
+
+    if (!targetDot) return;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    const targetSlide = slides[targetIndex];
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+
+    // making arrow reappear when on next slide
+    hideShowNav(slides, preButton, nxtButton, targetIndex);
+  })
+</script>
 
 	<!-- PART B-->
 	<div class="containerB">
@@ -709,7 +807,7 @@
 
 			$animatables.each(function(i) {
 				var $animatable = $(this);
-				if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+				if (($animatable.offset().top + $animatable.height() - 340) < offset) {
 					$animatable.removeClass('animatable').addClass('animated');
 				}
 			});

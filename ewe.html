@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/footer.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="x-icon" href = "pictures//Green Geometric Wind Energy Turbine Logo (2).svg"> 
+  <title>LeafLink</title>
+  <style>
+    body, html {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--tertiary-color);
+    }
+
+    .loading-screen {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .loading-screen.active {
+      display: flex;
+    }
+
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid var(--primary-color);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .content {
+      display: none;
+      text-align: center;
+    }
+
+    .content h1{
+      font-family: Roboto Slab;
+    }
+
+    .content p{
+      font-family: Mulish;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    #returnButton {
+      display: none;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      font-family: Mulish;
+      border-radius: 200px;
+      background-color: var(--fourth-color);
+
+      transition: all 0.5s ease-in-out;
+    }
+
+    #returnButton:hover{
+      background-color: var(--primary-color);
+    }
+  </style>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" 
+integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" 
+crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" 
+integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" 
+crossorigin="anonymous" 
+referrerpolicy="no-referrer">
+</script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+
+<script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"></script>
+
+<script defer src="js/app.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/search.js"></script>
+
+
+
+<body>
+    <div class="img-fixed fixed1"><img src="pictures/Add a little bit of body text.png" id="darkmode-toggle"></div>
+
+
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+    <p id="loadingText">Loading...</p>
+  </div>
+  <div id="content" class="content">
+    <h1>Thank you for Submitting your plan!</h1>
+    <p>A LeafLink Agent will meet with you in 4-5 businesses days</p>
+    <button id="returnButton">Return Home</button>
+  </div>
+
+  <script>
+    const loadingMessages = [
+      "Loading...",
+      "Please wait...",
+      "Generating Green Solutions...",
+      "Just a moment...",
+      "Developing your Home..."
+    ];
+    let messageIndex = 0;
+
+    function showLoadingScreen() {
+      document.getElementById('loadingScreen').classList.add('active');
+      const intervalId = setInterval(() => {
+        if (messageIndex < loadingMessages.length) {
+          document.getElementById('loadingText').textContent = loadingMessages[messageIndex];
+          messageIndex++;
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 2000);
+
+      setTimeout(() => {
+        document.getElementById('loadingScreen').classList.remove('active');
+        document.getElementById('content').classList.add('active');
+        document.getElementById('returnButton').style.display = 'inline-block';
+      }, 10000); // 10000 milliseconds = 10 seconds
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      showLoadingScreen();
+    });
+
+    document.getElementById('returnButton').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
