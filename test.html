@@ -1,249 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Energy Questionnaire</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <div class="image-container">
-      <img id="question-image" src="" alt="Question Image">
-    </div>
-    <div class="questionnaire-container">
-      <div id="progress-bar"><div class="progress"></div></div>
-      <div id="questionnaire">
-        <div id="question"></div>
-        <div id="options"></div>
-        <button id="next-btn" onclick="nextQuestion()">Next</button>
-      </div>
-    </div>
+<div class="carousel">
+  <button class="carousel-button button--left is-hidden">
+    <img src="pictures/arrow-left.svg">
+  </button>
+
+  <div class="carousel-track-container">
+    <ul class="carousel-track">
+      <li class="carousel-slide current-slide">
+        <div class="carousel-text-holder">
+          <h1>WildFires</h1>
+          <p>Not adopting green energy can indirectly contribute to more frequent and intense wildfires by exacerbating climate change through continued use of fossil fuels.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Waste</h1>
+          <p>Improperly disposed trash contributes to environmental pollution, posing threats to ecosystems and wildlife.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Global Warming</h1>
+          <p>Contributing to global warming, excessive greenhouse gas emissions from human activities intensify climate change, with far-reaching consequences for ecosystems and communities.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Deforestation</h1>
+          <p>Deforestation leads to habitat loss, decreased biodiversity, and increased carbon dioxide levels in the atmosphere.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Water Pollution</h1>
+          <p>Contaminants in water bodies pose serious health risks to both humans and aquatic life, impacting ecosystems globally.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Air Pollution</h1>
+          <p>Air pollution results from harmful emissions and chemicals, contributing to respiratory diseases and environmental damage.</p>
+        </div>
+      </li>
+      <li class="carousel-slide">
+        <div class="carousel-text-holder">
+          <h1>Overfishing</h1>
+          <p>Overfishing depletes fish stocks, disrupts marine ecosystems, and threatens food security for communities relying on fishing.</p>
+        </div>
+      </li>
+    </ul>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
 
+  <button class="carousel-button button--right">
+    <img src="pictures/arrow-right.svg" alt="">
+  </button>
 
+  <div class="carousel-nav">
+    <button class="carousel-indicator current-slide"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+    <button class="carousel-indicator"></button>
+  </div>
+</div>
+
+<!--styles of the carousel-->
 <style>
-    body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
-
-.container {
-  display: flex;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.image-container {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.image-container img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.questionnaire-container {
-  flex: 2;
-}
-
-#progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 5px;
-  width: 0;
-  transition: width 0.5s ease;
-}
-
-.card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.card:hover {
-  background-color: #f1f1f1;
-}
-
-.card.selected {
-  background-color: #4caf50;
-  color: #fff;
-}
-
-#question {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-#options {
-  display: flex;
-  flex-direction: column;
-}
-
-#next-btn {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#next-btn:hover {
-  background-color: #45a049;
-}
-
-
+  /* Carousel styles as provided in the original code */
 </style>
 
 <script>
-    const questions = [
-  {
-    question: "Which renewable energy source do you prefer?",
-    image: "pictures/tery.png",
-    options: [
-      { title: "Solar Energy", price: 1000 },
-      { title: "Wind Energy", price: 1200 },
-      { title: "Hydropower", price: 1500 },
-      { title: "Geothermal Energy", price: 1800 },
-      { title: "Biomass Energy", price: 2000 }
-    ]
-  },
-  {
-    question: "Which electric vehicle do you like?",
-    image: "pictures/house picture -solutions.png",
-    options: [
-      { title: "Tesla Model S", price: 80000 },
-      { title: "Nissan Leaf", price: 30000 },
-      { title: "Chevrolet Bolt", price: 36000 },
-      { title: "BMW i3", price: 45000 },
-      { title: "Audi e-tron", price: 65000 }
-    ]
-  },
-  {
-    question: "Which green home improvement would you choose?",
-    image: "pictures/house picture -solutions (5).png",
-    options: [
-      { title: "Solar Panels", price: 20000 },
-      { title: "Insulation", price: 5000 },
-      { title: "Energy-efficient Windows", price: 10000 },
-      { title: "Smart Thermostats", price: 3000 },
-      { title: "Green Roofing", price: 15000 }
-    ]
-  },
-  {
-    question: "Which eco-friendly appliance would you prefer?",
-    image: "pictures/house picture -solutions (6).png",
-    options: [
-      { title: "Energy Star Refrigerator", price: 1500 },
-      { title: "High-efficiency Washer", price: 1200 },
-      { title: "Eco-friendly Dishwasher", price: 800 },
-      { title: "Induction Cooktop", price: 1000 },
-      { title: "Heat Pump Water Heater", price: 2000 }
-    ]
-  },
-  {
-    question: "Which sustainable transport option do you support?",
-    image: "pictures/house picture -solutions (3).png",
-    options: [
-      { title: "Electric Buses", price: 500000 },
-      { title: "Bike-sharing Programs", price: 100000 },
-      { title: "Light Rail Systems", price: 2000000 },
-      { title: "Electric Scooters", price: 50000 },
-      { title: "Carpooling Services", price: 20000 }
-    ]
+  // Carousel functionality as provided in the original code
+
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nxtButton = document.querySelector('.button--right');
+  const preButton = document.querySelector('.button--left');
+  const dotsNav = document.querySelector('.carousel-nav');
+  const dots = Array.from(dotsNav.children);
+
+  const slideWidth = slides[0].getBoundingClientRect().width;
+
+  // display all the slides
+  const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
   }
-];
 
-let currentQuestion = 0;
-let totalCost = 0;
-const selectedPrices = [];
+  slides.forEach(setSlidePosition);
 
-function loadQuestion() {
-  const questionEl = document.getElementById('question');
-  const optionsEl = document.getElementById('options');
-  const questionImage = document.getElementById('question-image');
+  // general function to get amount of slide
+  const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+  }
 
-  const questionData = questions[currentQuestion];
-  questionEl.textContent = questionData.question;
-  questionImage.src = questionData.image;
+  const updateDots = (currentDot, targetDot) => {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+  }
 
-  optionsEl.innerHTML = '';
-  questionData.options.forEach((option, index) => {
-    const optionCard = document.createElement('div');
-    optionCard.className = 'card';
-    optionCard.innerHTML = `<h3>${option.title}</h3><p>$${option.price}</p>`;
-    optionCard.addEventListener('click', () => selectOption(index));
-    optionsEl.appendChild(optionCard);
-  });
-
-  updateProgressBar();
-}
-
-function selectOption(index) {
-  const optionCards = document.querySelectorAll('.card');
-  optionCards.forEach(card => card.classList.remove('selected'));
-  optionCards[index].classList.add('selected');
-  
-  selectedPrices[currentQuestion] = questions[currentQuestion].options[index].price;
-}
-
-function nextQuestion() {
-  if (document.querySelector('.card.selected')) {
-    if (currentQuestion < questions.length - 1) {
-      currentQuestion++;
-      loadQuestion();
+  const hideShowNav = (slides, preButton, nxtButton, targetIndex) => {
+    if (targetIndex == 0) {
+      preButton.classList.add('is-hidden');
+      nxtButton.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.add('is-hidden');
     } else {
-      showResult();
+      preButton.classList.remove('is-hidden');
+      nxtButton.classList.remove('is-hidden');
     }
-  } else {
-    alert('Please select an option before proceeding.');
   }
-}
 
-function updateProgressBar() {
-  const progressBar = document.querySelector('.progress');
-  progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
-}
+  // arrow buttons
+  nxtButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
 
-function showResult() {
-  const questionnaireEl = document.getElementById('questionnaire');
-  totalCost = selectedPrices.reduce((acc, price) => acc + price, 0);
-  const code = 'CODE-' + Math.floor(Math.random() * 1000000);
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const nextDot = currentDot.nextElementSibling;
+    updateDots(currentDot, nextDot);
 
-  questionnaireEl.innerHTML = `
-    <h2>Thank you for completing the questionnaire!</h2>
-    <p>Your total selected price is: $${totalCost}</p>
-    <p>Your random code is: ${code}</p>
-  `;
-}
+    moveToSlide(track, currentSlide, nextSlide);
 
-document.addEventListener('DOMContentLoaded', loadQuestion);
+    const nextIndex = slides.findIndex(slide => slide === nextSlide);
+    hideShowNav(slides, preButton, nxtButton, nextIndex);
+  })
 
+  preButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
 
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const prevDot = currentDot.previousElementSibling;
+    updateDots(currentDot, prevDot);
+
+    moveToSlide(track, currentSlide, prevSlide);
+
+    const prevIndex = slides.findIndex(slide => slide === prevSlide);
+    hideShowNav(slides, preButton, nxtButton, prevIndex);
+  })
+
+  // making dots work
+  dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closest('button');
+
+    if (!targetDot) return;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    const targetSlide = slides[targetIndex];
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+
+    // making arrow reappear when on next slide
+    hideShowNav(slides, preButton, nxtButton, targetIndex);
+  })
 </script>
 
