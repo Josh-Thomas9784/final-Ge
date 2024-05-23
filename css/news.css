@@ -9,13 +9,13 @@ body { margin:0px; padding:0px; }
 
 .header-banner {
     background-color: var(--primary-color);
-    background-image: url('pictures/house\ picture\ -solutions\ \(1\).png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 300px;
 }
+
 
 div h1 {
     background-color: var(--fourth-color);

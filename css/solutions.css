@@ -18,7 +18,7 @@ body{
 
 .main-text{
   height: 100%;
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,6 +232,17 @@ body{
 
 /* CARDS PART A */
 
+.title-carousel{
+  display: flex;
+  margin-bottom: 2%;
+  padding-left: 8%;
+}
+
+.title-carousel h1{
+  font-family: Roboto Slab;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
 .carnival-title{
   width: 100%;
   display: flex;
@@ -264,8 +275,8 @@ body{
 .carousel{
   position: relative;
   height: 600px;
-  width: 80%;
-  margin: 0 auto;
+  width: 88%;
+  margin-left: 6.5%;
   margin-bottom: 5%;
 }
 
@@ -300,49 +311,49 @@ body{
 }
 
 .carousel-slide:nth-child(1){
-  background-image: url("../pictures/pexels-pixabay-301417.jpg");
+  background-image: url("../pictures/energypic\ \(5\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(2){
-  background-image: url("../pictures/pexels-mali-maeder-802221.jpg");
+  background-image: url("../pictures/energypic\ \(10\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(3){
-  background-image: url("../pictures/pexels-singkham-1108572.jpg");
+  background-image: url("../pictures/energypic\ \(4\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(4){
-  background-image: url("../pictures/pexels-singkham-1108572.jpg");
+  background-image: url("../pictures/energypic\ \(3\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(5){
-  background-image: url("../pictures/pexels-singkham-1108572.jpg");
+  background-image: url("../pictures/energypic\ \(2\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(6){
-  background-image: url("../pictures/pexels-singkham-1108572.jpg");
+  background-image: url("../pictures/energypic\ \(1\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .carousel-slide:nth-child(7){
-  background-image: url("../pictures/pexels-singkham-1108572.jpg");
+  background-image: url("../pictures/energypic.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -423,6 +434,7 @@ body{
 
 .carousel-text-holder:hover{
   transform: scale(1.02, 1.02);
+  width: 28%;
   border: 1px solid white;
 }
 
@@ -692,6 +704,115 @@ body{
   }
 }
 
+.img-source-accordian{
+  width: 50%;
+  margin-right: 5%;
+  border-radius: 16px;
+  margin-top: 5%;
+  border-radius: 1px solid var(--primary-color);
+}
+
+.img-source-accordian img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border-radius: 1px solid var(--primary-color);
+}
+
+@media (max-width: 1200px){
+  .containerB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    height: 80vh;
+  }
+
+  .img-source-accordian{
+    display: none;
+  }
+  
+  .img-source-accordian img{
+    display: none;
+  }
+}
+
+/*---------- FULL SCREEN ---------*/
+
+
+.full-screen{
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 8%;
+  margin-bottom: 0;
+  width: 100%;
+  animation-duration: 0.75s;
+}
+
+.img-long-container2{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.img-long-container2 img{
+  width: 100%;
+  height: 100%;
+  filter: brightness(35%);
+  object-fit: cover;
+}
+
+.absolute-textbox{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.absolute-textbox h1{
+  font-size: clamp(1.5rem, 8vw, 3.2rem);
+  color: #fffef8;
+  padding-bottom: 2%;
+  font-family: Mulish;
+}
+
+.absolute-textbox p{
+  color: #fffef8;
+  padding-bottom: 2%;
+  font-family: Mulish;
+  font-weight: 300;
+  font-size: 1.5rem;
+  width: 80%;
+  text-align: center;
+}
+
+.absolute-textbox a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+  padding: 1% 5%;
+  background-color: var(--fourth-color);
+  text-align: center;
+  border-radius: 28px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: Mulish;
+}
+
+.absolute-textbox a:hover{
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .full-screen{
+    margin-top: 38%;
+  }
+}
+
+
 
 /*3rd part*/
 .part3{
@@ -728,6 +849,7 @@ body{
   border: solid 1px var(--secondary-color);
   padding: 20px;
   transition: all 0.2s;
+  
 }
 
 .list .list2 a{
@@ -777,7 +899,7 @@ body{
   }
 
   .part3{
-    margin-top :45%;
+    margin-top :15%;
     margin-bottom: 5%;
   }
 
@@ -790,7 +912,7 @@ body{
   }
 
   .part3{
-    margin-top :75%;
+    margin-top :15%;
     margin-bottom: 5%;
   }
 

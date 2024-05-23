@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap');
 
 :root {
-  --primary-color: #51a31e; /* Green */
+  --primary-color: #4b971c; /* Green */
   --secondary-color: #0E1514; /* dark green */
   --tertiary-color: #fffef8; /* white */
   --fourth-color: #3d97059d;
@@ -71,7 +71,7 @@ p{
 
 /* LOADING SCREEN */
 .preloader{
-  background: #000 url("../pictures/Preloader.gif") no-repeat center;
+  background: #000 url("../pictures/t.gif") no-repeat center;
   background-size: 250px;
   height: 100vh;
   width: 100%;

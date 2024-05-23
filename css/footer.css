@@ -1,66 +1,84 @@
 
 .container1{
-	max-width: 1170px;
 	margin:auto;
 	z-index: 1;
-
+	max-width: 90%;
 }
+
 .row{
 	display: flex;
 	flex-wrap: wrap;
+	gap: 3%;
+	justify-content: center;
 }
 ul{
 	list-style: none;
 }
+
 .footer{
   background-color: var(--tertiary-color) ;
-  padding: 70px 0;
+  padding: 10px 0;
   width: 100%;
 	border-top: 1px solid var(--secondary-color);
 }
+
 .footer-col{
-   width: 25%;
-   padding: 0 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 22%;
+	margin-top: 4%;
+	margin-bottom: 2%;
 }
+
 .footer-col h4{
+	padding: 5%;
 	font-size: 20px;
 	color: var(--secondary-color);
-	text-transform: capitalize;
-	margin-bottom: 35px;
 	font-weight: 500;
-	position: relative;
-  font-family: Bebas Neue;
   letter-spacing: 3px;
-  margin-left: 45px;
+	font-family: Roboto Slab;
+	margin-bottom: 5%;
+
 }
+
 .footer-col h4::before{
-	content: '';
+	content: ' ';
 	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: var(--tertiary-color);
+	top: 50px;
+	left: 50px;
+
+	background-color: var(--secondary-color);
 	height: 2px;
 	box-sizing: border-box;
-	width: 50px;
+	width: 70%;
 }
+
 .footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
+	margin-bottom: 5%;
 }
+
+.footer-col ul li{
+	display: flex;
+	margin-left: 50px;
+}
+
 .footer-col ul li a{
 	font-size: 18px;
 	text-transform: capitalize;
 	color: var(--tertiary-color);
 	text-decoration: none;
-	font-weight: 300;
+	font-weight: 500;
 	color: var(--secondary-color);
-	display: block;
 	transition: all 0.3s ease;
   font-family: Mulish;
 }
+
 .footer-col ul li a:hover{
 	color: var(--primary-color);
 	padding-left: 8px;
 }
+
 .footer-col .social-links a{
 	display: inline-block;
 	height: 40px;
@@ -74,7 +92,10 @@ ul{
 	transition: all 0.5s ease;
   text-decoration: none;
   list-style: none;
+
+	border: 1px solid black;
 }
+
 .footer-col .social-links a:hover{
 	color: rgb(0, 212, 28);
 	background-color: var(--secondary-color);
@@ -91,4 +112,9 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+
+.footer-col img{
+	height: 150px;
+	margin-top: 10%;
 }
