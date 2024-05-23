@@ -66,6 +66,7 @@ body{
 }
 
 .heading-btn1{
+  text-decoration: none;
   font-size: 1.2rem;
   border: 1px solid var(--fourth-color);
   padding: 2% 5%;
@@ -81,6 +82,7 @@ body{
 }
 
 .heading-btn2{
+  text-decoration: none;
   font-size: 1.2rem;
   border: 1px solid var(--secondary-color);
   padding: 2% 5%;
